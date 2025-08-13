@@ -1,0 +1,159 @@
+/* HeroSection.css */
+
+.hero-section {
+  background-image: url(img1.avif);
+  background-color: #f2f7fc; /* Light bluish background */
+  padding: 100px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #111;
+  font-weight: 400;
+}
+
+/* Responsive Text Sizes */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+}
+
+
+/* HeroImageSection.css */
+
+.hero-image-section {
+  background-image: url("img2.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.zero-image-section{
+      background-image: url("image5.jpg");
+      margin-bottom: 30px;
+      height: 80vh;
+        background-size: cover;
+}
+.mcards-sections{
+    margin-bottom: 20px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.55); /* Dark overlay */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  max-width: 1000px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.hero-text p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+}
+
+
+/* WhoWeAreSection.css */
+
+.who-section {
+  background-color: #e9f0f6; /* Light bluish background */
+  padding: 80px 20px;
+  text-align: center;
+  /* margin-top: 10px; */
+}
+
+.who-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.who-label {
+  color: #2a5db0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.who-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #1c2b45;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+.who-description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #111;
+  font-weight: 400;
+  padding: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .who-title {
+    font-size: 28px;
+  }
+
+  .who-description {
+    font-size: 16px;
+  }
+
+
+
+
+}

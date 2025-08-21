@@ -15,7 +15,8 @@
 
 .job-application-form .row {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  
   margin-bottom: 1rem;
 }
 

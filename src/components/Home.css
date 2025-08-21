@@ -1335,6 +1335,11 @@ body {
   text-decoration: none;
   color: whitesmoke;
 }
+.contact_header{
+  color: #063970;
+  font-size: 30px;
+  text-decoration: none;
+}
 
 /* FOOTER */
 .footer {

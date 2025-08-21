@@ -176,7 +176,7 @@ Contact us today to see how our tailored ServiceNow solutions can drive real res
           <div className="footer-map">
             <iframe
               title="Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.2446447197763!2d80.245452465296!3d12.955788531672635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d1a0c7f9697%3A0x7237c029e6e015df!2sGreeta%20TechPark!5e0!3m2!1sen!2sin!4v1754477012332!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2449058361417!2d80.24510617377567!3d12.956174487357748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d598dfdff9b%3A0xce67fc14aa2cc711!2sManovate%20Technologies!5e0!3m2!1sen!2sin!4v1755758103475!5m2!1sen!2sin"
               width="100%"
               height="200"
               style={{ border: 0 }}
@@ -202,7 +202,7 @@ Contact us today to see how our tailored ServiceNow solutions can drive real res
           <div className="footer-contact">
             <h3>Contact Us</h3>
             <hr />
-            <p>📍 Prince Infocity 1 – Old Mahabalipuram Road,<br />50, 1st St, Kandhanchavadi,<br />Tamil Nadu 600096</p>
+           
             <p>📍 Greeta TechPark - GREETA TOWERS, Industrial Estate, Perungudi, Chennai, Tamil Nadu 600096</p>
             <br/>
             <p>📍<strong>Email:</strong> info@manovate.in</p>

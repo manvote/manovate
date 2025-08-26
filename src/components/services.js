@@ -17,8 +17,12 @@ import p9 from "./sit.jpg";
 import p10 from "./sitm.jpg";
 import p11 from "./sai.jpg";
 import p12 from "./sblock.jpg";
-
-
+import p13 from "./sui.jpg";
+import p14 from "./scrm.jpg";
+import p15 from "./siot.jpg";
+import p16 from "./sitset.jpg";
+import p17 from "./sqa.jpg";
+import p18 from "./sec.jpg";
 
 function Services() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -179,7 +183,7 @@ Harness the power of artificial intelligence to transform your business. From in
 We develop custom blockchain applications that ensure secure, transparent, and tamper-proof transactions. Our solutions are designed to streamline processes, enhance trust, and deliver verifiable data in real-time, empowering your business with the full potential of blockchain technology</p>
       </div>
     </div>
-       <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
+       <div className="serviceS1-card" style={{ backgroundImage: `url(${p13})` }}>
       {/* <img src={chart} alt="UI/UX Design" /> */}
       <div className="serviceS1-content">
         <h3>UI/UX Design</h3>
@@ -195,7 +199,7 @@ We design engaging, easy-to-navigate interfaces that prioritize the user experie
 We specialize in developing and customizing ERP systems that streamline and optimize your core business functions. From financial management to HR and operations, our tailored solutions improve efficiency, enhance decision-making, and ensure seamless integration across all departments.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p14})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>CUSTOMER RELATIONSHIP MANAGEMENT (CRM)</h3>
@@ -203,14 +207,14 @@ We specialize in developing and customizing ERP systems that streamline and opti
 We develop and integrate CRM platforms tailored to your business needs, enabling you to efficiently manage customer data and build stronger relationships. Our solutions help improve engagement, drive sales, and provide valuable insights to foster long-term customer loyalty.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p15})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>INTERNET OF THINGS(IoT)</h3>
         <p>IoT Solutions for Connected Devices, Remote Monitoring, and Automation We specialize in developing IoT systems that connect devices, enable real-time remote monitoring, and automate processes. Our solutions enhance operational efficiency, provide actionable insights, and empower businesses to make smarter, data-driven decisions.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p16})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>IT INFRASTRUCTURE SETUP</h3>
@@ -218,14 +222,14 @@ We develop and integrate CRM platforms tailored to your business needs, enabling
 We provide comprehensive IT infrastructure services, including custom network design, efficient server configuration, and complete office IT setups. Our solutions ensure a secure, scalable, and optimized environment that supports your business operations seamlessly</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p17})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>QA & TESTING SERVICES</h3>
         <p>Thorough Manual and Automated Testing for Unmatched Product Reliability and Performance We deliver comprehensive manual and automated testing to ensure your products perform flawlessly. Our rigorous testing process identifies potential issues, guaranteeing that your applications are both reliable and high-performing across all environments</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p18})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>E-COMMERCE DEVELOPMENT</h3>

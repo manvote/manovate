@@ -102,6 +102,14 @@ function Contact() {
            </button>
          </header>
 
+    <section class="contact-hero">
+  <div class="contact-content">
+    <h1>Careers at Manovate </h1>
+<h3>Bring your talent, curiosity, and ideas to a team that’s redefining innovation.</h3>
+    
+  </div>
+</section>
+
       {/* Contact Section */}
       <section className="contact-section">
         <h2 className="contact-title">Contact Us</h2>

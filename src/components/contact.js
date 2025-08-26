@@ -122,7 +122,7 @@ function Contact() {
               Get In Touch With Our Experts
             </p>
             <p>
-             Ready to transform the way you work? Whether you need to streamline operations, enhance workflows, or deliver measurable outcomes, KeenStack is here to help.
+             Ready to transform the way you work? Whether you need to streamline operations, enhance workflows, or deliver measurable outcomes, Manovate is here to help.
 <br/>
 Contact us today to see how our tailored ServiceNow solutions can drive real results for your business. Let’s get started.
             </p>

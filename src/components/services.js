@@ -17,12 +17,7 @@ import p9 from "./sit.jpg";
 import p10 from "./sitm.jpg";
 import p11 from "./sai.jpg";
 import p12 from "./sblock.jpg";
-import p13 from "./sui.jpg";
-import p14 from "./scrm.jpg";
-import p15 from "./siot.jpg";
-import p16 from "./sitset.jpg";
-import p17 from "./sqa.jpg";
-import p18 from "./sec.jpg";
+
 
 
 function Services() {
@@ -42,8 +37,8 @@ function Services() {
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/services">Services</Link>
-         <Link to="/careers">Careers</Link>
-          <Link to="/contact" className="contact-icon">📞</Link>
+          <Link to="/careers">Careers</Link>
+          <Link to="/contact" className="contact-icon">📞</Link> 
         </nav>
 
         {/* Hamburger Icon */}
@@ -128,107 +123,114 @@ function Services() {
       {/* <img src={chart} alt="Custom Software Development" /> */}
       <div className="serviceS1-content">
         <h3>CUSTOM SOFTWARE DEVELOPMENT</h3>
-        <p>Tailored applications to solve specific business challenges and streamline operations.</p>
+        <p>Custom Solutions Designed to Address Unique Business Challenges and Optimize OperationsWe create tailored applications that meet your specific business needs, enhancing efficiency and driving growth. Our solutions are built to streamline workflows, solve complex problems, and deliver measurable results.</p>
       </div>
     </div>
       <div className="serviceS1-card" style={{ backgroundImage: `url(${p5})` }}>
       {/* <img src={chart} alt="mobile app Development" /> */}
       <div className="serviceS1-content">
         <h3>MOBILE APP DEVELOPMENT</h3>
-        <p>Native and cross-platform mobile apps designed for
-  iOS and Android.</p>
+        <p>Seamless Native and Cross-Platform Mobile Apps for iOS and Android We design and develop high-performance mobile applications that deliver a smooth, intuitive experience on both iOS and Android. Whether native or cross-platform, our apps are built to scale and engage users across all devices</p>
       </div>
     </div>
     <div className="serviceS1-card" style={{ backgroundImage: `url(${p6})` }}>
       {/* <img src={chart} alt="web Development" /> */}
       <div className="serviceS1-content">
         <h3>WEB DEVELOPMENT</h3>
-        <p>Responsive, fast, and secure websites using modern
-  frameworks.</p>
+        <p>Responsive, High-Performance, and Secure Websites Built with Cutting-Edge Frameworks We create visually stunning, fast-loading websites that adapt seamlessly across devices. Leveraging the latest frameworks, we ensure robust security and optimized performance, providing an exceptional user experience that keeps your business ahead of the curve</p>
       </div>
     </div>
  <div className="serviceS1-card" style={{ backgroundImage: `url(${p7})` }}>
       {/* <img src={chart} alt="devops" /> */}
       <div className="serviceS1-content">
         <h3>DevOps </h3>
-        <p>CI/CD pipelines, infrastructure automation, and continuous deployment solutions.</p>
+        <p>Efficient CI/CD Pipelines, Infrastructure Automation, and Continuous Deployment Solutions We streamline your development process with fully automated CI/CD pipelines, ensuring faster, more reliable code delivery. Our infrastructure automation solutions minimize manual effort, while continuous deployment ensures your applications are always up-to-date and running smoothly.</p>
       </div>
     </div>
     <div className="serviceS1-card" style={{ backgroundImage: `url(${p9})` }}>
       {/* <img src={chart} alt="it consulting" /> */}
       <div className="serviceS1-content">
         <h3>IT CONSULTING </h3>
-        <p>Expert guidance to align your IT strategy with business goals.</p>
+        <p>Strategic IT Consulting to Align Technology with Your Business Objectives
+Our expert consultants work closely with you to craft IT strategies that drive business growth. We help bridge the gap between technology and your core business goals, ensuring your IT investments deliver maximum value and support long-term success</p>
       </div>
     </div>
      <div className="serviceS1-card" style={{ backgroundImage: `url(${p10})` }}>
       {/* <img src={chart} alt="managed it services" /> */}
       <div className="serviceS1-content">
         <h3>MANAGED IT SERVICES</h3>
-        <p>24/7 monitoring, support,and maintenance of IT infrastructure.</p>
+        <p>Round-the-Clock Monitoring, Support, and Maintenance for Your IT Infrastructure
+We provide 24/7 monitoring and proactive support to ensure your IT infrastructure runs smoothly and efficiently. Our dedicated team swiftly addresses any issues, minimizing downtime and maintaining peak performance for your critical systems</p>
       </div>
     </div>
       <div className="serviceS1-card" style={{ backgroundImage: `url(${p11})` }}>
       {/* <img src={chart} alt="Artificial Intelligence & Machine Learning" /> */}
       <div className="serviceS1-content">
         <h3>ARTIFICIAL INTELLIGENCE & MACHINE LEARNING</h3>
-        <p>AI solutions including chatbots, recommendation engines,and predictive analytics.</p>
+        <p>AI-Powered Solutions: Chatbots, Recommendation Engines, and Predictive Analytics
+Harness the power of artificial intelligence to transform your business. From intelligent chatbots that enhance customer engagement to recommendation engines that drive conversions, we create custom AI solutions that deliver actionable insights and predictive capabilities to fuel data-driven decision-making.</p>
       </div>
     </div>
         <div className="serviceS1-card" style={{ backgroundImage: `url(${p12})` }}>
       {/* <img src={chart} alt="Blockchain technology" /> */}
       <div className="serviceS1-content">
         <h3>BLOCKCHAIN DEVELOPMENT</h3>
-        <p>Custom blockchain applications for secure and transparent transactions.</p>
+        <p>Tailored Blockchain Solutions for Secure, Transparent Transactions
+We develop custom blockchain applications that ensure secure, transparent, and tamper-proof transactions. Our solutions are designed to streamline processes, enhance trust, and deliver verifiable data in real-time, empowering your business with the full potential of blockchain technology</p>
       </div>
     </div>
-       <div className="serviceS1-card" style={{ backgroundImage: `url(${p13})` }}>
+       <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
       {/* <img src={chart} alt="UI/UX Design" /> */}
       <div className="serviceS1-content">
         <h3>UI/UX Design</h3>
-        <p>Engaging, user-friendly interfaces designed for a seamless user experience.</p>
+        <p>Intuitive, User-Centric Interfaces for a Seamless Experience
+We design engaging, easy-to-navigate interfaces that prioritize the user experience. Our goal is to create visually appealing and functional designs that make interactions effortless, ensuring your users have a smooth and enjoyable journey every time</p>
       </div>
     </div>
      <div className="serviceS1-card" style={{ backgroundImage: `url(${p8})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>ENTERPRISE RESOURCE PLANNING (ERP)</h3>
-        <p>ERP system development and customization for finance, HR, and operations.</p>
+        <p>Custom ERP Solutions for Finance, HR, and Operations
+We specialize in developing and customizing ERP systems that streamline and optimize your core business functions. From financial management to HR and operations, our tailored solutions improve efficiency, enhance decision-making, and ensure seamless integration across all departments.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p14})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>CUSTOMER RELATIONSHIP MANAGEMENT (CRM)</h3>
-        <p>Development and integration of CRM platforms to manage customer data and improve engagement.</p>
+        <p>Custom CRM Development and Integration for Enhanced Customer Engagement
+We develop and integrate CRM platforms tailored to your business needs, enabling you to efficiently manage customer data and build stronger relationships. Our solutions help improve engagement, drive sales, and provide valuable insights to foster long-term customer loyalty.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p15})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>INTERNET OF THINGS(IoT)</h3>
-        <p>IoT systems development for connected devices,remote monitoring, and automation.</p>
+        <p>IoT Solutions for Connected Devices, Remote Monitoring, and Automation We specialize in developing IoT systems that connect devices, enable real-time remote monitoring, and automate processes. Our solutions enhance operational efficiency, provide actionable insights, and empower businesses to make smarter, data-driven decisions.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p16})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>IT INFRASTRUCTURE SETUP</h3>
-        <p>Network design, server configuration, and office IT setup services.</p>
+        <p>Expert Network Design, Server Configuration, and Office IT Setup
+We provide comprehensive IT infrastructure services, including custom network design, efficient server configuration, and complete office IT setups. Our solutions ensure a secure, scalable, and optimized environment that supports your business operations seamlessly</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p17})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>QA & TESTING SERVICES</h3>
-        <p>Manual and automated testing to ensure product reliability and performance.</p>
+        <p>Thorough Manual and Automated Testing for Unmatched Product Reliability and Performance We deliver comprehensive manual and automated testing to ensure your products perform flawlessly. Our rigorous testing process identifies potential issues, guaranteeing that your applications are both reliable and high-performing across all environments</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p18})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>E-COMMERCE DEVELOPMENT</h3>
-        <p>Scalable e-commerce platforms with secure payment gateways and product management.</p>
+        <p>Scalable E-Commerce Platforms with Secure Payment Gateways and Streamlined Product Management
+We build robust, scalable e-commerce platforms that deliver seamless shopping experiences. Our solutions include secure payment gateways and efficient product management systems, designed to grow with your business and drive conversions</p>
       </div>
     </div>
     {/* Repeat for other services/projects */}

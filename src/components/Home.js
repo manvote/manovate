@@ -1,265 +1,386 @@
-// import React from "react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import { FaPhoneAlt } from "react-icons/fa";
-// import { FaPen } from "react-icons/fa";
+import { FiMenu, FiX } from "react-icons/fi";
 import "./Home.css";
-import vedio1 from "./vedio.mp4";
-import phone from "./phone-solid-full.svg";
-import mail from "./envelope-solid-full.svg";
 
+ // Unused? Consider removing if not used.
+// import phone from "./phone-solid-full.svg";
+// import mail from "./envelope-solid-full.svg";
 import logo from "./movate1.png";
+import brand from "./branding.png";
+import tech from "./technology.png";
+import digit from "./digital.png";
+import content from "./content.jpg";
+import webdev from "./web.png";
+import bussinesslogo from "./bussiness.png";
+import p1 from "./network-project-bg.jpg";
+import p2 from "./cyberproject.jpg";
+import p3 from "./cloudproject.jpg";
+import p4 from "./dataaproject.jpg";
+import p5 from "./softproject.jpg";
+import p6 from "./aiproject.png";
+import p7 from "./softtest.jpg";
 
-// import heroImg from "./hero.png";
-import code from "./code-solid-full.svg";
-import mobile from "./mobile-screen-button-solid-full.svg";
-// import cloud from "./cloud-solid-full.svg";
-// import cyber from "./shield-halved-solid-full.svg";
-// import people from "./people-group-solid-full.svg";
-// import server from "./server-solid-full.svg";
-// import chart from "./chart-line-solid-full.svg";
-// import ai from "./robot-solid-full.svg";
-// import block from "./link-solid-full.svg";
-import gear from "./gears-solid-full.svg";
-// import work from "./work.jpg";
-// import pencil from "./pencil-solid-full.svg";
-// import charts from "./chart-area-solid-full.svg";
-// import world from "./earth-asia-solid-full.svg";
-// import serviceIcon from "./service-icon.png";
-// import clientImg from "./client.png";
 
 function Home() {
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="homepage">
       {/* Navbar */}
-<header className="navbar">
-  <div className="logo-section">
-    <img src={logo} alt="Logo" className="logo" />
-    {/* <span className="brand">LifelineConnect</span> */}
-  </div>
-
-  <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
-  <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-    <Link to="/">Home</Link>
-    <Link to="/about">About us</Link>
-    <Link to="/services">Services</Link>
-    {/* <Link to="/projects">Our projects</Link> */}
-     <Link to="/careers" >Careers</Link>
-    {/* <Link to="/blog"></Link>
-    <Link to="/how-it-works">How it Works</Link> */}
-    <Link to="/contact" className="contact-btn">Contact us</Link>
-     
-  </nav>
-</header>
-
-
-      {/* <section className="hero"> */}
-          {/* <video autoPlay loop muted playsInline className="background-video">
-    <source src={vedio1} type="video/mp4" />
-    Your browser does not support the video tag.
-  </video> */}
-        {/* <h1>Manovate Innovation The Future</h1>
-       
- <h3>  Empowering industries with AI, automation, and next-gen semiconductor solutions</h3>
-      </section> */}
-      <div className="background-video-container">
-  <video autoPlay loop muted playsInline className="background-video">
-    <source src={vedio1} type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <div className="video-overlay">
-    {/* Optional content over video */}
-    <h1 className="overlay-title">Manovate Technologies<br/>Innovation The Future</h1>
-    <h3> Empowering industries with AI, automation, and next-gen semiconductor solutions</h3>
-  </div>
-</div>
-
-
-     {/* THE INTELLECT PROMISE SECTION */}
-<section className="intellect-promise">
-  <div className="intellect-text">
-    <h2>The Manovate Promise</h2>
-    <p>
-      In the world of technology innovation, Manvote is committed to driving business growth and 
-      digital value by building intelligent solutions through cutting-edge AI and robust software 
-      development. Our approach simplifies complexity and ensures reliable delivery, resulting in 
-      reduced costs and improved customer satisfaction.
-</p>
-    <p>
-      With a foundation in first principles thinking, we have streamlined our product ecosystem into scalable AI models, powerful software platforms, 
-      and integrated APIs—significantly accelerating transformation and innovation for our clients.
-    </p>
-    <p>
-      Backed by our in-house technologies and IP—ranging from custom AI frameworks to
-       end-to-end software development tools—Manvote delivers enterprise-grade solutions with agility, high performance
-      , and ease of deployment, enabling organizations to lead confidently in the digital era.
-    </p>
-  </div>
-
-  <div className="promise-cards">
-    <div className="promise-card">
-      <img src={code} alt="Drive FI Business Growth" />
-      <h3>Custom Software Development</h3><p>Tailored applications to solve specific business challenges and streamline operations.</p>
-    </div>
-    <div className="promise-card">
-      <img src={mobile} alt="Operational Efficiency" />
-      <h3>Mobile App Development</h3>
-      <p>Native and cross-platform mobile apps designed for
-iOS and Android.</p>
-    </div>
-    <div className="promise-card">
-      <img src={code} alt="Implementation Certainty" />
-      <h3>Web Development
-</h3>
-<p>Responsive, fast, and secure websites using modern
-frameworks.
-
-</p>
-    </div>
-    <div className="promise-card">
-      <img src={gear} alt="30% lower TCO" />
-      <h3>DevOps Services
-</h3>
-<p>CI/CD pipelines, infrastructure automation, and continuous deployment solutions.
-
-</p>
-    </div>
-  </div>
-</section>
-{/* Timeline Section - Journey of Manovate */}
-<section className="timeline-section">
-  <h2 className="timeline-title">Journey of <span>Manovate</span></h2>
-  <div className="timeline-container">
-    <div className="timeline-item left">
-      <div className="content">
-        <h3>2017</h3>
-        <p>Inception of Manovate Technologies</p>
-      </div>
-    </div>
-    <div className="timeline-item left">
-      <div className="content">
-        <h3>2018</h3>
-        <p>Global operations kicked off in the market.</p>
-      </div>
-    </div>
-    <div className="timeline-item left">
-      <div className="content">
-        <h3>2019</h3>
-        <p>Recognized as a pioneer in scalable software frameworks.</p>
-      </div>
-    </div>
-    <div className="timeline-item left">
-      <div className="content">
-        <h3>2020</h3>
-        <p>Demerger and innovation launch in core AI and automation.</p>
-      </div>
-    </div>
-    <div className="timeline-item left">
-      <div className="content">
-        <h3>2021</h3>
-        <p>Achieved unicorn status in under a decade.</p>
-      </div>
-    </div>
-    {/* <div className="timeline-item left">
-      <div className="content">
-        <h3>2022</h3>
-        <p>Launch of eMACH.ai - Open Finance Platform.</p>
-      </div>
-    </div> */}
-  </div>
-</section>
-
-
-
-
-      {/* CONTACT SECTION */}
-     <section className="contact">
-      <div className="contact-heading">
-        <Link to="/contact" className="contact_header">Get in Touch</Link>
-      </div>
-       
-      <div className="contact-options">
-         <Link to="/contact" className="contactuslink">
-        <div className="contact-box">
-          <div className="icon-circle">
-         <img src={phone} alt="contact us phone" />
-          </div>
-           <Link to="/contact" className="contactuslink">
-          <h4>Call Us</h4>
-          <p>Contact: +91 97870 66569</p>
-         
-          </Link>
-        </div>
-        </Link>
-        <Link to="/contact" className="contactuslink">
-        <div className="contact-box">
-          <div className="icon-circle">
-           <img src={mail} alt="contact us mail" />
-          </div>
-           <Link to="/contact" className="contactuslink">
-          <h4>Write Us</h4>
-          <p>hr@manovate.in</p>
+      <header className="navbar">
+        <div className="logo">
+          <img src={logo} alt="ProTech Logo" />
           
-          </Link>
         </div>
-        </Link>
+
+        {/* Navigation */}
+        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/services">Services</Link>
+         {/* <Link to="/careers">Careers</Link>
+          <Link to="/contact" className="contact-icon">📞</Link> */}
+        </nav>
+
+        {/* Hamburger Icon */}
+        <button
+          className="menu-toggle"
+          aria-label="Toggle navigation"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+        </button>
+      </header>
+
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-text">
+          <h1>
+            Innovating IT, <br /> Empowering The Technology
+          </h1>
+          <p>
+            Your Trusted and Experienced Partner for Driving Continuous
+            Advancement and Innovation in Information Technology Solutions and
+            Services.
+          </p>
+
+          <div className="hero-buttons">
+            <Link to="/contact" className="btn-primary">Get in Touch</Link>
+            <Link to="/about" className="btn-secondary">Learn more ➜</Link>
+          </div>
+        </div>
+
+        {/* <div className="hero-side-box">
+          <h2>300+</h2>
+          <p>
+            Certified IT Professionals <br />
+            A dedicated team of experts driving your success.
+          </p>
+        </div> */}
+      </section>
+
+      {/* Services Section */}
+      <section className="services-section">
+        <div className="container">
+          <div className="heading">
+            <p className="sub-title">WHAT WE CAN DO FOR YOU</p>
+            <h2 className="title">
+              Our Services We <br /> The Manovate Promise You
+            </h2>
+            <p className="description">
+              In the world of technology innovation, Manovate is committed to driving business
+              growth and digital value by building intelligent solutions through cutting-edge AI
+              and robust software development. 
+              {/* <br/>Our approach simplifies complexity and ensures
+              reliable delivery, resulting in reduced costs and improved customer satisfaction.
+            
+            <br/>
+              With a foundation in first principles thinking, we have streamlined our product
+              ecosystem into scalable AI models, powerful software platforms, and integrated APIs —
+              significantly accelerating transformation and innovation for our clients.
+            <br/>
+              Backed by our in-house technologies and IP — ranging from custom AI frameworks to
+              end-to-end software development tools — Manovate delivers enterprise-grade solutions
+              with agility, high performance, and ease of deployment. */}
+            </p>
+          </div>
+
+          <div className="services-grid">
+            {[
+              { icon: brand, title: "Branding & Design", text: "We design professional yet simple logos. Our designs are search engine and user friendly." },
+              { icon: tech, title: "Technology", text: "Scalable technology solutions built for business efficiency and growth." },
+              { icon: digit, title: "Digital Marketing", text: "Drive customer engagement and growth through creative digital strategies." },
+              { icon: content, title: "Content Strategy", text: "Effective strategies to boost brand presence with impactful content." },
+              { icon: webdev, title: "Web Development", text: "Responsive, secure, and fast websites using modern frameworks." },
+              { icon: bussinesslogo, title: "Business Growth", text: "Scale your business with innovative digital transformation strategies." }
+            ].map((service, idx) => (
+              <div className="service-card" key={idx}>
+                <img src={service.icon} alt={service.title} className="icon" />
+                <h3 className="card-title">{service.title}</h3>
+                <p className="card-text">{service.text}</p>
+                <Link to="/services" className="card-link">Find out more →</Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/*core values */}
+<section class="core-values">
+  <div class="core-values-container">
+    <div class="core-values-text">
+      <h2>All The Core Values We Stand For</h2>
+      <p>
+        We are guided by these principles in everything we do to serve you the best services and get the best result as its goals.
+      </p>
+    </div>
+    <div class="core-values-grid">
+      <div class="value-item">
+        <div class="icon">📚</div>
+        <h4>Innovation</h4>
+        <p>Constantly seeking new and better ways to solve IT challenges.</p>
+      </div>
+      <div class="value-item">
+        <div class="icon">🔍</div>
+        <h4>Integrity</h4>
+        <p>Operating with honesty, transparency, and ethical behavior.</p>
+      </div>
+      <div class="value-item">
+        <div class="icon">🤝</div>
+        <h4>Customer-Centricity</h4>
+        <p>Putting clients' needs at the forefront of our operations.</p>
+      </div>
+      <div class="value-item">
+        <div class="icon">👥</div>
+        <h4>Collaboration</h4>
+        <p>Working closely with clients to achieve mutual success.</p>
+      </div>
+      <div class="value-item">
+        <div class="icon">⚙️</div>
+        <h4>Quality</h4>
+        <p>Delivering top-notch IT solutions, prices, and services.</p>
+      </div>
+      <div class="value-item">
+        <div class="icon">⏱</div>
+        <h4>Flexibility</h4>
+        <p>Delivering the result with flexible times and solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+   
+ <section className="projects-section">
+      <div className="projects-text">
+        <h2>See Our Successful Projects</h2>
+        <p>Explore Our Success Stories</p>
+        <Link to="/services" className="view-all-btn">See all projects →</Link>
+      </div>
+
+      <div className="projects-scroll">
+        <div className="projects-track">
+          <div className="project-card" style={{ backgroundImage: `url(${p1})` }}>
+            <div className="card-content">
+              <h3>Network Optimization</h3>
+              <p>We partnered with a leading global retailer struggling to streamline operations across multiple regions. Their outdated legacy systems created bottlenecks — slowing decision-making, driving up costs, and holding back customer satisfaction. Together, we reimagined their operations with modern, scalable solutions 
+                that unlocked agility, reduced costs, and improved customer experiences worldwide.</p>
+            </div>
+          </div>
+
+          <div className="project-card" style={{ backgroundImage: `url(${p2})` }}>
+            <div className="card-content">
+              <h3>Cybersecurity Enhancement</h3>
+              <p>A leading global retailer relied on us to strengthen their cybersecurity posture. By upgrading legacy systems with modern security frameworks, we reduced risks, 
+                streamlined compliance, and safeguarded customer trust across multiple regions.</p>
+            </div>
+          </div>
+
+          <div className="project-card" style={{ backgroundImage: `url(${p3})` }}>
+            <div className="card-content">
+              <h3>Cloud Migration</h3>
+              <p>we executed a seamless cloud migration — modernizing legacy systems, improving scalability, and enabling real-time insights. The result:
+                 faster decision-making, reduced operational expenses, and the agility to scale across regions.</p>
+            </div>
+          </div>
+
+          <div className="project-card" style={{ backgroundImage: `url(${p4})` }}>
+            <div className="card-content">
+              <h3>Data Analytics Success</h3>
+              <p>An e-commerce retailer was overwhelmed with fragmented data, limiting their ability to act quickly. By implementing a modern analytics solution, we unified their data streams and turned information into actionable insights. 
+                The result: smarter strategies, faster decision-making, and measurable business impact.</p>
+            </div>
+          </div>
+          <div className="project-card" style={{ backgroundImage: `url(${p5})` }}>
+            <div className="card-content">
+              <h3>software Development</h3>
+              <p>A growing business was held back by outdated software that couldn’t keep pace with its ambitions. We redefined their digital infrastructure with modern, agile applications 
+                — accelerating innovation, reducing costs, and creating a foundation for long-term success.</p>
+            </div>
+          </div>
+           <div className="project-card" style={{ backgroundImage: `url(${p6})` }}>
+            <div className="card-content">
+              <h3>Artificial Intelligence & Machine Learning</h3>
+              <p>A fast-growing company struggled to keep up with market changes using traditional analytics. We introduced AI-powered automation
+                 and machine learning-driven forecasting, empowering them to anticipate customer needs, improve efficiency, and stay ahead of the competition.</p>
+            </div>
+          </div>
+           <div className="project-card" style={{ backgroundImage: `url(${p7})` }}>
+            <div className="card-content">
+              <h3>QA & Testing Services</h3>
+              <p>A leading product company faced customer churn due to recurring bugs and inconsistent performance. Our QA & Testing Services introduced automation
+                , performance benchmarking, and real-time monitoring, enabling them to release high-quality software faster while boosting customer satisfaction.</p>
+            </div>
+          </div>
+           <div className="project-card" style={{ backgroundImage: `url(${p1})` }}>
+            <div className="card-content">
+              <h3>Network Optimization</h3>
+              <p>We partnered with a leading global retailer struggling to streamline operations across multiple regions. Their outdated legacy systems created bottlenecks — slowing decision-making, driving up costs, and holding back customer satisfaction. Together, we reimagined their operations with modern, scalable solutions 
+                that unlocked agility, reduced costs, and improved customer experiences worldwide.</p>
+            </div>
+          </div>
+
+          <div className="project-card" style={{ backgroundImage: `url(${p2})` }}>
+            <div className="card-content">
+              <h3>Cybersecurity Enhancement</h3>
+              <p>A leading global retailer relied on us to strengthen their cybersecurity posture. By upgrading legacy systems with modern security frameworks, we reduced risks, 
+                streamlined compliance, and safeguarded customer trust across multiple regions.</p>
+            </div>
+          </div>
+
+          <div className="project-card" style={{ backgroundImage: `url(${p3})` }}>
+            <div className="card-content">
+              <h3>Cloud Migration</h3>
+              <p>we executed a seamless cloud migration — modernizing legacy systems, improving scalability, and enabling real-time insights. The result:
+                 faster decision-making, reduced operational expenses, and the agility to scale across regions.</p>
+            </div>
+          </div>
+
+          <div className="project-card" style={{ backgroundImage: `url(${p4})` }}>
+            <div className="card-content">
+              <h3>Data Analytics Success</h3>
+              <p>An e-commerce retailer was overwhelmed with fragmented data, limiting their ability to act quickly. By implementing a modern analytics solution, we unified their data streams and turned information into actionable insights. 
+                The result: smarter strategies, faster decision-making, and measurable business impact.</p>
+            </div>
+          </div>
+          <div className="project-card" style={{ backgroundImage: `url(${p5})` }}>
+            <div className="card-content">
+              <h3>software Development</h3>
+              <p>A growing business was held back by outdated software that couldn’t keep pace with its ambitions. We redefined their digital infrastructure with modern, agile applications 
+                — accelerating innovation, reducing costs, and creating a foundation for long-term success.</p>
+            </div>
+          </div>
+           <div className="project-card" style={{ backgroundImage: `url(${p6})` }}>
+            <div className="card-content">
+              <h3>Artificial Intelligence & Machine Learning</h3>
+              <p>A fast-growing company struggled to keep up with market changes using traditional analytics. We introduced AI-powered automation
+                 and machine learning-driven forecasting, empowering them to anticipate customer needs, improve efficiency, and stay ahead of the competition.</p>
+            </div>
+          </div>
+           <div className="project-card" style={{ backgroundImage: `url(${p7})` }}>
+            <div className="card-content">
+              <h3>QA & Testing Services</h3>
+              <p>A leading product company faced customer churn due to recurring bugs and inconsistent performance. Our QA & Testing Services introduced automation
+                , performance benchmarking, and real-time monitoring, enabling them to release high-quality software faster while boosting customer satisfaction.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-   <footer className="custom-footer">
+
+ {/* Timeline Section */}
+ <section className="journey-section">
+  <h2 className="journey-title">
+    The <span>Journey</span> of <strong>Manovate</strong>
+  </h2>
+  <div className="journey-timeline">
+    {[
+      { year: 2017, text: "Manovate was born with a bold vision — to redefine how businesses embrace technology. What started as a small team with big dreams quickly grew into a movement of innovation." },
+      { year: 2018, text: "Within a year, our passion transcended borders. We expanded globally, bringing smart, scalable solutions to enterprises navigating digital transformation." },
+      { year: 2019, text: "Recognized as a pioneer in scalable software frameworks, Manovate became the trusted partner for organizations seeking agility, speed, and future-ready architectures." },
+      { year: 2020, text: "Amid a world of disruption, we turned challenge into opportunity — launching breakthrough innovations in AI and automation that redefined industry benchmarks." },
+      { year: 2021, text: "Our relentless drive and customer-first approach propelled us to unicorn status — a testament to the trust we earned and the impact we created globally." }
+    ].map((item, index) => (
+      <div className="journey-item" key={index}>
+        <div className="journey-dot"></div>
+        <div className={`journey-content ${index % 2 === 0 ? 'left' : 'right'}`}>
+          <h3>{item.year}</h3>
+          <p>{item.text}</p>
+        </div>
+      </div>
+    ))}
+    <div className="journey-line"></div>
+  </div>
+</section>
+
+
+
+
+
+      {/* Contact Section */}
+      <section class="cta-section">
+  <div class="cta-container">
+    <h2>Ready to elevate your IT infrastructure,<br/> enhance security, and drive growth?</h2>
+    <p>Contact us today to discuss customized solutions for your business.</p>
+    <Link to="/contact" class="cta-button">Contact Us</Link>
+  </div>
+</section>
+
+
+      {/* Footer */}
+      
+<footer className="footer">
   <div className="footer-container">
-    {/* Left - Map Embed */}
-    <div className="footer-map">
+    {/* Map Section */}
+    <div className="footer-column footer-map">
       <iframe
         title="Location Map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2449058361417!2d80.24510617377567!3d12.956174487357748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d598dfdff9b%3A0xce67fc14aa2cc711!2sManovate%20Technologies!5e0!3m2!1sen!2sin!4v1755758103475!5m2!1sen!2sin"
         width="100%"
-        height="200"
-        style={{ border: 0 }}
-        allowFullScreen=""
+        height="220"
+        style={{ border: 0, borderRadius: "10px" }}
+        allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
 
-    {/* Middle - Links */}
-    <div className="footer-links">
+    {/* Useful Links */}
+    <div className="footer-column">
       <h3>Useful Links</h3>
-      <hr />
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About Us</Link></li>
         <li><Link to="/services">Our Services</Link></li>
-        {/* <li><Link to="/project">Our Projects</Link></li> */}
         <li><Link to="/contact">Contact Us</Link></li>
       </ul>
     </div>
 
-    {/* Right - Contact Info */}
-    <div className="footer-contact">
+    {/* Contact */}
+    <div className="footer-column">
       <h3>Contact Us</h3>
-      <hr />
-   
-      <p>📍 Greeta TechPark -
-GREETA TOWERS, Industrial Estate, Perungudi, Chennai, Tamil Nadu 600096</p>
+      <p>
+        📍 Greeta TechPark - GREETA TOWERS,<br />
+        Industrial Estate, Perungudi,<br />
+        Chennai, Tamil Nadu 600096
+      </p>
     </div>
   </div>
 
+  {/* Bottom Section */}
   <div className="footer-bottom">
-    <p>© Manovate Technologies<br/>Innovation The Future</p>
+    <p>© Manovate Technologies | Innovating The Future</p>
     <img src={logo} alt="Manovate Logo" className="bottom-logo" />
   </div>
 </footer>
 
 
-    </div>
+
+</div>
   );
 }
 

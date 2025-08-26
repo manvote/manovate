@@ -1,37 +1,41 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
 import "./Home.css";
 import "./careers.css";
-import vedio1 from "./vedio.mp4";
+import vedio1 from "./vedio (2).mp4";
 import logo from "./movate1.png";
 
 function Careers() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="homepage">
-      {/* Navbar */}
-      <header className="navbar">
-        <div className="logo-section">
-          <img src={logo} alt="Logo" className="logo" />
-        </div>
-
-        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-
-        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About us</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/careers">Careers</Link>
-          <Link to="/contact" className="contact-btn">
-            Contact us
-          </Link>
-        </nav>
-      </header>
+   <div className="homepage">
+         {/* Navbar */}
+         <header className="navbar">
+           <div className="logo">
+             <img src={logo} alt="ProTech Logo" />
+             
+           </div>
+   
+           {/* Navigation */}
+           <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+             <Link to="/">Home</Link>
+             <Link to="/about">About</Link>
+             <Link to="/services">Services</Link>
+            <Link to="/careers">Careers</Link>
+             <Link to="/contact" className="contact-icon">📞</Link>
+           </nav>
+   
+           {/* Hamburger Icon */}
+           <button
+             className="menu-toggle"
+             aria-label="Toggle navigation"
+             onClick={() => setMenuOpen(!menuOpen)}
+           >
+             {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+           </button>
+         </header>
 
       {/* Video Background */}
       <div className="background-video-container">
@@ -133,50 +137,51 @@ function Careers() {
 
 
       
-         <footer className="custom-footer">
-        <div className="footer-container">
-          {/* Left - Map Embed */}
-          <div className="footer-map">
-            <iframe
-              title="Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2449058361417!2d80.24510617377567!3d12.956174487357748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d598dfdff9b%3A0xce67fc14aa2cc711!2sManovate%20Technologies!5e0!3m2!1sen!2sin!4v1755758103475!5m2!1sen!2sin"
-              width="100%"
-              height="200"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-      
-          {/* Middle - Links */}
-          <div className="footer-links">
-            <h3>Useful Links</h3>
-            <hr />
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/services">Our Services</Link></li>
-              {/* <li><Link to="/project">Our Projects</Link></li> */}
-              <li><Link to="/contact">Contact Us</Link></li>
-            </ul>
-          </div>
-      
-          {/* Right - Contact Info */}
-          <div className="footer-contact">
-            <h3>Contact Us</h3>
-            <hr />
-           
-            <p>📍 Greeta TechPark -
-      GREETA TOWERS, Industrial Estate, Perungudi, Chennai, Tamil Nadu 600096</p>
-          </div>
-        </div>
-      
-        <div className="footer-bottom">
-          <p>© Manovate Technologies<br/>Innovation The Future</p>
-          <img src={logo} alt="Manovate Logo" className="bottom-logo" />
-        </div>
-      </footer>
+   <footer className="footer">
+     <div className="footer-container">
+       {/* Map Section */}
+       <div className="footer-column footer-map">
+         <iframe
+           title="Location Map"
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2449058361417!2d80.24510617377567!3d12.956174487357748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d598dfdff9b%3A0xce67fc14aa2cc711!2sManovate%20Technologies!5e0!3m2!1sen!2sin!4v1755758103475!5m2!1sen!2sin"
+           width="100%"
+           height="220"
+           style={{ border: 0, borderRadius: "10px" }}
+           allowFullScreen
+           loading="lazy"
+           referrerPolicy="no-referrer-when-downgrade"
+         ></iframe>
+       </div>
+   
+       {/* Useful Links */}
+       <div className="footer-column">
+         <h3>Useful Links</h3>
+         <ul>
+           <li><Link to="/">Home</Link></li>
+           <li><Link to="/about">About Us</Link></li>
+           <li><Link to="/services">Our Services</Link></li>
+           <li><Link to="/contact">Contact Us</Link></li>
+         </ul>
+       </div>
+   
+       {/* Contact */}
+       <div className="footer-column">
+         <h3>Contact Us</h3>
+         <p>
+           📍 Greeta TechPark - GREETA TOWERS,<br />
+           Industrial Estate, Perungudi,<br />
+           Chennai, Tamil Nadu 600096
+         </p>
+       </div>
+     </div>
+   
+     {/* Bottom Section */}
+     <div className="footer-bottom">
+       <p>© Manovate Technologies | Innovating The Future</p>
+       <img src={logo} alt="Manovate Logo" className="bottom-logo" />
+     </div>
+   </footer>
+   
     </div>
   );
 }

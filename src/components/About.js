@@ -1,6 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
 import logo from "./movate1.png";
+import aboutwho from "./aboutwhobgremoved.png";
+import pc from "./pc.png";
+import laptop from "./laptop.png";
+import cellphone from "./cellphone.png";
+import smartphone from "./smartphone.png";
+import tab from "./tablet.png";
+import smartwatch from "./smartwatch.png";
+import hybrid from "./hybridcar.png";
+import www from "./www.jpg";
+import vr from "./vr.png";
+import clouda from "./clouda.png";
+import space from "./space.png";
+import roboat from "./robota.png";
+import aia from "./aia.png";
 import "./Home.css";
 import "./about.css";
 
@@ -8,68 +23,159 @@ import "./about.css";
 function About() {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    
+const values = [
+  {
+    icon: "💡",
+    title: "Innovation",
+    desc: "Constantly seeking new and better ways to solve IT challenges."
+  },
+  {
+    icon: "🤝",
+    title: "Integrity",
+    desc: "Operating with honesty, transparency, and ethical behavior."
+  },
+  {
+    icon: "🎯",
+    title: "Customer-Centricity",
+    desc: "Putting clients’ needs at the forefront of our operations."
+  },
+  {
+    icon: "👥",
+    title: "Collaboration",
+    desc: "Working closely with clients to achieve mutual success."
+  },
+  {
+    icon: "✅",
+    title: "Quality",
+    desc: "Delivering top-notch IT solutions, prices, and services."
+  },
+  {
+    icon: "⚡",
+    title: "Flexibility",
+    desc: "Delivering the result with flexible times and solutions."
+  }
+];
+const awards = [
+  { icon: "🏆", title: "Tech Innovator of the Year Award" },
+  { icon: "🔒", title: "Cybersecurity Excellence Award" },
+  { icon: "💻", title: "IT Services Provider of the Year" },
+  { icon: "☁️", title: "Cloud Integration Pioneer Award" },
+  { icon: "📊", title: "Data Analytics Excellence Award" },
+  { icon: "🤝", title: "Client Satisfaction Champion" }
+];
   return (
-    <div className="homepage">
+<div className="homepage">
       {/* Navbar */}
-<header className="navbar">
-  <div className="logo-section">
-    <img src={logo} alt="Logo" className="logo" />
-    {/* <span className="brand">LifelineConnect</span> */}
+      <header className="navbar">
+        <div className="logo">
+          <img src={logo} alt="ProTech Logo" />
+          
+        </div>
+
+        {/* Navigation */}
+        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/services">Services</Link>
+         {/* <Link to="/careers">Careers</Link>
+          <Link to="/contact" className="contact-icon">📞</Link> */}
+        </nav>
+
+        {/* Hamburger Icon */}
+        <button
+          className="menu-toggle"
+          aria-label="Toggle navigation"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+        </button>
+      </header>
+
+{/* <div className="about"> */}
+<section class="about-hero">
+  <div class="about-content">
+    <h1>About<br/> Manovate Technologies</h1>
+    
   </div>
-
-  <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
-  <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-    <Link to="/">Home</Link>
-    <Link to="/about">About us</Link>
-    <Link to="/services">Services</Link>
-    {/* <Link to="/projects">Our projects</Link> */}
-    <Link to="/careers" >Careers</Link>
-    {/* <Link to="/blog"></Link>
-    <Link to="/how-it-works">How it Works</Link> */}
-    <Link to="/contact" className="contact-btn">Contact us</Link>
-  </nav>
-</header>
-
-<div className="about">
-<section className="hero-section">
-      <div className="hero-content">
-        <h1 className="hero-title">Where Innovation<br />Meets Execution</h1>
-        <p className="hero-description">
-         Manovate is redefining digital transformation, empowering organizations to innovate and thrive with 
-         IT services and consulting. We simplify complexity, turning powerful capabilities into
-          AI-driven solutions that streamline operations, elevate customer and employee experiences, and drive measurable results.
-        </p>
-      </div>
-    </section>
-
-    <section className="hero-image-section">
-      <div className="overlay">
-        <div className="hero-text">
-          <h1>Fueled by Curiosity and a<br />Commitment to Excellence</h1>
-          <p>
-            Manovate partners with you to create solutions that drive<br />
-            meaningful and measurable outcomes.
+</section>
+{/*who we are*/}
+<section className="who-we-are">
+      <div className="who-container">
+        
+        {/* Left Content */}
+        <div className="who-text">
+          <p className="who-subtitle">WHO WE ARE</p>
+          <h2 className="who-title">Your Partner in IT Excellence</h2>
+          <p className="who-desc">
+            Manovate is a dynamic IT company with over two decades of experience,
+            dedicated to delivering innovative IT solutions. We’ve helped
+            businesses of all sizes navigate the ever-evolving tech landscape.
           </p>
+          <p className="who-desc">
+            Our team of 300+ certified IT professionals is passionate about
+            exceeding your expectations—whether it’s managing IT systems,
+            fortifying cybersecurity, optimizing networks, or harnessing the
+            power of data analytics.
+          </p>
+        </div>
+
+        {/* Right Image */}
+        <div className="who-image">
+          <img
+            src={aboutwho}
+            alt="Who We Are"
+          />
         </div>
       </div>
     </section>
 
-     <section className="who-section">
-      <div className="who-container">
-        <p className="who-label">WHO WE ARE</p>
-        <h2 className="who-title">Your Partner for Smarter Digital Transformation</h2>
-        <p className="who-description">
-           Manovate is a next-generation IT consulting company specializing in AI, game development, and custom software solutions.
-We empower businesses to innovate, scale, and succeed in the digital era through intelligent, user-centric technology
-With a focus on innovation and excellence.
-        </p>
+{/*about core sction*/}
+  <section className="about-core-values">
+      <div className="about-core-values-container">
+        <p className="about-core-values-subtitle">CORE VALUES</p>
+        <h2 className="about-core-values-title">
+          We are guided by these principles in everything we do
+        </h2>
+
+        <div className="about-core-values-grid">
+          {values.map((item, index) => (
+            <div key={index} className="about-core-values-card">
+              <div className="about-core-values-icon">{item.icon}</div>
+              <h3 className="about-core-values-heading">{item.title}</h3>
+              <p className="about-core-values-desc">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
+
+    {/*awards section */}
+      <section className="about-awards">
+      <div className="about-awards-container">
+        
+        {/* Left Content */}
+        <div className="about-awards-text">
+          <p className="about-awards-subtitle">AWARDS & RECOGNITION</p>
+          <h2 className="about-awards-title">
+            Celebrating Manovate Excellence
+          </h2>
+        </div>
+
+        {/* Right Awards Grid */}
+        <div className="about-awards-grid">
+          {awards.map((award, index) => (
+            <div key={index} className="about-awards-card">
+              <div className="about-awards-icon">{award.icon}</div>
+              <p className="about-awards-name">{award.title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+   
+  
 
 
     <section className="mcards-sections">
@@ -98,78 +204,170 @@ With a focus on innovation and excellence.
       </div>
     </section>
 
-
-  <section className="who-section">
-      <div className="who-container">
-        <p className="who-label">WHAT WE DO</p>
-        <h2 className="who-title">Turning Complicated Challenges Into Seamless Solutions</h2>
-        <p className="who-description">
-          At Manovate, we specialize in transforming complex business challenges into seamless digital solutions. From automating workflows with AI to creating immersive gaming experiences, we provide future-ready technologies that empower your organization.
-Whether you're looking to enhance operational efficiency, innovate through custom applications, our multidisciplinary team delivers scalable, intelligent solutions that drive measurable impact.
-With a strong focus on innovation, agility, and user experience, we ensure that every project we undertake leads to smarter results and sustainable success.
+{/* advancing section*/}
+  <section className="advancing-humanity">
+      <div className="advancing-container">
+        <h2 className="advancing-title">Advancing Humanity</h2>
+        <p className="advancing-text">
+          The future is ours to create. Whether it’s a driverless car, VR
+          experience, or factory robotics, we help turn theory into possibility.
+          We help create technological devices and ideas that transform our
+          future and shape our current life.
         </p>
-      </div>
-    </section>
+        <p className="advancing-text">
+          We are proud to be part of the most significant technological
+          breakthroughs. Virtually no laptop, smartphone, wearable device,
+          voice-controlled gadget, VR device, or smart car would have made it
+          into your hands without us.
+        </p>
 
+        {/* Timeline Icons */}
+        <div className="timeline">
+          <div className="timeline-item">
+            <img src={pc} alt="PC" />
+            <p>Personal Computer</p>
+          </div>
+          <div className="timeline-item">
+            <img src={laptop} alt="Laptop" />
+            <p>Portable Computer</p>
+          </div>
+          <div className="timeline-item">
+            <img src={cellphone} alt="Phone" />
+            <p>Cellular Phone</p>
+          </div>
+          <div className="timeline-item">
+            <img src={smartphone} alt="Smartphone" />
+            <p>Smart Phone</p>
+          </div>
+          <div className="timeline-item">
+            <img src={tab} alt="Tablet" />
+            <p>Tablet Computer</p>
+          </div>
+          <div className="timeline-item">
+            <img src={smartwatch} alt="Smart Watch" />
+            <p>Smart Watch</p>
+          </div>
+          <div className="timeline-item">
+            <img src={hybrid} alt="Car" />
+            <p>Hybrid Car</p>
+          </div>
+          <div className="timeline-item">
+            <img src={www}alt="Internet" />
+            <p>Internet</p>
+          </div>
+          <div className="timeline-item">
+            <img src={vr} alt="VR" />
+            <p>VR</p>
+          </div>
+          <div className="timeline-item">
+            <img src={clouda} alt="Cloud" />
+            <p>Cloud</p>
+          </div>
+          <div className="timeline-item">
+            <img src={space} alt="Space" />
+            <p>Space Exploration</p>
+          </div>
+          <div className="timeline-item">
+            <img src={roboat}alt="Robotics" />
+            <p>Robotics</p>
+          </div>
+          <div className="timeline-item">
+            <img src={aia} alt="AI" />
+            <p>AI</p>
+          </div>
+        </div>
 
-     <section className="zero-image-section">
-      <div className="overlay">
-        <div className="hero-text">
-          <h1>Take the Next Step<br />With Manovate</h1>
-          <p>
-            Our team is ready to help you unlock your organization’s potential <br></br> through innovative technology and strategic partnerships.<br></br> Let’s build the future, together.
-          </p>
+        <h3 className="belief">
+          We believe in the power of technology to make this world a brighter
+          place. We are excited by all that humanity can achieve.
+        </h3>
+
+        {/* Bottom 3 Columns */}
+        <div className="three-columns">
+          <div className="column">
+            <h4>We Are</h4>
+            <p>
+              A global technology leader. We make an impact by creating solutions
+              that drive progress and transform industries. Collaboration is the
+              key to our success.
+            </p>
+          </div>
+          <div className="column">
+            <h4>We Provide</h4>
+            <p>
+              Leading-edge technology and devices using advanced inspection
+              tools, metrology systems, and computational analytics. Our
+              solutions accelerate tomorrow’s electronic devices.
+            </p>
+          </div>
+          <div className="column">
+            <h4>We Enable</h4>
+            <p>
+              The evolution and innovation in the data era across key industries
+              including automotive, mobile, and data center.
+            </p>
+          </div>
         </div>
       </div>
-
     </section>
 
-   <footer className="custom-footer">
-  <div className="footer-container">
-    {/* Left - Map Embed */}
-    <div className="footer-map">
-      <iframe
-        title="Location Map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2449058361417!2d80.24510617377567!3d12.956174487357748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d598dfdff9b%3A0xce67fc14aa2cc711!2sManovate%20Technologies!5e0!3m2!1sen!2sin!4v1755758103475!5m2!1sen!2sin"
-        width="100%"
-        height="200"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
+    {/*commement section*/}
 
-    {/* Middle - Links */}
-    <div className="footer-links">
-      <h3>Useful Links</h3>
-      <hr />
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About Us</Link></li>
-        <li><Link to="/services">Our Services</Link></li>
-        {/* <li><Link to="/project">Our Projects</Link></li> */}
-        <li><Link to="/contact">Contact Us</Link></li>
-      </ul>
-    </div>
-
-    {/* Right - Contact Info */}
-    <div className="footer-contact">
-      <h3>Contact Us</h3>
-      <hr />
-      
-      <p>📍 Greeta TechPark -
-GREETA TOWERS, Industrial Estate, Perungudi, Chennai, Tamil Nadu 600096</p>
-    </div>
+    <section className="commitment-section">
+  <div className="commitment-content">
+    <h2>Experience Manovate Commitment to Excellence</h2>
+    <Link to="/contact" className="commitment-btn">Contact Us</Link>
   </div>
+</section>
 
-  <div className="footer-bottom">
- <p>© Manovate Technologies<br/>Innovation The Future</p>
-    <img src={logo} alt="Manovate Logo" className="bottom-logo" />
-  </div>
-</footer>
+
+ <footer className="footer">
+   <div className="footer-container">
+     {/* Map Section */}
+     <div className="footer-column footer-map">
+       <iframe
+         title="Location Map"
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2449058361417!2d80.24510617377567!3d12.956174487357748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d598dfdff9b%3A0xce67fc14aa2cc711!2sManovate%20Technologies!5e0!3m2!1sen!2sin!4v1755758103475!5m2!1sen!2sin"
+         width="100%"
+         height="220"
+         style={{ border: 0, borderRadius: "10px" }}
+         allowFullScreen
+         loading="lazy"
+         referrerPolicy="no-referrer-when-downgrade"
+       ></iframe>
+     </div>
+ 
+     {/* Useful Links */}
+     <div className="footer-column">
+       <h3>Useful Links</h3>
+       <ul>
+         <li><Link to="/">Home</Link></li>
+         <li><Link to="/about">About Us</Link></li>
+         <li><Link to="/services">Our Services</Link></li>
+         <li><Link to="/contact">Contact Us</Link></li>
+       </ul>
+     </div>
+ 
+     {/* Contact */}
+     <div className="footer-column">
+       <h3>Contact Us</h3>
+       <p>
+         📍 Greeta TechPark - GREETA TOWERS,<br />
+         Industrial Estate, Perungudi,<br />
+         Chennai, Tamil Nadu 600096
+       </p>
+     </div>
+   </div>
+ 
+   {/* Bottom Section */}
+   <div className="footer-bottom">
+     <p>© Manovate Technologies | Innovating The Future</p>
+     <img src={logo} alt="Manovate Logo" className="bottom-logo" />
+   </div>
+ </footer>
+ 
 </div>
-</div>
+// </div>
 
 
   );

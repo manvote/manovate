@@ -1281,7 +1281,8 @@ background-image: url("home-hero-bvg1.png");
 
 /* FOOTER */
 .footer {
-    background: linear-gradient(135deg, #00aaff, #0077cc); /* dark background */
+    background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(12, 12, 93, 1) 50%, rgba(12, 12, 76, 1) 100%);
+  backdrop-filter: blur(15px);
   color:whitesmoke;
   padding: 2rem 1.5rem;
   font-family: "Segoe UI", sans-serif;

@@ -78,8 +78,8 @@ const awards = [
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/services">Services</Link>
-         {/* <Link to="/careers">Careers</Link>
-          <Link to="/contact" className="contact-icon">📞</Link> */}
+         <Link to="/careers">Careers</Link>
+          <Link to="/contact" className="contact-icon">📞</Link>
         </nav>
 
         {/* Hamburger Icon */}

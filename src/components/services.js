@@ -17,7 +17,12 @@ import p9 from "./sit.jpg";
 import p10 from "./sitm.jpg";
 import p11 from "./sai.jpg";
 import p12 from "./sblock.jpg";
-
+import p13 from "./sui.jpg";
+import p14 from "./scrm.jpg";
+import p15 from "./siot.jpg";
+import p16 from "./sitset.jpg";
+import p17 from "./sqa.jpg";
+import p18 from "./sec.jpg";
 
 
 function Services() {
@@ -37,8 +42,8 @@ function Services() {
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/services">Services</Link>
-         {/* <Link to="/careers">Careers</Link>
-          <Link to="/contact" className="contact-icon">📞</Link> */}
+         <Link to="/careers">Careers</Link>
+          <Link to="/contact" className="contact-icon">📞</Link>
         </nav>
 
         {/* Hamburger Icon */}
@@ -177,7 +182,7 @@ function Services() {
         <p>Custom blockchain applications for secure and transparent transactions.</p>
       </div>
     </div>
-       <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
+       <div className="serviceS1-card" style={{ backgroundImage: `url(${p13})` }}>
       {/* <img src={chart} alt="UI/UX Design" /> */}
       <div className="serviceS1-content">
         <h3>UI/UX Design</h3>
@@ -191,35 +196,35 @@ function Services() {
         <p>ERP system development and customization for finance, HR, and operations.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p14})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>CUSTOMER RELATIONSHIP MANAGEMENT (CRM)</h3>
         <p>Development and integration of CRM platforms to manage customer data and improve engagement.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p15})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>INTERNET OF THINGS(IoT)</h3>
         <p>IoT systems development for connected devices,remote monitoring, and automation.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p16})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>IT INFRASTRUCTURE SETUP</h3>
         <p>Network design, server configuration, and office IT setup services.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p17})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>QA & TESTING SERVICES</h3>
         <p>Manual and automated testing to ensure product reliability and performance.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
+     <div className="serviceS1-card" style={{ backgroundImage: `url(${p18})` }}>
       {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
       <div className="serviceS1-content">
         <h3>E-COMMERCE DEVELOPMENT</h3>

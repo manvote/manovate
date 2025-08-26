@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import "./Home.css";
 import "./careers.css";
-import vedio1 from "./vedio (2).mp4";
+
 import logo from "./movate1.png";
 
 function Careers() {
@@ -38,7 +38,7 @@ function Careers() {
          </header>
 
       {/* Video Background */}
-      <div className="background-video-container">
+      {/* <div className="background-video-container">
         <video autoPlay loop muted playsInline className="background-video">
           <source src={vedio1} type="video/mp4" />
           Your browser does not support the video tag.
@@ -50,7 +50,14 @@ function Careers() {
             semiconductor solutions
           </h3>
         </div>
-      </div>
+      </div> */}
+      <section class="careers-hero">
+  <div class="careers-content">
+    <h1>Careers at Manovate </h1>
+<h3>Bring your talent, curiosity, and ideas to a team that’s redefining innovation.</h3>
+    
+  </div>
+</section>
 
       {/* Job Application Form */}
       <form
@@ -120,7 +127,7 @@ function Careers() {
           <input type="text" name="position" required />
         </div>
 
-        {/* <div>
+        <div>
           <label>
             Upload Resume <span className="required">*</span>
           </label>
@@ -130,10 +137,22 @@ function Careers() {
             accept=".pdf,.doc,.docx"
             required
           />
-        </div> */}
+        </div>
 
         <button type="submit">Submit</button>
       </form>
+
+<section class="job-postings">
+  <span class="section-label">JOB POSTINGS</span>
+  <h2>Your Next Opportunity Starts Here</h2>
+  <p>
+    We’re always looking for talented individuals to join our team. Explore our current openings 
+    and take the next step in your career. If you don’t see a current opening that fits your profile, 
+    feel free to send your resume and cover letter to 
+    <a href="mailto:hr@manovate.co.in"> hr@manovate.co.in </a>. 
+    We’ll keep your information on file and reach out if a suitable role becomes available.
+  </p>
+</section>
 
 
       

@@ -79,6 +79,8 @@ const awards = [
           <Link to="/about">About</Link>
           <Link to="/services">Services</Link>
          <Link to="/careers">Careers</Link>
+         <Link to="/solution">Solution</Link>
+         <Link to="/expertise">Expertise</Link>
           <Link to="/contact" className="contact-icon">📞</Link>
         </nav>
 

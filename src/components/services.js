@@ -5,23 +5,23 @@ import logo from "./movate1.png";
 import "./Home.css";
 import "./services.css";
 import vedio1 from "./vedio (2).mp4";
-import p1 from "./scyber.jpg";
-import p2 from "./scloud.jpg";
-import p3 from "./sdata.jpg";
+import p1 from "./aidevcom.jpg";
+import p2 from "./aiage.jpg";
+import p3 from "./chatbot.jpg";
 import p4 from "./ssoft.jpg";
 import p5 from "./smobile.jpg";
-import p6 from "./sweb.jpg";
-import p7 from "./sdev.jpg";
-import p8 from "./serp.jpg";
-import p9 from "./sit.jpg";
+import p6 from "./aicons.jpg";
+import p7 from "./voiceass.jpg";
+import p8 from "./webdevvv.jpg";
+import p9 from "./airecmmmmm.jpg";
 import p10 from "./sitm.jpg";
 import p11 from "./sai.jpg";
-import p12 from "./sblock.jpg";
+import p12 from "./chatttt.jpg";
 import p13 from "./sui.jpg";
-import p14 from "./scrm.jpg";
-import p15 from "./siot.jpg";
+import p14 from "./clouda.png";
+import p15 from "./banking.jpg";
 import p16 from "./sitset.jpg";
-import p17 from "./sqa.jpg";
+import p17 from "./machine.jpg";
 import p18 from "./sec.jpg";
 
 function Services() {
@@ -33,7 +33,6 @@ function Services() {
       <header className="navbar">
         <div className="logo">
           <img src={logo} alt="ProTech Logo" />
-          
         </div>
 
         {/* Navigation */}
@@ -42,6 +41,8 @@ function Services() {
           <Link to="/about">About</Link>
           <Link to="/services">Services</Link>
           <Link to="/careers">Careers</Link>
+          <Link to="/solution">Solution</Link>
+          <Link to="/expertise">Expertise</Link>
           <Link to="/contact" className="contact-icon">📞</Link> 
         </nav>
 
@@ -58,7 +59,6 @@ function Services() {
    <section class="services-hero">
   <div class="services-content">
     <h1>Our Services</h1>
-    
   </div>
 </section>
 
@@ -75,13 +75,10 @@ function Services() {
         improve scalability, and increase efficiency. Our services ensure 
         long-term value and innovation for your business.
       </p>
-      {/* <button className="services-btn">Learn More</button> */}
     </div>
 
     {/* Right Image / Video */}
     <div className="services-media">
-      
-      {/* If video */}
       <div className="video-overlay">
         <video autoPlay loop muted playsInline >
           <source src={vedio1} type="video/mp4" />
@@ -98,156 +95,132 @@ function Services() {
 
   <div className="services1-grid">
     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
-      {/* <img src={code} alt="Cybersecurity Enhancement" /> */}
       <div className="serviceS1-content">
-        <h3>CYBERSECURITY ENHANCEMENT</h3>
-        <p>A leading global retailer relied on us to strengthen their cybersecurity posture. By upgrading legacy systems with modern security frameworks, we reduced risks, 
-                streamlined compliance, and safeguarded customer trust across multiple regions.</p>
+        <h3>AI DEVELOPMENT COMPANY</h3>
+        <p>We deliver advanced AI-powered software solutions that help businesses automate tasks, analyze data, and innovate faster. From predictive modeling to intelligent automation, we create scalable AI systems tailored to your goals.</p>
       </div>
     </div>
 
     <div className="serviceS1-card"style={{ backgroundImage: `url(${p2})` }}>
-      {/* <img src={cloud} alt="Cloud Migration" /> */}
       <div className="serviceS1-content">
-        <h3>CLOUD MIGRATION</h3>
-        <p>we executed a seamless cloud migration — modernizing legacy systems, improving scalability, and enabling real-time insights. The result:
-                 faster decision-making, reduced operational expenses, and the agility to scale across regions.</p>
+        <h3>AI AGENTS DEVELOPMENT</h3>
+        <p>Our AI agents are designed to act autonomously, making real-time decisions, automating workflows, and improving customer engagement. They adapt to your business processes and ensure faster, smarter execution.</p>
       </div>
     </div>
 
     <div className="serviceS1-card" style={{ backgroundImage: `url(${p3})` }}>
-      {/* <img src={chart} alt="Data Analytics Success" /> */}
       <div className="serviceS1-content">
-        <h3>DATA ANALYTICS</h3>
-        <p>An e-commerce retailer was overwhelmed with fragmented data, limiting their ability to act quickly. By implementing a modern analytics solution, we unified their data streams and turned information into actionable insights. 
-                The result: smarter strategies, faster decision-making, and measurable business impact.</p>
+        <h3>AI CHATBOT DEVELOPMENT SERVICES</h3>
+        <p>We design intelligent chatbots that provide seamless customer support, automate routine interactions, and enhance user engagement across platforms like websites, apps, and messaging services.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p4})` }}>
-      {/* <img src={chart} alt="Custom Software Development" /> */}
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p4})` }}>
       <div className="serviceS1-content">
-        <h3>CUSTOM SOFTWARE DEVELOPMENT</h3>
-        <p>Custom Solutions Designed to Address Unique Business Challenges and Optimize OperationsWe create tailored applications that meet your specific business needs, enhancing efficiency and driving growth. Our solutions are built to streamline workflows, solve complex problems, and deliver measurable results.</p>
+        <h3>AI ASSISTANT DEVELOPMENT SERVICES </h3>
+        <p>Build personalized AI assistants that handle tasks, scheduling, and business operations. Our assistants integrate seamlessly into your systems, boosting efficiency and productivity.</p>
       </div>
     </div>
-      <div className="serviceS1-card" style={{ backgroundImage: `url(${p5})` }}>
-      {/* <img src={chart} alt="mobile app Development" /> */}
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p5})` }}>
       <div className="serviceS1-content">
-        <h3>MOBILE APP DEVELOPMENT</h3>
-        <p>Seamless Native and Cross-Platform Mobile Apps for iOS and Android We design and develop high-performance mobile applications that deliver a smooth, intuitive experience on both iOS and Android. Whether native or cross-platform, our apps are built to scale and engage users across all devices</p>
+        <h3>COMPUTER VISION AI SOLUTIONS</h3>
+        <p>From image recognition to video analysis, we create computer vision systems that enable object detection, facial recognition, quality inspection, and more — unlocking new levels of automation and accuracy.</p>
       </div>
     </div>
+
     <div className="serviceS1-card" style={{ backgroundImage: `url(${p6})` }}>
-      {/* <img src={chart} alt="web Development" /> */}
+      <div className="serviceS1-content">
+        <h3>AI CONSULTING SERVICES</h3>
+        <p>Our experts guide you through AI adoption with tailored strategies, proof of concepts, and implementation roadmaps. We ensure AI solutions align with your business goals and deliver measurable ROI.</p>
+      </div>
+    </div>
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p7})` }}>
+      <div className="serviceS1-content">
+        <h3>AI VOICE ASSISTANT DEVELOPMENT</h3>
+        <p>We create AI-powered voice assistants that deliver natural, human-like conversations. Integrated with smart devices and apps, they provide hands-free interactions for better customer experiences.</p>
+      </div>
+    </div>
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p9})` }}>
+      <div className="serviceS1-content">
+        <h3>AI RECOMMENDATION SYSTEM </h3>
+        <p>Personalized recommendation engines that increase sales, boost engagement, and enhance customer loyalty. Our AI systems analyze behavior and preferences to deliver the right suggestion at the right time.</p>
+      </div>
+    </div>
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p10})` }}>
+      <div className="serviceS1-content">
+        <h3>AI AUTOMATION SERVICE</h3>
+        <p>We help you automate repetitive business processes with AI-powered workflows. This reduces human error, saves time, and improves operational efficiency.</p>
+      </div>
+    </div>
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p11})` }}>
+      <div className="serviceS1-content">
+        <h3>AIOT SOLUTIONS</h3>
+        <p>Combining AI with IoT, we create smart ecosystems for predictive maintenance, connected devices, and real-time monitoring — driving intelligent automation and data-driven insights.</p>
+      </div>
+    </div>
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p12})` }}>
+      <div className="serviceS1-content">
+        <h3>CHATGPT</h3>
+        <p>We integrate ChatGPT-powered solutions for businesses — enabling smarter customer interactions, content creation, and workflow automation with state-of-the-art natural language processing.</p>
+      </div>
+    </div>
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p13})` }}>
+      <div className="serviceS1-content">
+        <h3>MOBILE DEVELOPMENT</h3>
+        <p>We build user-friendly, secure, and high-performing mobile apps for Android and iOS. Designed with engaging UI/UX, our apps ensure seamless experiences across devices.</p>
+      </div>
+    </div>
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p8})` }}>
       <div className="serviceS1-content">
         <h3>WEB DEVELOPMENT</h3>
-        <p>Responsive, High-Performance, and Secure Websites Built with Cutting-Edge Frameworks We create visually stunning, fast-loading websites that adapt seamlessly across devices. Leveraging the latest frameworks, we ensure robust security and optimized performance, providing an exceptional user experience that keeps your business ahead of the curve</p>
+        <p>Our web development services deliver scalable, secure, and responsive websites using modern frameworks. We ensure your digital presence is powerful and user-centric.</p>
       </div>
     </div>
- <div className="serviceS1-card" style={{ backgroundImage: `url(${p7})` }}>
-      {/* <img src={chart} alt="devops" /> */}
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p14})` }}>
       <div className="serviceS1-content">
-        <h3>DevOps </h3>
-        <p>Efficient CI/CD Pipelines, Infrastructure Automation, and Continuous Deployment Solutions We streamline your development process with fully automated CI/CD pipelines, ensuring faster, more reliable code delivery. Our infrastructure automation solutions minimize manual effort, while continuous deployment ensures your applications are always up-to-date and running smoothly.</p>
+        <h3>CLOUD SOLUTIONS DEVELOPMENT</h3>
+        <p>We provide end-to-end cloud solutions including migration, deployment, and optimization. Our services enable scalability, cost efficiency, and business continuity.</p>
       </div>
     </div>
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p9})` }}>
-      {/* <img src={chart} alt="it consulting" /> */}
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p15})` }}>
       <div className="serviceS1-content">
-        <h3>IT CONSULTING </h3>
-        <p>Strategic IT Consulting to Align Technology with Your Business Objectives
-Our expert consultants work closely with you to craft IT strategies that drive business growth. We help bridge the gap between technology and your core business goals, ensuring your IT investments deliver maximum value and support long-term success</p>
+        <h3>BANKING SOFTWARE DEVELOPMENT</h3>
+        <p>We build secure and scalable banking and fintech solutions, including payment systems, digital wallets, and fraud detection tools to modernize financial services.</p>
       </div>
     </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p10})` }}>
-      {/* <img src={chart} alt="managed it services" /> */}
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p16})` }}>
       <div className="serviceS1-content">
-        <h3>MANAGED IT SERVICES</h3>
-        <p>Round-the-Clock Monitoring, Support, and Maintenance for Your IT Infrastructure
-We provide 24/7 monitoring and proactive support to ensure your IT infrastructure runs smoothly and efficiently. Our dedicated team swiftly addresses any issues, minimizing downtime and maintaining peak performance for your critical systems</p>
+        <h3>CUSTOM SOFTWARE DEVELOPMENT</h3>
+        <p>Tailored software solutions designed specifically for your business challenges. We develop applications that streamline workflows, boost efficiency, and drive innovation.</p>
       </div>
     </div>
-      <div className="serviceS1-card" style={{ backgroundImage: `url(${p11})` }}>
-      {/* <img src={chart} alt="Artificial Intelligence & Machine Learning" /> */}
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p17})` }}>
       <div className="serviceS1-content">
-        <h3>ARTIFICIAL INTELLIGENCE & MACHINE LEARNING</h3>
-        <p>AI-Powered Solutions: Chatbots, Recommendation Engines, and Predictive Analytics
-Harness the power of artificial intelligence to transform your business. From intelligent chatbots that enhance customer engagement to recommendation engines that drive conversions, we create custom AI solutions that deliver actionable insights and predictive capabilities to fuel data-driven decision-making.</p>
+        <h3>MACHINE LEARNING DEVELOPMENT SERVICES</h3>
+        <p>We design and train machine learning models that enable predictive analytics, intelligent decision-making, and automation. Our ML solutions evolve with your data for continuous improvement.</p>
       </div>
     </div>
-        <div className="serviceS1-card" style={{ backgroundImage: `url(${p12})` }}>
-      {/* <img src={chart} alt="Blockchain technology" /> */}
-      <div className="serviceS1-content">
-        <h3>BLOCKCHAIN DEVELOPMENT</h3>
-        <p>Tailored Blockchain Solutions for Secure, Transparent Transactions
-We develop custom blockchain applications that ensure secure, transparent, and tamper-proof transactions. Our solutions are designed to streamline processes, enhance trust, and deliver verifiable data in real-time, empowering your business with the full potential of blockchain technology</p>
-      </div>
-    </div>
-       <div className="serviceS1-card" style={{ backgroundImage: `url(${p13})` }}>
-      {/* <img src={chart} alt="UI/UX Design" /> */}
-      <div className="serviceS1-content">
-        <h3>UI/UX Design</h3>
-        <p>Intuitive, User-Centric Interfaces for a Seamless Experience
-We design engaging, easy-to-navigate interfaces that prioritize the user experience. Our goal is to create visually appealing and functional designs that make interactions effortless, ensuring your users have a smooth and enjoyable journey every time</p>
-      </div>
-    </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p8})` }}>
-      {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
-      <div className="serviceS1-content">
-        <h3>ENTERPRISE RESOURCE PLANNING (ERP)</h3>
-        <p>Custom ERP Solutions for Finance, HR, and Operations
-We specialize in developing and customizing ERP systems that streamline and optimize your core business functions. From financial management to HR and operations, our tailored solutions improve efficiency, enhance decision-making, and ensure seamless integration across all departments.</p>
-      </div>
-    </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p14})` }}>
-      {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
-      <div className="serviceS1-content">
-        <h3>CUSTOMER RELATIONSHIP MANAGEMENT (CRM)</h3>
-        <p>Custom CRM Development and Integration for Enhanced Customer Engagement
-We develop and integrate CRM platforms tailored to your business needs, enabling you to efficiently manage customer data and build stronger relationships. Our solutions help improve engagement, drive sales, and provide valuable insights to foster long-term customer loyalty.</p>
-      </div>
-    </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p15})` }}>
-      {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
-      <div className="serviceS1-content">
-        <h3>INTERNET OF THINGS(IoT)</h3>
-        <p>IoT Solutions for Connected Devices, Remote Monitoring, and Automation We specialize in developing IoT systems that connect devices, enable real-time remote monitoring, and automate processes. Our solutions enhance operational efficiency, provide actionable insights, and empower businesses to make smarter, data-driven decisions.</p>
-      </div>
-    </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p16})` }}>
-      {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
-      <div className="serviceS1-content">
-        <h3>IT INFRASTRUCTURE SETUP</h3>
-        <p>Expert Network Design, Server Configuration, and Office IT Setup
-We provide comprehensive IT infrastructure services, including custom network design, efficient server configuration, and complete office IT setups. Our solutions ensure a secure, scalable, and optimized environment that supports your business operations seamlessly</p>
-      </div>
-    </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p17})` }}>
-      {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
-      <div className="serviceS1-content">
-        <h3>QA & TESTING SERVICES</h3>
-        <p>Thorough Manual and Automated Testing for Unmatched Product Reliability and Performance We deliver comprehensive manual and automated testing to ensure your products perform flawlessly. Our rigorous testing process identifies potential issues, guaranteeing that your applications are both reliable and high-performing across all environments</p>
-      </div>
-    </div>
-     <div className="serviceS1-card" style={{ backgroundImage: `url(${p18})` }}>
-      {/* <img src={chart} alt="Enterprise Resource Planning" /> */}
+
+    <div className="serviceS1-card" style={{ backgroundImage: `url(${p18})` }}>
       <div className="serviceS1-content">
         <h3>E-COMMERCE DEVELOPMENT</h3>
-        <p>Scalable E-Commerce Platforms with Secure Payment Gateways and Streamlined Product Management
-We build robust, scalable e-commerce platforms that deliver seamless shopping experiences. Our solutions include secure payment gateways and efficient product management systems, designed to grow with your business and drive conversions</p>
+        <p>Our e-commerce solutions deliver robust online stores with secure payments, product management, and scalable features. We ensure a smooth shopping experience that drives conversions.</p>
       </div>
     </div>
-    {/* Repeat for other services/projects */}
   </div>
 </section>
-
-
-  
-     
-                   
- 
-
-
 
       <footer className="footer">
         <div className="footer-container">
@@ -292,10 +265,7 @@ We build robust, scalable e-commerce platforms that deliver seamless shopping ex
           <p>© Manovate Technologies | Innovating The Future</p>
           <img src={logo} alt="Manovate Logo" className="bottom-logo" />
         </div>
-      </footer>
-      
-      
-      
+      </footer>      
 </div>
   );
 }

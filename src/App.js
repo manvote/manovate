@@ -8,6 +8,8 @@ import Projects from "./components/projects";
 import Contact  from "./components/contact";
 import Careers  from "./components/careers";
 import Loader from "./components/Loader";
+import Solution from "./components/solution";
+import Expertise from "./components/expertise";
 // import DonorList from "./components/DonorList";
 // import DoctorList from "./components/DoctorList";
 // import Fitnesstracker from "./components/Fitnesstracker";
@@ -41,6 +43,8 @@ function App() {
         <Route path="/projects" element={<Projects/>}/>
         <Route path="/contact" element={<Contact/>}/>
          <Route path="/careers" element={<Careers/>}/>
+         <Route path="/solution" element={<Solution/>}/>
+        <Route path="/expertise" element={<Expertise/>}/> 
         {/* <Route path="/DonorList" element={<DonorList />} />
         <Route path="/DoctorList" element={<DoctorList />} />
         <Route path="/fitness" element={<Fitnesstracker/>}/>

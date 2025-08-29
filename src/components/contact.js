@@ -89,6 +89,8 @@ function Contact() {
              <Link to="/about">About</Link>
              <Link to="/services">Services</Link>
             <Link to="/careers">Careers</Link>
+            <Link to="/solution">Solution</Link>
+            <Link to="/expertise">Expertise</Link>
              <Link to="/contact" className="contact-icon">📞</Link>
            </nav>
    
@@ -233,4 +235,4 @@ Contact us today to see how our tailored ServiceNow solutions can drive real res
   );
 }
 
-export default Contact;
+export default Contact; 

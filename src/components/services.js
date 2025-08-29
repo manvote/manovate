@@ -69,12 +69,11 @@ function Services() {
     {/* Left Content */}
     <div className="services-text">
       <span className="services-label">OUR SERVICE</span>
-      <h2>Software Cloud Development</h2>
-      <h4>Custom Software Solutions</h4>
+      <h2>AI Software Cloud Development</h2>
+      {/* <h4>Custom Software Solutions</h4> */}
       <p>
-        We provide tailored cloud solutions that optimize business processes, 
-        improve scalability, and increase efficiency. Our services ensure 
-        long-term value and innovation for your business.
+        We provide tailored AI-driven cloud solutions that optimize business processes, enhance scalability, and boost efficiency. 
+        Our services deliver long-term value and continuous innovation for your business.
       </p>
     </div>
 
@@ -91,8 +90,8 @@ function Services() {
 </section>
 
 <section className="services1-showcase">
-  <h4 className="section1-label">OUR PROJECTS</h4>
-  <h2 className="section1-title">Our Success Stories</h2>
+  <h4 className="section1-label">OUR SERVICES</h4>
+  {/* <h2 className="section1-title">Our Success Stories</h2> */}
 
   <div className="services1-grid">
     <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
+import { FaMapMarkerAlt,FaLinkedin } from "react-icons/fa";
 import logo from "./movate1.png";
 import aboutwho from "./aboutwhobgremoved.png";
 import pc from "./pc.png";
@@ -323,51 +324,49 @@ const awards = [
 </section>
 
 
- <footer className="footer">
-   <div className="footer-container">
-     {/* Map Section */}
-     <div className="footer-column footer-map">
-       <iframe
-         title="Location Map"
-         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2449058361417!2d80.24510617377567!3d12.956174487357748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d598dfdff9b%3A0xce67fc14aa2cc711!2sManovate%20Technologies!5e0!3m2!1sen!2sin!4v1755758103475!5m2!1sen!2sin"
-         width="100%"
-         height="220"
-         style={{ border: 0, borderRadius: "10px" }}
-         allowFullScreen
-         loading="lazy"
-         referrerPolicy="no-referrer-when-downgrade"
-       ></iframe>
-     </div>
- 
-     {/* Useful Links */}
-     <div className="footer-column">
-       <h3>Useful Links</h3>
-       <ul>
-         <li><Link to="/">Home</Link></li>
-         <li><Link to="/about">About Us</Link></li>
-         <li><Link to="/services">Our Services</Link></li>
-         <li><Link to="/contact">Contact Us</Link></li>
-       </ul>
-     </div>
- 
-     {/* Contact */}
-     <div className="footer-column">
-       <h3>Contact Us</h3>
-       <p>
-         📍 Greeta TechPark - GREETA TOWERS,<br />
-         Industrial Estate, Perungudi,<br />
-         Chennai, Tamil Nadu 600096
-       </p>
-     </div>
-   </div>
- 
-   {/* Bottom Section */}
-   <div className="footer-bottom">
-     <p>© Manovate Technologies | Innovating The Future</p>
-     <img src={logo} alt="Manovate Logo" className="bottom-logo" />
-   </div>
- </footer>
- 
+{/* Footer */}
+      
+<footer className="footer">
+  {/* <div className="footer-logo">
+          <img src={logo} alt="footer-logo" />
+        </div> */}
+      <div className="footer-top">
+        {/* Logo */}
+        {/* <div className="footer-logo">
+          <img src={logo} alt="footer-logo" />
+        </div> */}
+
+        {/* Navigation Links */}
+        <ul className="footer-nav">
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/services">SERVICES</Link></li>
+          <li><Link to="/careers">CAREERS</Link></li>
+          <li><Link to="/contact">CONTACT</Link></li>
+          <li><Link to="/about">ABOUT</Link></li>
+        </ul>
+      </div>
+ <hr className="footer-divider" />
+
+      <div className="footer-bottom">
+        {/* Copyright */}
+        <p>© 2025 Manovate Technologies | Innovating The Future</p>
+
+        {/* Social Icons */}
+        <div className="footer-socials">
+          <a href="https://www.linkedin.com/company/108395213/admin/dashboard/" target="_blank" rel="noreferrer">
+            <FaLinkedin />
+          </a>
+          
+          <a href="https://share.google/1muxM9QFVEQhZBK1k" target="_blank" rel="noreferrer">
+ <FaMapMarkerAlt />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+
+
+
 </div>
 // </div>
 

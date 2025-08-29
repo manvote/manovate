@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX, FiArrowRight, FiArrowLeft } from "react-icons/fi";
+import { FaMapMarkerAlt,FaLinkedin } from "react-icons/fa";
 import "./Home.css";
 import "./expertise.css";
 import logo from "./movate1.png";
@@ -193,6 +194,50 @@ function Expertise() {
           ))}
         </div>
       </section>
+
+      {/* Footer */}
+      
+<footer className="footer">
+  {/* <div className="footer-logo">
+          <img src={logo} alt="footer-logo" />
+        </div> */}
+      <div className="footer-top">
+        {/* Logo */}
+        {/* <div className="footer-logo">
+          <img src={logo} alt="footer-logo" />
+        </div> */}
+
+        {/* Navigation Links */}
+        <ul className="footer-nav">
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/services">SERVICES</Link></li>
+          <li><Link to="/careers">CAREERS</Link></li>
+          <li><Link to="/contact">CONTACT</Link></li>
+          <li><Link to="/about">ABOUT</Link></li>
+        </ul>
+      </div>
+ <hr className="footer-divider" />
+
+      <div className="footer-bottom">
+        {/* Copyright */}
+        <p>© 2025 Manovate Technologies | Innovating The Future</p>
+
+        {/* Social Icons */}
+        <div className="footer-socials">
+          <a href="https://www.linkedin.com/company/108395213/admin/dashboard/" target="_blank" rel="noreferrer">
+            <FaLinkedin />
+          </a>
+          
+          <a href="https://share.google/1muxM9QFVEQhZBK1k" target="_blank" rel="noreferrer">
+ <FaMapMarkerAlt />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+
+
+
     </div>
   );
 }

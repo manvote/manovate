@@ -1,7 +1,7 @@
 import React, { useState } from "react"; // Removed unused useEffect import
 import { Link } from "react-router-dom";
 import { FiMenu, FiX, FiXCircle, FiArrowRight } from "react-icons/fi";
-import { FaMapMarkerAlt,FaLinkedin } from "react-icons/fa";
+import { FaMapMarkerAlt,FaLinkedin,FaInstagram } from "react-icons/fa";
 import "./Home.css";
 import "./solution.css";
 import logo from "./movate1.png";
@@ -226,6 +226,13 @@ function Solution() {
           <a href="https://share.google/1muxM9QFVEQhZBK1k" target="_blank" rel="noreferrer">
  <FaMapMarkerAlt />
           </a>
+                   <a
+            href="https://www.instagram.com/manovate_tech/"
+            target="_blank"
+            rel="noreferrer"
+            >
+            <FaInstagram />
+           </a>
         </div>
       </div>
     </footer>

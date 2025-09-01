@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX, FiArrowRight, FiArrowLeft } from "react-icons/fi";
-import { FaMapMarkerAlt,FaLinkedin } from "react-icons/fa";
+import { FaMapMarkerAlt,FaLinkedin,FaInstagram } from "react-icons/fa";
 import "./Home.css";
 import "./expertise.css";
 import logo from "./movate1.png";
@@ -231,6 +231,13 @@ function Expertise() {
           <a href="https://share.google/1muxM9QFVEQhZBK1k" target="_blank" rel="noreferrer">
  <FaMapMarkerAlt />
           </a>
+                   <a
+            href="https://www.instagram.com/manovate_tech/"
+            target="_blank"
+            rel="noreferrer"
+            >
+            <FaInstagram />
+           </a>
         </div>
       </div>
     </footer>

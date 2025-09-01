@@ -1,26 +1,23 @@
-require("@babel/register")({
-  presets: ["@babel/preset-env", "@babel/preset-react"],
-});
+const { SitemapStream, streamToPromise } = require('sitemap');
+const { createWriteStream } = require('fs');
 
-const Sitemap = require("react-router-sitemap").default;
-
-// manually list your routes since react-router v6 doesn't expose them
-const router = [
-  "/",
-  "/about",
-  "/services",
-  "/projects",
-  "/contact",
-  "/careers",
-  "/solution",
-  "/expertise",
-  // Add any extra routes you want to include
+const links = [
+  { url: '/', changefreq: 'daily', priority: 1.0 },
+  { url: '/about', changefreq: 'weekly', priority: 0.8 },
+  { url: '/services', changefreq: 'weekly', priority: 0.8 },
+  { url: '/projects', changefreq: 'weekly', priority: 0.8 },
+  { url: '/contact', changefreq: 'weekly', priority: 0.8 },
+  { url: '/careers', changefreq: 'monthly', priority: 0.6 },
+  { url: '/solution', changefreq: 'weekly', priority: 0.7 },
+  { url: '/expertise', changefreq: 'weekly', priority: 0.7 },
 ];
 
-function generateSitemap() {
-  return new Sitemap(router)
-    .build("https://manovate.co.in/") // ✅ your domain
-    .save("./public/sitemap.xml");   // output location
-}
+const sitemap = new SitemapStream({ hostname: 'https://sdplacement.in' });
 
-generateSitemap();
+streamToPromise(sitemap)
+  .then(() => console.log('✅ sitemap.xml created!'))
+  .catch(console.error);
+
+sitemap.pipe(createWriteStream('./public/sitemap.xml'));
+links.forEach(link => sitemap.write(link));
+sitemap.end();

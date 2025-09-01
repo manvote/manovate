@@ -200,11 +200,11 @@ Contact us today to see how our tailored ServiceNow solutions can drive real res
 
         {/* Navigation Links */}
         <ul className="footer-nav">
-          <li><Link to="/">HOME</Link></li>
-          <li><Link to="/services">SERVICES</Link></li>
-          <li><Link to="/careers">CAREERS</Link></li>
-          <li><Link to="/contact">CONTACT</Link></li>
-          <li><Link to="/about">ABOUT</Link></li>
+          <li><a herf to="/">HOME</a></li>
+          <li><a href="/services">SERVICES</a></li>
+          <li><a href="/careers">CAREERS</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+          <li><a href="/about">ABOUT</a></li>
         </ul>
       </div>
  <hr className="footer-divider" />

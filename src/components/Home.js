@@ -74,13 +74,7 @@ function Home() {
           </div>
         </div>
 
-        {/* <div className="hero-side-box">
-          <h2>300+</h2>
-          <p>
-            Certified IT Professionals <br />
-            A dedicated team of experts driving your success.
-          </p>
-        </div> */}
+       
       </section>
 
       {/* Services Section */}

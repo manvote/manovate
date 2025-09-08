@@ -161,87 +161,6 @@ body {
 
 
 
-/* .home {
-  font-family: 'Segoe UI', sans-serif;
-  color: #111;
-} */
-
-/* HERO */
-/* .background-video-container {
-  position: relative;
-  width: 100%;
-  height: 350px; 
-  overflow: hidden;
-} */
-
-/* .background-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 300px;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
-.video-overlay {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  top: 20%;
-}
-
-.overlay-title {
-  font-size: 3rem;
-  color: #fff;
-} */
-
-
-/* @media (max-width: 1024px) {
-  .background-video-container {
-    height: 300px;
-  }
-
-  .overlay-title {
-    font-size: 2.5rem;
-  }
-} */
-
-
-
-
-    
-
-
-
-
-
-
-/* .hero {
-   position: relative;
-  width: 100%;
-  height: 100vh; 
-  overflow: hidden;
-  
-} */
-/* .background-video{
-  width: 750px;
-  height: 400px;
-} */
-
-/* .hero h1 {
-  font-size: 64px;
-  margin: 10px 0;
-  position: absolute;
-}
-
-.hero p {
-  font-size: 20px;
-} */
 
 /* Reset */
 /* Reset */
@@ -385,32 +304,26 @@ background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(12, 12, 93, 1)
 
 /* Hero Section */
 .hero {
-  flex: 1;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;     /* Center content vertically */
+  flex-direction: column;  /* Stack elements vertically if needed */
   padding: 80px 40px;
   margin-top: 85px;
-  flex-wrap: wrap;
-  
   gap: 40px;
-background-image: url("home-hero-bvg1.png");
+  background-image: url("home-hero-bvg1.png");
   background-size: cover;
   overflow: hidden;
   color: #fff;
   min-height: 85vh;
+  text-align: center; /* Ensure text aligns in center */
 }
 
 .hero-text {
   flex: 1;
-  /* min-width: 300px; */
-  /* max-width: 600px; */
-  /* text-align: center;
-  justify-content: center;
-  align-items: center; */
-   
-  margin-left: 70px;
+  margin: 0; /* Remove left margin */
 }
+
 @keyframes zoomInOut {
   0%   { transform: scale(1); }
   50%  { transform: scale(1.05); } /* Slight zoom in */
@@ -479,31 +392,7 @@ background-image: url("home-hero-bvg1.png");
 .btn-secondary:hover {
   background: #1dd1a1;
 }
-/* Hero Side Box */
-/* .hero-side-box {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 280px;
-  flex-shrink: 0;
-}
 
-.hero-side-box h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #00ffcc;
-}
-
-.hero-side-box p {
-  font-size: 1rem;
-  margin-top: 10px;
-  line-height: 1.5;
-}
-
-.hero-side-box span {
-  font-size: 0.9rem;
-  color: #ddd;
-} */
 
 /* Footer */
 .footer-logos {
@@ -720,77 +609,7 @@ background-image: url("home-hero-bvg1.png");
 
 
 
-/* Small screens: Mobiles (up to 550px) */
-/* @media (max-width: 550px) {
-  .intellect-text h2 {
-    font-size: 1.6rem;
-  }
 
-  .intellect-text p {
-    font-size: 0.95rem;
-  }
-
-  .promise-card {
-    padding: 20px 12px;
-  }
-
-  .promise-card h3 {
-    font-size: 1rem;
-  }
-} */
-
-/* Extra small devices (up to 400px) */
-/* @media (max-width: 400px) {
-  .intellect-text h2 {
-    font-size: 1.4rem;
-  }
-
-  .intellect-text p {
-    font-size: 0.9rem;
-  }
-
-  .promise-card h3 {
-    font-size: 0.95rem;
-  }
-  .promise-cards{
-    padding-left: 10px;
-  }
-} */
-
-/* @media (min-width: 769px) and (max-width: 1045px) {
-  .intellect-promise {
-    flex-direction: column;
-    padding: 40px 6%;
-  }
-
-  .intellect-text {
-    max-width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .intellect-text h2 {
-    font-size: 2rem;
-  }
-
-  .intellect-text p {
-    font-size: 1rem;
-  }
-
-  .promise-cards {
-    max-width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-  }
-
-  .promise-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .promise-card {
-    padding: 25px 15px;
-  }
-} */
 
 /*core services*/
 @keyframes zoomInOut {
@@ -908,46 +727,7 @@ background-image: url("home-hero-bvg1.png");
 
 
 
-/* Timeline Section */
-/* .timeline-section {
-  position: relative;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-  font-family: 'Poppins', sans-serif;
-}
 
-.timeline-title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 60px;
-}
-
-.timeline-title span {
-  color: #0ea5e9;
-}
-
-/* Timeline Container */
-
-
-/* Timeline Item */
-
-
-
-/* Timeline vertical line */
-
-
-
-/* .timeline-item.left {
-  left: 0;
-  text-align: right;
-}
-
-.timeline-item.right {
-  left: 50%;
-  text-align: left;
-}
 
 /* Connecting Circles */
 

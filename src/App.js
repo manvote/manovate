@@ -10,15 +10,8 @@ import Careers  from "./components/careers";
 import Loader from "./components/Loader";
 import Solution from "./components/solution";
 import Expertise from "./components/expertise";
-// import DonorList from "./components/DonorList";
-// import DoctorList from "./components/DoctorList";
-// import Fitnesstracker from "./components/Fitnesstracker";
-// import Mediciantrack from "./components/Mediciantrack";
-// import Registeration from "./components/Registeration";
-// import Login from "./components/login";
-// import Donorreg from "./components/Donorreg"
-// import './App.css';
-// import FindDonor from "./components/finddonor";
+import ScrollToTop from "./components/scrolltop";
+
 
 
 
@@ -36,6 +29,7 @@ function App() {
   }
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About/>}/>

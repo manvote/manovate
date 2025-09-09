@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX, FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { FaMapMarkerAlt,FaLinkedin,FaInstagram } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
+import { HeadProvider, Title, Meta } from 'react-head';
 import "./Home.css";
 import "./expertise.css";
 import logo from "./movate1.png";
@@ -104,17 +104,17 @@ function Expertise() {
 
   return (
     <>
-    <Helmet>
-        <title>Our Expertise | Digital Transformation & IT Mastery – Manovate</title>
-        <meta
+    <HeadProvider>
+        <Title>Our Expertise | Digital Transformation & IT Mastery – Manovate</Title>
+        <Meta
           name="description"
           content="Explore Manovate’s expertise in digital transformation, IT innovation, and strategic business solutions. Drive growth and operational excellence in 2025."
         />
-        <meta
+        <Meta
           name="keywords"
           content="Manovate expertise, IT consulting, digital innovation, software development experts, web app specialists, enterprise IT strategies, AI-powered IT solutions, business automation expertise, technology consulting, IT architecture, data-driven business growth, cloud strategy experts"
         />
-      </Helmet>
+      </HeadProvider>
     <div className="homepage">
       {/* Navbar */}
       <header className="navbar">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import { Helmet } from "react-helmet-async";
+import { HeadProvider, Title, Meta } from 'react-head';
 import logo from "./movate1.png";
 import { FaMapMarkerAlt,FaLinkedin ,FaInstagram} from "react-icons/fa";
 import "./Home.css";
@@ -78,17 +78,17 @@ function Contact() {
 
   return (
     <>
-     <Helmet>
-        <title>Contact Manovate | Get Expert IT & Digital Solutions Today</title>
-        <meta
+     <HeadProvider>
+        <Title>Contact Manovate | Get Expert IT & Digital Solutions Today</Title>
+        <Meta
           name="description"
           content="Contact Manovate for AI-powered IT solutions, web & app development, and digital marketing strategies designed to scale your business faster in 2025."
         />
-        <meta
+        <Meta
           name="keywords"
           content="contact Manovate, IT solutions inquiry, digital marketing consultation, web development support, software development consultation, app development request, Manovate support, technology solutions contact, request a free quote, business IT consulting contact"
         />
-      </Helmet>
+      </HeadProvider>
    <div className="homepage">
          {/* Navbar */}
          <header className="navbar">

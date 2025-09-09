@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaMapMarkerAlt,FaLinkedin,FaInstagram } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
+import { HeadProvider, Title, Meta } from 'react-head';
 import logo from "./movate1.png";
 import aboutwho from "./aboutwhobgremoved.png";
 import pc from "./pc.png";
@@ -68,17 +68,17 @@ const awards = [
 ];
   return (
     <>
-    <Helmet>
-        <title>About Manovate | Innovating IT & Digital Growth</title>
-        <meta
+    <HeadProvider>
+        <Title>About Manovate | Innovating IT & Digital Growth</Title>
+        <Meta
           name="description"
           content="Manovate helps businesses thrive with innovative IT solutions, AI-powered web development, and digital strategies that redefine online success in 2025."
         />
-        <meta
+        <Meta
           name="keywords"
           content="about Manovate, IT solutions provider, business innovation company, AI-driven IT solutions, top software company, digital transformation partner, enterprise IT consulting, SaaS development experts, Manovate team, technology-driven business growth"
         />
-      </Helmet>
+      </HeadProvider>
 <div className="homepage">
       {/* Navbar */}
       <header className="navbar">

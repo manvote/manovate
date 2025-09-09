@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaMapMarkerAlt,FaLinkedin,FaInstagram } from "react-icons/fa";
 import "./Home.css";
-import { Helmet } from "react-helmet-async";
+import { HeadProvider, Title, Meta } from 'react-head';
 
  // Unused? Consider removing if not used.
 // import phone from "./phone-solid-full.svg";
@@ -29,17 +29,17 @@ function Home() {
 
   return (
      <>
-      <Helmet>
-        <title>Manovate | AI-Powered IT Solutions, Web & Digital Growth Experts</title>
-        <meta
+      <HeadProvider>
+        <Title>Manovate | AI-Powered IT Solutions, Web & Digital Growth Experts</Title>
+        <Meta
           name="description"
           content="Manovate delivers next-gen IT solutions, AI-powered web development, and digital marketing strategies to drive traffic, leads, and business growth in 2025."
         />
-        <meta
+        <Meta
           name="keywords"
           content="Manovate, IT solutions 2025, AI-powered web development, digital marketing experts, business innovation services, enterprise IT consulting, software solutions, app development, cloud services, digital growth strategies, best IT company India, technology consulting"
         />
-      </Helmet>
+      </HeadProvider>
       {/* <h1>Welcome to Manovate</h1> */}
     
     <div className="homepage">

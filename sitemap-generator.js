@@ -12,7 +12,7 @@ const links = [
   { url: '/expertise', changefreq: 'weekly', priority: 0.7 },
 ];
 
-const sitemap = new SitemapStream({ hostname: 'https://sdplacement.in' });
+const sitemap = new SitemapStream({ hostname: 'https://manovate.co.in' });
 
 streamToPromise(sitemap)
   .then(() => console.log('✅ sitemap.xml created!'))

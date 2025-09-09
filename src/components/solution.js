@@ -2,6 +2,7 @@ import React, { useState } from "react"; // Removed unused useEffect import
 import { Link } from "react-router-dom";
 import { FiMenu, FiX, FiXCircle, FiArrowRight } from "react-icons/fi";
 import { FaMapMarkerAlt,FaLinkedin,FaInstagram } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 import "./Home.css";
 import "./solution.css";
 import logo from "./movate1.png";
@@ -93,6 +94,18 @@ function Solution() {
   };
 
   return (
+    <>
+     <Helmet>
+        <title>Digital Solutions & Business Innovation | Manovate 2025</title>
+        <meta
+          name="description"
+          content="Discover Manovate's cutting-edge digital solutions and business innovation strategies. Transform, optimize, and scale your operations for 2025 and beyond."
+        />
+        <meta
+          name="keywords"
+          content="digital solutions 2025, business innovation, IT transformation, enterprise growth strategies, AI-powered digital solutions, cloud integration, business process automation, future-ready IT solutions, technology-driven business growth, digital transformation experts"
+        />
+      </Helmet>
     <div className="homepage">
       {/* Navbar */}
       <header className="navbar">
@@ -241,6 +254,7 @@ function Solution() {
 
 
     </div>
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Helmet } from "react-helmet-async";
 import logo from "./movate1.png";
 import { FaMapMarkerAlt,FaLinkedin ,FaInstagram} from "react-icons/fa";
 import "./Home.css";
@@ -76,6 +77,18 @@ function Contact() {
   };
 
   return (
+    <>
+     <Helmet>
+        <title>Contact Manovate | Get Expert IT & Digital Solutions Today</title>
+        <meta
+          name="description"
+          content="Contact Manovate for AI-powered IT solutions, web & app development, and digital marketing strategies designed to scale your business faster in 2025."
+        />
+        <meta
+          name="keywords"
+          content="contact Manovate, IT solutions inquiry, digital marketing consultation, web development support, software development consultation, app development request, Manovate support, technology solutions contact, request a free quote, business IT consulting contact"
+        />
+      </Helmet>
    <div className="homepage">
          {/* Navbar */}
          <header className="navbar">
@@ -238,6 +251,7 @@ Contact us today to see how our tailored ServiceNow solutions can drive real res
 
       
     </div>
+    </>
   );
 }
 

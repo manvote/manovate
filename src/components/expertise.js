@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX, FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { FaMapMarkerAlt,FaLinkedin,FaInstagram } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 import "./Home.css";
 import "./expertise.css";
 import logo from "./movate1.png";
@@ -102,6 +103,18 @@ function Expertise() {
   };
 
   return (
+    <>
+    <Helmet>
+        <title>Our Expertise | Digital Transformation & IT Mastery – Manovate</title>
+        <meta
+          name="description"
+          content="Explore Manovate’s expertise in digital transformation, IT innovation, and strategic business solutions. Drive growth and operational excellence in 2025."
+        />
+        <meta
+          name="keywords"
+          content="Manovate expertise, IT consulting, digital innovation, software development experts, web app specialists, enterprise IT strategies, AI-powered IT solutions, business automation expertise, technology consulting, IT architecture, data-driven business growth, cloud strategy experts"
+        />
+      </Helmet>
     <div className="homepage">
       {/* Navbar */}
       <header className="navbar">
@@ -246,6 +259,7 @@ function Expertise() {
 
 
     </div>
+    </>
   );
 }
 

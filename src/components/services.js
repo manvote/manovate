@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaMapMarkerAlt,FaLinkedin,FaInstagram } from "react-icons/fa";
 import logo from "./movate1.png";
+import { Helmet } from "react-helmet-async";
 import "./Home.css";
 import "./services.css";
 import vedio1 from "./vedio (2).mp4";
@@ -29,6 +30,19 @@ function Services() {
     const [menuOpen, setMenuOpen] = useState(false);
 
   return (
+
+    <>
+     <Helmet>
+        <title>Manovate Services | Scalable IT, Web, App & Digital Marketing Solutions</title>
+        <meta
+          name="description"
+          content="Discover Manovate’s services: scalable IT solutions, responsive web apps, AI-driven tools, and advanced digital marketing to stay ahead of competitors."
+        />
+        <meta
+          name="keywords"
+          content="Manovate services, IT solutions, web development services, mobile app development, cloud computing, AI-driven solutions, software consulting, enterprise IT services, digital marketing solutions, business automation, SaaS development, custom software development"
+        />
+      </Helmet>
  <div className="homepage">
       {/* Navbar */}
       <header className="navbar">
@@ -272,6 +286,7 @@ function Services() {
 
 
 </div>
+</>
   );
 }
 

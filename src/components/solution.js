@@ -1,4 +1,9 @@
-import React, { useState } from "react"; // Removed unused useEffect import
+
+
+import { useState } from "react";
+
+
+ // Removed unused useEffect import
 import { Link } from "react-router-dom";
 import { FiMenu, FiX, FiXCircle, FiArrowRight } from "react-icons/fi";
 import { FaMapMarkerAlt,FaLinkedin,FaInstagram } from "react-icons/fa";

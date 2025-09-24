@@ -142,7 +142,11 @@ function Contact() {
 <br/>
 Contact us today to see how our tailored ServiceNow solutions can drive real results for your business. Let’s get started.
             </p>
-            <p><strong>Email:</strong> info@manovate.in</p>
+            <p><strong>Email:</strong> info@manovate.co.in</p>
+             <p><strong>Address:</strong> <br/>
+             <strong>Chennai : </strong>GREETA TOWERS, Industrial Estate, Perungudi, Chennai, Tamil Nadu 600096 <br/>
+             <strong>Bengaluru : </strong>
+             1st Floor, 94, Rashtriya Vidyalaya Rd, Basavanagudi, Bengaluru, Karnataka 560004</p>
           </div>
 
           {/* Contact Form */}

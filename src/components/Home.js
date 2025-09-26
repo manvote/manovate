@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaMapMarkerAlt,FaLinkedin,FaInstagram } from "react-icons/fa";
+import { FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
 import "./Home.css";
 import { HeadProvider, Title, Meta } from 'react-head';
 
@@ -388,6 +388,13 @@ function Home() {
   >
   <FaInstagram />
  </a>
+    <a
+            href="https://www.facebook.com/profile.php?id=61581412741189"
+            target="_blank"
+            rel="noreferrer"
+            >
+            <FaFacebook />
+            </a>
         </div>
       </div>
     </footer>

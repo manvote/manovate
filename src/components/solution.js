@@ -6,7 +6,7 @@ import { useState } from "react";
  // Removed unused useEffect import
 import { Link } from "react-router-dom";
 import { FiMenu, FiX, FiXCircle, FiArrowRight } from "react-icons/fi";
-import { FaMapMarkerAlt,FaLinkedin,FaInstagram } from "react-icons/fa";
+import { FaMapMarkerAlt,FaLinkedin,FaInstagram ,FaFacebook} from "react-icons/fa";
 import { HeadProvider, Title, Meta } from 'react-head';
 import "./Home.css";
 import "./solution.css";
@@ -251,6 +251,13 @@ function Solution() {
             >
             <FaInstagram />
            </a>
+              <a
+            href="https://www.facebook.com/profile.php?id=61581412741189"
+            target="_blank"
+            rel="noreferrer"
+            >
+            <FaFacebook />
+            </a>
         </div>
       </div>
     </footer>

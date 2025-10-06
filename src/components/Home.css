@@ -212,7 +212,8 @@ body {
 }
 
 .logo img {
-  height: 65px;
+  height: 100px;
+  width: 125px;
   
  
 }
@@ -334,6 +335,7 @@ body {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 20px;
+  margin-top: 40px;
   text-align: center;
   justify-content: center;
   align-items: center;

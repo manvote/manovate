@@ -120,8 +120,8 @@ function Contact() {
 
     <section class="contact-hero">
   <div class="contact-content">
-    <h1>Careers at Manovate </h1>
-<h3>Bring your talent, curiosity, and ideas to a team that’s redefining innovation.</h3>
+    <h1>Contact Manovate </h1>
+<h3>Explore our talent, curiosity, and ideas to a team that’s redefining innovation.</h3>
     
   </div>
 </section>

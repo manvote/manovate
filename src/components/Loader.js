@@ -1,7 +1,7 @@
 // src/components/Loader.js
 import React from 'react';
 import './Loader.css';
-import logo from "./movate1.png";
+import logo from "./manovate.png";
 
 const Loader = () => {
   return (

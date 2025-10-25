@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
 import "./Home.css";
 import { HeadProvider, Title, Meta } from 'react-head';
+import { Menu, X, ArrowRight, ChevronRight, ChevronLeft } from "lucide-react";
 
  // Unused? Consider removing if not used.
 // import phone from "./phone-solid-full.svg";
@@ -22,10 +23,25 @@ import p4 from "./dataaproject.jpg";
 import p5 from "./softproject.jpg";
 import p6 from "./aiproject.png";
 import p7 from "./softtest.jpg";
+import heroright from"./home-hero-bvg1.png";
 
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const nav = document.querySelector(".navbar");
+      if (window.scrollY > 50) nav.classList.add("scrolled");
+      else nav.classList.remove("scrolled");
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
      <>
@@ -41,55 +57,59 @@ function Home() {
         />
       </HeadProvider>
       {/* <h1>Welcome to Manovate</h1> */}
-    
+
     <div className="homepage">
       {/* Navbar */}
-      <header className="navbar">
-        <div className="logo">
-          <img src={logo} alt="ProTech Logo" />
-          
+    <nav className="navbar">
+        <div className="nav-logo">
+          <img
+            src={logo}
+            alt="Logo"
+            className="logo"
+          />
         </div>
-
-        {/* Navigation */}
-        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-         <Link to="/careers">Careers</Link>
-         <Link to="/solution">Solution</Link>
-         <Link to="/expertise">Expertise</Link>
-          <Link to="/contact" className="contact-icon">📞</Link>
-        </nav>
-
-        {/* Hamburger Icon */}
-        <button
-          className="menu-toggle"
-          aria-label="Toggle navigation"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-        </button>
-      </header>
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div className="hamburger" onClick={toggleMenu}>
+          {menuOpen ? <FiX /> : <FiMenu />}
+        </div>
+      </nav>
 
       {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-text">
-          <h1>
-            Innovating IT, <br /> Empowering The Technology
-          </h1>
-          <p>
-            Your Trusted and Experienced Partner for Driving Continuous
-            Advancement and Innovation in Information Technology Solutions and
-            Services.
-          </p>
+      <section className="hero-section">
+        <div className="hero-overlay">
+          <div className="hero-content">
+            <h1 className="hero-title">
+              Digital IT <br />
+              <span>Innovating IT, Empowering Technology</span>
+            </h1>
+            <p className="hero-subtitle">
+              Your trusted partner in driving innovation and growth through next-gen solutions.
+            </p>
+            <div className="hero-buttons">
+              <button className="btn-primary">Get Started</button>
+              <button className="btn-outline">Learn More</button>
+            </div>
+          </div>
 
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn-primary">Get in Touch</Link>
-            <Link to="/about" className="btn-secondary">Learn more ➜</Link>
+          <div className="hero-image">
+            <img
+              src={heroright}
+              alt="Placeholder"
+            />
           </div>
         </div>
-
-       
+        <div className="background-text">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </section>
 
       {/* Services Section */}
@@ -123,7 +143,6 @@ function Home() {
               { icon: brand, title: "Branding & Design", text: "We design professional yet simple logos. Our designs are search engine and user friendly." },
               { icon: tech, title: "Technology", text: "Scalable technology solutions built for business efficiency and growth." },
               { icon: digit, title: "Digital Marketing", text: "Drive customer engagement and growth through creative digital strategies." },
-              { icon: content, title: "Content Strategy", text: "Effective strategies to boost brand presence with impactful content." },
               { icon: webdev, title: "Web Development", text: "Responsive, secure, and fast websites using modern frameworks." },
               { icon: bussinesslogo, title: "Business Growth", text: "Scale your business with innovative digital transformation strategies." }
             ].map((service, idx) => (

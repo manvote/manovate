@@ -1,36 +1,128 @@
+// Services.js
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { FiMenu, FiX } from "react-icons/fi";
-import { FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
-import logo from "./movate1.png";
 import { HeadProvider, Title, Meta } from 'react-head';
-import "./Home.css";
-import "./services.css";
-import vedio1 from "./vedio (2).mp4";
-import p1 from "./aidevcom.jpg";
-import p2 from "./aiage.jpg";
-import p3 from "./chatbot.jpg";
-import p4 from "./ssoft.jpg";
-import p5 from "./smobile.jpg";
-import p6 from "./aicons.jpg";
-import p7 from "./voiceass.jpg";
-import p8 from "./webdevvv.jpg";
-import p9 from "./airecmmmmm.jpg";
-import p10 from "./sitm.jpg";
-import p11 from "./sai.jpg";
-import p12 from "./chatttt.jpg";
-import p13 from "./sui.jpg";
-import p14 from "./clouda.png";
-import p15 from "./banking.jpg";
-import p16 from "./sitset.jpg";
-import p17 from "./machine.jpg";
-import p18 from "./sec.jpg";
 
-function Services() {
-    const [menuOpen, setMenuOpen] = useState(false);
+
+const servicesList = [
+  {
+    id: 1,
+    title: "IT Consultancy",
+    description:
+      "We provide top-notch IT consultancy to optimize business processes and increase efficiency. Our team works closely with you to understand your business needs and provide solutions that enhance productivity and growth. We specialize in system integration, IT strategy planning, and process optimization.",
+    image: "/images/image.jpg",
+  },
+  {
+    id: 2,
+    title: "Web Development",
+    description:
+      "Modern and responsive web development for your business. We build websites that are visually appealing, user-friendly, and optimized for performance. From frontend to backend development, we ensure your website aligns with your brand identity and business goals.",
+    image: "/images/image.jpg",
+  },
+  {
+    id: 3,
+    title: "Cybersecurity",
+    description:
+      "Protect your data with our advanced cybersecurity solutions. Our services include network security, threat monitoring, and vulnerability assessments. We help businesses safeguard their sensitive information and maintain trust with clients.",
+    image: "/images/image.jpg",
+  },
+  {
+    id: 4,
+    title: "Cloud Services",
+    description:
+      "Scalable cloud solutions to grow your business efficiently. We help migrate your infrastructure to the cloud, optimize resources, and improve collaboration. Our solutions ensure security, flexibility, and cost-effectiveness.",
+    image: "/images/image.jpg",
+  },
+  {
+    id: 5,
+    title: "Digital Marketing",
+    description:      
+      "Boost your online presence with our digital marketing strategies. We offer SEO, social media marketing, content creation, and PPC advertising to help you reach your target audience effectively. Our data-driven approach ensures measurable results and ROI.",
+    image: "/images/image.jpg",
+  },
+  {
+    id: 6,
+    title: "Software Development",
+    description:  
+      "Custom software solutions tailored to your business needs. We develop applications that streamline operations, enhance user experience, and drive innovation. Our team uses the latest technologies to deliver high-quality software on time and within budget.",
+    image: "/images/image.jpg",
+  },
+];
+
+const Services = () => {
+  const [selectedService, setSelectedService] = useState(servicesList[0]);
+  const [hovered, setHovered] = useState(null);
+
+  const containerStyle = {
+    display: "flex",
+    maxWidth: "1200px",
+    margin: "60px auto",
+    padding: "0 20px",
+    gap: "20px",
+    fontFamily: "'Poppins', sans-serif",
+    alignItems: "flex-start",
+  };
+
+  const leftColumnStyle = {
+    flex: "1",
+    display: "flex",
+    flexDirection: "column",
+    gap: "25px",
+  };
+
+  const cardStyle = {
+    backgroundColor: "#f5f9ff",
+    borderRadius: "15px",
+    boxShadow: "0 6px 20px rgba(0,0,0,0.1)",
+    padding: "20px",
+  };
+
+  const allServicesHeading = {
+    fontSize: "20px",
+    fontWeight: 600,
+    marginBottom: "20px",
+    color: "#0d6efd",
+  };
+
+  const sidebarItemStyle = (active, isHovered) => ({
+    padding: "12px 15px",
+    marginBottom: "10px",
+    cursor: "pointer",
+    borderRadius: "8px",
+    backgroundColor: active ? "#0d6efd" : "#f8f9fa",
+    color: active ? "#fff" : "#333",
+    transition: "all 0.3s ease",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    boxShadow: active ? "0 4px 10px rgba(0,0,0,0.15)" : "none",
+    transform: isHovered ? "translateX(5px)" : "translateX(0)",
+  });
+
+  const contentContainer = {
+    flex: "3",
+    backgroundColor: "#fff",
+    borderRadius: "12px",
+    boxShadow: "0 6px 20px rgba(0,0,0,0.1)",
+    padding: "30px",
+  };
+
+  const imageStyle = {
+    width: "100%",
+    borderRadius: "12px",
+    boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+  };
+
+  const paragraphStyle = {
+    fontSize: "16px",
+    color: "#555",
+    lineHeight: 1.7,
+    textAlign: "justify",
+  };
+
+const [selectedFaq, setSelectedFaq] = useState(null);
+
 
   return (
-
     <>
      <HeadProvider>
         <Title>Manovate Services | Scalable IT, Web, App & Digital Marketing Solutions</Title>
@@ -43,258 +135,539 @@ function Services() {
           content="Manovate services, IT solutions, web development services, mobile app development, cloud computing, AI-driven solutions, software consulting, enterprise IT services, digital marketing solutions, business automation, SaaS development, custom software development"
         />
       </HeadProvider>
- <div className="homepage">
-      {/* Navbar */}
-      <header className="navbar">
-        <div className="logo">
-          <img src={logo} alt="ProTech Logo" />
+
+    <div style={{ paddingBottom: "60px" }}>
+      {/* Hero Section */}
+      <div
+        style={{
+          width: "100%",
+          height: "400px",
+          backgroundImage:
+              "linear-gradient(135deg, rgba(124, 170, 255, 0.9) 0%, rgba(0, 89, 255, 0.82) 100%), url('/images/breadcrumb.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "#fff",
+          textAlign: "center",
+          position: "relative",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.6)",
+          }}
+        ></div>
+        <div style={{ zIndex: 2 }}>
+          <h1 style={{ fontSize: "48px", margin: 0, fontWeight: 600 }}>
+            Service Details
+          </h1>
+          <div style={{ marginTop: "10px", fontSize: "16px", color: "#ddd" }}>
+            <a
+              href="/"
+              style={{ color: "#fff", textDecoration: "none", marginRight: "5px" }}
+            >
+              Home
+            </a>{" "}
+            &gt; <span>Service</span>
+          </div>
         </div>
+      </div>
 
-        {/* Navigation */}
-        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/careers">Careers</Link>
-          <Link to="/solution">Solution</Link>
-          <Link to="/expertise">Expertise</Link>
-          <Link to="/contact" className="contact-icon">📞</Link> 
-        </nav>
+      {/* Main Section */}
+      <div style={containerStyle}>
+        {/* LEFT SIDE (Sidebar + Opening Hours stacked) */}
+        <div style={leftColumnStyle}>
+          {/* All Services Box */}
+          <div style={cardStyle}>
+            <div style={allServicesHeading}>All Services</div>
+            {servicesList.map((service) => (
+              <div
+                key={service.id}
+                onClick={() => setSelectedService(service)}
+                onMouseEnter={() => setHovered(service.id)}
+                onMouseLeave={() => setHovered(null)}
+                style={sidebarItemStyle(
+                  selectedService.id === service.id,
+                  hovered === service.id
+                )}
+              >
+                <span>{service.title}</span>
+                <span
+                  style={{
+                    display: "inline-block",
+                    marginLeft: "10px",
+                    transform:
+                      hovered === service.id
+                        ? "translateX(5px)"
+                        : "translateX(0)",
+                    transition: "transform 0.3s ease",
+                  }}
+                >
+                  ➔
+                </span>
+              </div>
+            ))}
+          </div>
 
-        {/* Hamburger Icon */}
-        <button
-          className="menu-toggle"
-          aria-label="Toggle navigation"
-          onClick={() => setMenuOpen(!menuOpen)}
+          {/* Opening Hours Box */}
+<div
+  style={{
+    backgroundColor: "#f5f9ff",
+    borderRadius: "12px",
+    boxShadow: "0 6px 20px rgba(0,0,0,0.05)",
+    padding: "25px",
+  }}
+>
+  {/* Heading */}
+  <div style={{ marginBottom: "20px" }}>
+    <h3
+      style={{
+        fontSize: "20px",
+        fontWeight: 700,
+        color: "#000",
+        marginBottom: "8px",
+      }}
+    >
+      Opening Hours
+    </h3>
+    <div
+      style={{
+        width: "40px",
+        height: "3px",
+        backgroundColor: "#0d6efd",
+        borderRadius: "2px",
+      }}
+    ></div>
+  </div>
+
+  {/* Hours List */}
+  <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+    {[
+      { day: "Mon – Sat", time: "10.00 AM – 4.00 PM" },
+      { day: "Sun", time: "09.00 AM – 4.00 PM" },
+      { day: "Friday", time: "Closed" },
+      { day: "Emergency", time: "24 hours" },
+    ].map((item, index) => (
+      <div
+        key={index}
+        style={{
+          backgroundColor: "#fff",
+          borderRadius: "10px",
+          padding: "12px 16px",
+          display: "flex",
+          alignItems: "center",
+          gap: "12px",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+          transition: "all 0.3s ease",
+          cursor: "default",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-4px)";
+          e.currentTarget.style.boxShadow = "0 6px 15px rgba(13,110,253,0.15)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "translateY(0)";
+          e.currentTarget.style.boxShadow = "0 2px 8px rgba(0,0,0,0.05)";
+        }}
+      >
+        {/* Clock Icon */}
+        <span
+          style={{
+            display: "inline-flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "28px",
+            height: "28px",
+            borderRadius: "50%",
+            background: "rgba(13,110,253,0.1)",
+            color: "#0d6efd",
+            fontWeight: 600,
+            fontSize: "16px",
+          }}
         >
-          {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-        </button>
-      </header>
-   
-   <section class="services-hero">
-  <div class="services-content">
-    <h1>Our Services</h1>
+          🕒
+        </span>
+
+        {/* Day + Time */}
+        <span style={{ fontSize: "15px", color: "#333" }}>
+          <strong>{item.day}:</strong> {item.time}
+        </span>
+      </div>
+    ))}
   </div>
-</section>
+</div>
 
-{/*services section start*/}
-<section className="services-feature">
-  <div className="services-container">
-    {/* Left Content */}
-    <div className="services-text">
-      <span className="services-label">OUR SERVICE</span>
-      <h2>AI Software Cloud Development</h2>
-      {/* <h4>Custom Software Solutions</h4> */}
-      <p>
-        We provide tailored AI-driven cloud solutions that optimize business processes, enhance scalability, and boost efficiency. 
-        Our services deliver long-term value and continuous innovation for your business.
-      </p>
+{/* Need Help / Call Us Section */}
+<div style={{ position: "relative", marginTop: "20px", borderRadius: "12px", overflow: "hidden" }}>
+  {/* Image */}
+  <img
+    src="/images/support.jpg" // replace with your image path
+    alt="Support"
+    style={{
+      width: "100%",
+      display: "block",
+      transition: "transform 0.4s ease",
+    }}
+    onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+    onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+  />
+
+  {/* Text Overlay */}
+  <div
+    style={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      color: "#fff",
+      textAlign: "center",
+      textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+    }}
+  >
+    <h3 style={{ fontSize: "25px", fontWeight: 700, margin: 0 }}>
+      Need Help? Call Us
+    </h3>
+    <p style={{ fontSize: "20px", marginTop: "5px" }}>+1 234 567 890</p>
+  </div>
+</div>
+
+
+
+        </div>
+
+        
+
+        {/* RIGHT SIDE (Content) */}
+        <div style={{ maxWidth: "800px", margin: "40px auto", padding: "0 20px" }}>
+        <div style={contentContainer}>
+          <h2 style={{ fontSize: "32px", color: "#0d6efd", fontWeight: 600 }}>
+            {selectedService.title}
+          </h2>
+          <p style={paragraphStyle}>{selectedService.description}</p>
+          <img
+            src={selectedService.image}
+            alt={selectedService.title}
+            style={imageStyle}
+          />
+          <p style={paragraphStyle}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+            odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
+            quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
+            mauris. Fusce nec tellus sed augue semper porta.
+          </p>
+          <p style={paragraphStyle}>
+            Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia
+            nunc.
+          </p>
+          {/* Benefits Section with Side Image */}
+<div
+  style={{
+    display: "flex",
+    alignItems: "flex-start",
+    justifyContent: "space-between",
+    gap: "25px",
+    marginTop: "40px",
+    flexWrap: "wrap",
+  }}
+>
+  {/* Left Side - Image */}
+  <div
+    style={{
+      flex: "1",
+      minWidth: "250px",
+    }}
+  >
+    <img
+      src="/images/benefits.jpg" // replace with your real image path
+      alt="Benefits Illustration"
+      style={{
+        width: "100%",
+        borderRadius: "12px",
+        boxShadow: "0 6px 15px rgba(0,0,0,0.1)",
+        transition: "transform 0.4s ease",
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+      onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+    />
+  </div>
+
+  {/* Right Side - Benefits List */}
+  <div
+    style={{
+      flex: "1.2",
+      minWidth: "300px",
+      backgroundColor: "#f5f9ff",
+      borderRadius: "12px",
+      boxShadow: "0 6px 15px rgba(0,0,0,0.08)",
+      padding: "25px",
+      transition: "all 0.3s ease",
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.transform = "translateY(-5px)";
+      e.currentTarget.style.boxShadow = "0 10px 25px rgba(13,110,253,0.15)";
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.transform = "translateY(0)";
+      e.currentTarget.style.boxShadow = "0 6px 15px rgba(0,0,0,0.08)";
+    }}
+  >
+    <h3
+      style={{
+        fontSize: "22px",
+        fontWeight: 700,
+        color: "#0d6efd",
+        marginBottom: "20px",
+      }}
+    >
+      Benefits with Our Service
+    </h3>
+    <ul style={{ listStyle: "none", padding: 0 }}>
+      {[
+        "Professional and Experienced Team",
+        "24/7 Customer Support",
+        "Guaranteed Quality and Timely Delivery",
+      ].map((benefit, index) => (
+        <li
+          key={index}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            backgroundColor: "#fff",
+            padding: "12px 16px",
+            marginBottom: "12px",
+            borderRadius: "10px",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+            transition: "all 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "translateY(-4px)";
+            e.currentTarget.style.boxShadow =
+              "0 4px 10px rgba(13,110,253,0.15)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "translateY(0)";
+            e.currentTarget.style.boxShadow =
+              "0 2px 8px rgba(0,0,0,0.05)";
+          }}
+        >
+          <span
+            style={{
+              display: "inline-flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "28px",
+              height: "28px",
+              borderRadius: "50%",
+              backgroundColor: "rgba(13,110,253,0.1)",
+              color: "#0d6efd",
+              fontWeight: 600,
+              marginRight: "10px",
+            }}
+          >
+            ✔
+          </span>
+          <span style={{ color: "#333", fontSize: "15px" }}>{benefit}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+{/* Extra Content Section */}
+<div style={{ marginTop: "50px" }}>
+  <h3
+    style={{
+      fontSize: "24px",
+      fontWeight: 700,
+      color: "#0d6efd",
+      marginBottom: "15px",
+    }}
+  >
+    Why Choose Our Service?
+  </h3>
+
+  <p
+    style={{
+      fontSize: "16px",
+      color: "#555",
+      lineHeight: 1.8,
+      marginBottom: "30px",
+      textAlign: "justify",
+    }}
+  >
+    Our solutions are built with innovation and client satisfaction at the
+    core. We combine cutting-edge technology with proven methodologies to
+    deliver consistent results. Our experts ensure smooth implementation,
+    transparent communication, and measurable outcomes that help your business
+    grow stronger every day.
+  </p>
+
+  {/* Side-by-side Images */}
+  <div
+    style={{
+      display: "flex",
+      gap: "20px",
+      flexWrap: "wrap",
+      justifyContent: "space-between",
+    }}
+  >
+    <div
+      style={{
+        flex: "1",
+        minWidth: "250px",
+        maxWidth: "45%",
+        height: "180px", // reduced height
+        overflow: "hidden",
+        borderRadius: "12px",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+        transition: "transform 0.4s ease",
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
+      onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+    >
+      <img
+        src="/images/teamwork.jpg" // replace with your real image
+        alt="Team Collaboration"
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          borderRadius: "12px",
+          display: "block",
+        }}
+      />
     </div>
 
-    {/* Right Image / Video */}
-    <div className="services-media">
-      <div className="video-overlay">
-        <video autoPlay loop muted playsInline >
-          <source src={vedio1} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div> 
+    <div
+      style={{
+        flex: "1",
+        minWidth: "250px",
+        maxWidth: "45%",
+        height: "180px", // reduced height
+        overflow: "hidden",
+        borderRadius: "12px",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+        transition: "transform 0.4s ease",
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
+      onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+    >
+      <img
+        src="/images/innovation.jpg" // replace with your real image
+        alt="Innovation"
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          borderRadius: "12px",
+          display: "block",
+        }}
+      />
     </div>
   </div>
-</section>
+</div>
 
-<section className="services1-showcase">
-  <h4 className="section1-label">OUR SERVICES</h4>
-  {/* <h2 className="section1-title">Our Success Stories</h2> */}
 
-  <div className="services1-grid">
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p1})` }}>
-      <div className="serviceS1-content">
-        <h3>AI DEVELOPMENT COMPANY</h3>
-        <p>We deliver advanced AI-powered software solutions that help businesses automate tasks, analyze data, and innovate faster. From predictive modeling to intelligent automation, we create scalable AI systems tailored to your goals.</p>
+
+{/* FAQ Section */}
+<div style={{ marginTop: "40px" }}>
+  <h3
+    style={{
+      fontSize: "22px",
+      fontWeight: 700,
+      color: "#0d6efd",
+      marginBottom: "20px",
+    }}
+  >
+    Frequently Asked Questions
+  </h3>
+  {[
+    {
+      question: "How long does a typical project take?",
+      answer:
+        "Project timelines vary depending on complexity, but most are completed within 4–6 weeks.",
+    },
+    {
+      question: "Do you offer post-launch support?",
+      answer:
+        "Yes, we provide ongoing maintenance and technical support even after project completion.",
+    },
+    {
+      question: "Can services be customized to fit my needs?",
+      answer:
+        "Absolutely! We tailor every solution to your specific goals and requirements.",
+    },
+    {
+      question: "Can services be customized to fit my needs?",
+      answer:
+        "Absolutely! We tailor every solution to your specific goals and requirements.",
+    },
+    {
+      question: "Can services be customized to fit my needs?",
+      answer:
+        "Absolutely! We tailor every solution to your specific goals and requirements.",
+    },
+  ].map((faq, index) => (
+    <div
+      key={index}
+      onClick={() =>
+        setSelectedFaq(selectedFaq === index ? null : index)
+      }
+      style={{
+        marginBottom: "12px",
+        backgroundColor: "#f5f9ff",
+        borderRadius: "10px",
+        boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+        overflow: "hidden",
+        transition: "all 0.3s ease",
+        cursor: "pointer",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "15px 20px",
+        }}
+      >
+        <span style={{ fontWeight: 600, color: "#333" }}>{faq.question}</span>
+        <span style={{ color: "#0d6efd", fontSize: "20px" }}>
+          {selectedFaq === index ? "▲" : "▼"}
+        </span>
       </div>
+      {selectedFaq === index && (
+        <div
+          style={{
+            padding: "0 20px 15px 20px",
+            color: "#555",
+            lineHeight: 1.6,
+            animation: "fadeIn 0.3s ease-in-out",
+          }}
+        >
+          {faq.answer}
+        </div>
+      )}
     </div>
+  ))}
+</div>
 
-    <div className="serviceS1-card"style={{ backgroundImage: `url(${p2})` }}>
-      <div className="serviceS1-content">
-        <h3>AI AGENTS DEVELOPMENT</h3>
-        <p>Our AI agents are designed to act autonomously, making real-time decisions, automating workflows, and improving customer engagement. They adapt to your business processes and ensure faster, smarter execution.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p3})` }}>
-      <div className="serviceS1-content">
-        <h3>AI CHATBOT DEVELOPMENT SERVICES</h3>
-        <p>We design intelligent chatbots that provide seamless customer support, automate routine interactions, and enhance user engagement across platforms like websites, apps, and messaging services.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p4})` }}>
-      <div className="serviceS1-content">
-        <h3>AI ASSISTANT DEVELOPMENT SERVICES </h3>
-        <p>Build personalized AI assistants that handle tasks, scheduling, and business operations. Our assistants integrate seamlessly into your systems, boosting efficiency and productivity.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p5})` }}>
-      <div className="serviceS1-content">
-        <h3>COMPUTER VISION AI SOLUTIONS</h3>
-        <p>From image recognition to video analysis, we create computer vision systems that enable object detection, facial recognition, quality inspection, and more — unlocking new levels of automation and accuracy.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p6})` }}>
-      <div className="serviceS1-content">
-        <h3>AI CONSULTING SERVICES</h3>
-        <p>Our experts guide you through AI adoption with tailored strategies, proof of concepts, and implementation roadmaps. We ensure AI solutions align with your business goals and deliver measurable ROI.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p7})` }}>
-      <div className="serviceS1-content">
-        <h3>AI VOICE ASSISTANT DEVELOPMENT</h3>
-        <p>We create AI-powered voice assistants that deliver natural, human-like conversations. Integrated with smart devices and apps, they provide hands-free interactions for better customer experiences.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p9})` }}>
-      <div className="serviceS1-content">
-        <h3>AI RECOMMENDATION SYSTEM </h3>
-        <p>Personalized recommendation engines that increase sales, boost engagement, and enhance customer loyalty. Our AI systems analyze behavior and preferences to deliver the right suggestion at the right time.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p10})` }}>
-      <div className="serviceS1-content">
-        <h3>AI AUTOMATION SERVICE</h3>
-        <p>We help you automate repetitive business processes with AI-powered workflows. This reduces human error, saves time, and improves operational efficiency.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p11})` }}>
-      <div className="serviceS1-content">
-        <h3>AIOT SOLUTIONS</h3>
-        <p>Combining AI with IoT, we create smart ecosystems for predictive maintenance, connected devices, and real-time monitoring — driving intelligent automation and data-driven insights.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p12})` }}>
-      <div className="serviceS1-content">
-        <h3>CHATGPT</h3>
-        <p>We integrate ChatGPT-powered solutions for businesses — enabling smarter customer interactions, content creation, and workflow automation with state-of-the-art natural language processing.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p13})` }}>
-      <div className="serviceS1-content">
-        <h3>MOBILE DEVELOPMENT</h3>
-        <p>We build user-friendly, secure, and high-performing mobile apps for Android and iOS. Designed with engaging UI/UX, our apps ensure seamless experiences across devices.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p8})` }}>
-      <div className="serviceS1-content">
-        <h3>WEB DEVELOPMENT</h3>
-        <p>Our web development services deliver scalable, secure, and responsive websites using modern frameworks. We ensure your digital presence is powerful and user-centric.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p14})` }}>
-      <div className="serviceS1-content">
-        <h3>CLOUD SOLUTIONS DEVELOPMENT</h3>
-        <p>We provide end-to-end cloud solutions including migration, deployment, and optimization. Our services enable scalability, cost efficiency, and business continuity.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p15})` }}>
-      <div className="serviceS1-content">
-        <h3>BANKING SOFTWARE DEVELOPMENT</h3>
-        <p>We build secure and scalable banking and fintech solutions, including payment systems, digital wallets, and fraud detection tools to modernize financial services.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p16})` }}>
-      <div className="serviceS1-content">
-        <h3>CUSTOM SOFTWARE DEVELOPMENT</h3>
-        <p>Tailored software solutions designed specifically for your business challenges. We develop applications that streamline workflows, boost efficiency, and drive innovation.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p17})` }}>
-      <div className="serviceS1-content">
-        <h3>MACHINE LEARNING DEVELOPMENT SERVICES</h3>
-        <p>We design and train machine learning models that enable predictive analytics, intelligent decision-making, and automation. Our ML solutions evolve with your data for continuous improvement.</p>
-      </div>
-    </div>
-
-    <div className="serviceS1-card" style={{ backgroundImage: `url(${p18})` }}>
-      <div className="serviceS1-content">
-        <h3>E-COMMERCE DEVELOPMENT</h3>
-        <p>Our e-commerce solutions deliver robust online stores with secure payments, product management, and scalable features. We ensure a smooth shopping experience that drives conversions.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-     {/* Footer */}
-      
-<footer className="footer">
-  {/* <div className="footer-logo">
-          <img src={logo} alt="footer-logo" />
-        </div> */}
-      <div className="footer-top">
-        {/* Logo */}
-        {/* <div className="footer-logo">
-          <img src={logo} alt="footer-logo" />
-        </div> */}
-
-        {/* Navigation Links */}
-        <ul className="footer-nav">
-          <li><Link to="/">HOME</Link></li>
-          <li><Link to="/services">SERVICES</Link></li>
-          <li><Link to="/careers">CAREERS</Link></li>
-          <li><Link to="/contact">CONTACT</Link></li>
-          <li><Link to="/about">ABOUT</Link></li>
-        </ul>
-      </div>
- <hr className="footer-divider" />
-
-      <div className="footer-bottom">
-        {/* Copyright */}
-        <p>© 2025 Manovate Technologies | Innovating The Future</p>
-
-        {/* Social Icons */}
-        <div className="footer-socials">
-          <a href="https://www.linkedin.com/company/108395213/admin/dashboard/" target="_blank" rel="noreferrer">
-            <FaLinkedin />
-          </a>
-          
-          <a href="https://share.google/1muxM9QFVEQhZBK1k" target="_blank" rel="noreferrer">
- <FaMapMarkerAlt />
-          </a>
-                   <a
-            href="https://www.instagram.com/manovate_tech/"
-            target="_blank"
-            rel="noreferrer"
-            >
-            <FaInstagram />
-           </a>
-              <a
-            href="https://www.facebook.com/profile.php?id=61581412741189"
-            target="_blank"
-            rel="noreferrer"
-            >
-            <FaFacebook />
-            </a>
         </div>
       </div>
-    </footer>
-
-
-
-</div>
-</>
+    </div>
+    </div>
+    </>
   );
-}
+};
 
 export default Services;

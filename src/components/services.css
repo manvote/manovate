@@ -201,6 +201,7 @@
 /* =============== BENEFITS =============== */
 .benefits-section {
   display: flex;
+<<<<<<< HEAD
   align-items: center;
   justify-content: space-between;
   gap: 40px;
@@ -544,3 +545,69 @@
     font-size: 14px;
   }
 }
+=======
+  align-items: flex-end;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.serviceS1-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Content */
+.serviceS1-content {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.serviceS1-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Hide paragraph initially */
+.serviceS1-content p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 10px 0 0;
+  opacity: 0;          /* hidden */
+  max-height: 0;       /* collapsed */
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* === Hover Effect === */
+.serviceS1-card:hover .serviceS1-content {
+  height: 100%; /* expand overlay if needed */
+}
+
+.serviceS1-card:hover .serviceS1-content p {
+  opacity: 1;          /* fade in */
+  max-height: 200px;   /* expand */
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .services1-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .services1-grid {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
+}
+
+
+
+
+
+
+/* FOOTER */
+>>>>>>> 6744aaf82a85fd5514854772541b8ff192b6ee9f

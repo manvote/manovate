@@ -149,6 +149,7 @@ body {
   font-weight: 700;
 }
 
+<<<<<<< HEAD
 .solution-card ul {
   list-style: none;
   padding: 0;
@@ -183,10 +184,94 @@ body {
 /* 📱 Responsive view */
 @media (max-width: 768px) {
   .solutions-grid-container {
+=======
+.solution-modal-content h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.solution-modal-description {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  padding-left: 45px;
+}
+
+.solution-modal-details h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 25px 0 15px;
+}
+
+.solution-modal-details p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #34495e;
+}
+
+.features-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 25px 0;
+}
+
+.features-benefits h3 {
+  grid-column: span 2;
+}
+
+.features, .benefits {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.features-benefits ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.features-benefits li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #34495e;
+}
+
+.solution-cta-button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.solution-cta-button:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .solutions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .features-benefits {
+>>>>>>> 6744aaf82a85fd5514854772541b8ff192b6ee9f
     grid-template-columns: 1fr;
   }
 }
 
+<<<<<<< HEAD
 /* Outro Section */
 .solutions-outro-section {
   display: flex;
@@ -328,3 +413,48 @@ body {
 /* --- Accessibility / utility --- */
 a { outline-color: rgba(21,101,192,0.3); }
 img { max-width: 100%; display:block; }
+=======
+@media (max-width: 768px) {
+  .solutions-title {
+    font-size: 2.2rem;
+  }
+  
+  .solution-modal-content {
+    padding: 30px 20px;
+  }
+  
+  .solution-modal-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .modal-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .solution-modal-description {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .solutions {
+    padding: 80px 15px 60px;
+  }
+  
+  .solutions-title {
+    font-size: 1.8rem;
+  }
+  
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .solution-card {
+    padding: 20px;
+  }
+}
+/* FOOTER */
+>>>>>>> 6744aaf82a85fd5514854772541b8ff192b6ee9f

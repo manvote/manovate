@@ -5,7 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/services";
-import Projects from "./components/projects";
+
 import Contact  from "./components/contact";
 import Careers  from "./components/careers";
 import Loader from "./components/Loader";
@@ -36,11 +36,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About/>}/>
         <Route path="/services" element={<Services/>}/>
-        <Route path="/projects" element={<Projects/>}/>
+        
         <Route path="/contact" element={<Contact/>}/>
          <Route path="/careers" element={<Careers/>}/>
          <Route path="/solution" element={<Solution/>}/>
-        <Route path="/expertise" element={<Expertise/>}/> 
+        <Route path="/products" element={<Expertise/>}/> 
         {/* <Route path="/DonorList" element={<DonorList />} />
         <Route path="/DoctorList" element={<DoctorList />} />
         <Route path="/fitness" element={<Fitnesstracker/>}/>

@@ -37,13 +37,13 @@ function Careers() {
       setLoading(false);
     }
   };
-const [jobs, setJobs] = useState([]);
+// const [jobs, setJobs] = useState([]);
 
-  useEffect(() => {
-    fetch("https://manovatebackend.onrender.com/api/jobs/") // Django backend API
-      .then((res) => res.json())
-      .then((data) => setJobs(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://manovatebackend.onrender.com/api/jobs/") // Django backend API
+  //     .then((res) => res.json())
+  //     .then((data) => setJobs(data));
+  // }, []);
 
 const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);

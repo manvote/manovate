@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import "./solution.css";
 import introImage from "./solution.jpg";
-import outroImage from "./solution1.jpg";
+
 import { HeadProvider, Title, Meta } from "react-head";
 import { Box, Typography } from "@mui/material";
 import logo from "./manovate.png";
@@ -11,16 +11,16 @@ import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa"
 import {Link} from "react-router-dom";
 
 export default function Solutions() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     setLoaded(true);
   }, []);
 
-  const handleContactClick = () => {
-    navigate("/contact");
-  };
+  // const handleContactClick = () => {
+  //   navigate("/contact");
+  // };
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);

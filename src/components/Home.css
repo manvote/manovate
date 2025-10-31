@@ -29,7 +29,7 @@
 .navbar.scrolled {
   background: rgba(10, 15, 60, 0.95);
   backdrop-filter: blur(10px);
-  padding: 12px 60px;
+  /* padding: 12px 60px; */
 }
 
 .nav-container {
@@ -44,13 +44,13 @@
   height: 140px;
   width: auto;
   object-fit: contain;
-  margin-left: -26px;
+  margin-left: -56px;
 }
 
 /* ===== Desktop Links ===== */
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   list-style: none;
 }
 
@@ -206,8 +206,14 @@
   }
     .hamburger {
     display: block !important;
-     margin-right: 80px;
+     margin-right: 50px;
   }
+  .nav-left img.nav-logo {
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+  margin-left: -10px;
+}
 }
 
 
@@ -264,6 +270,8 @@
   margin-top: 30px;
   display: flex;
   gap: 15px;
+  
+  
 }
 
 .btn-primary {
@@ -298,6 +306,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
+ 
 }
 
 .btn-outline:hover {
@@ -378,6 +387,15 @@
     text-align: center;
      max-width: 800px;
   }
+  .hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+   align-items: center;
+  text-align: center;
+  justify-content: center;
+  
+}
 }
 
 /* @media (max-width: 768px) {

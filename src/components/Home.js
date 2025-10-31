@@ -121,10 +121,11 @@ function Home() {
 
         <div className="nav-right">
           <a href="/contact" className="get-in-touch">Get In Touch →</a>
-          <div className="hamburger" onClick={toggleMenu}>
+         
+        </div>
+         <div className="hamburger" onClick={toggleMenu}>
             {menuOpen ? <FiX /> : <FiMenu />}
           </div>
-        </div>
       </div>
     </nav>
 

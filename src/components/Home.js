@@ -4,7 +4,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
 import "./Home.css";
 import { HeadProvider, Title, Meta } from 'react-head';
-import { Menu, X, ArrowRight, ChevronRight, ChevronLeft } from "lucide-react";
+
 
  // Unused? Consider removing if not used.
 // import phone from "./phone-solid-full.svg";
@@ -40,7 +40,8 @@ function Home() {
   }, []);
 
  const videoRef = useRef(null);
-  const videos = [hero, hero1, hero2]; // Add more video imports here
+  const videos = React.useMemo(() => [hero, hero1, hero2], []);
+ // Add more video imports here
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
     useEffect(() => {
@@ -113,7 +114,7 @@ function Home() {
             <li><a href="/about" onClick={toggleMenu}>About</a></li>
           <li><a href="/services" onClick={toggleMenu}>Services</a></li>
           <li><a href="/products" onClick={toggleMenu}>Products</a></li>
-         
+          <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
         
           <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
           
@@ -131,7 +132,7 @@ function Home() {
 
 
       {/* Hero Section */}
-    <section className="hero-section">
+    <section className="hhero-section">
       {/* Background Video */}
       <video
         ref={videoRef}
@@ -142,18 +143,18 @@ function Home() {
       />
 
       {/* Overlay content */}
-      <div className="hero-overlay">
-        <div className="hero-content">
-          <h1 className="hero-title">
+      <div className="hhero-overlay">
+        <div className="hhero-content">
+          <h1 className="hhero-title">
             Digital IT <br />
             <span>Innovating IT, Empowering Technology</span>
           </h1>
-          <p className="hero-subtitle">
+          <p className="hhero-subtitle">
             Your trusted partner in driving innovation and growth through next-gen solutions.
           </p>
-          <div className="hero-buttons">
-            <button className="btn-primary">Get Started</button>
-            <button className="btn-outline">Learn More</button>
+          <div className="hhero-buttons">
+            <Link to="/about" className="btn-primary">Get Started</Link>
+            <Link to="/services" className="btn-outline">Learn More</Link>
           </div>
         </div>
       </div>
@@ -396,7 +397,7 @@ function Home() {
           <div className="image-wrapper">
             <img src={abouthome} alt="About" />
             <div className="experience-badge">
-              <h3>06 Year's</h3>
+              <h3>6-Year's</h3>
               <p>years of experience in this industry</p>
             </div>
           </div>
@@ -443,18 +444,21 @@ function Home() {
 
         {/* Navigation Links */}
         <ul className="footer-nav">
-          <li><Link to="/">HOME</Link></li>
-          <li><Link to="/services">SERVICES</Link></li>
-          <li><Link to="/careers">CAREERS</Link></li>
-          <li><Link to="/contact">CONTACT</Link></li>
-          <li><Link to="/about">ABOUT</Link></li>
+            <li><Link to="/">HOME</Link></li>
+                          <li><Link to="/about">ABOUT</Link></li>
+                          <li><Link to="/services">SERVICES</Link></li>
+                       
+                          <li><Link to="/products">PRODUCTS</Link></li>
+                          <li><Link to="/solution">SOLUTIONS</Link></li>
+                           <li><Link to="/careers">CAREERS</Link></li>
+                          <li><Link to="/contact">CONTACT</Link></li>
         </ul>
       </div>
  <hr className="footer-divider" />
 
       <div className="footer-bottom">
         {/* Copyright */}
-        <p>© 2025 Manovate Technologies | Innovating The Future</p>
+        <p>© 2021 Manovate Technologies | Innovating The Future</p>
 
         {/* Social Icons */}
         <div className="footer-socials">

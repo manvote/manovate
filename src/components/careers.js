@@ -5,10 +5,10 @@ import { FaMapMarkerAlt,FaLinkedin,FaInstagram ,FaFacebook} from "react-icons/fa
 import "./Home.css";
 import "./careers.css";
 
-import logo from "./movate1.png";
+import logo from "./manovate.png";
 
 function Careers() {
-  const [menuOpen, setMenuOpen] = useState(false);
+
   const [loading, setLoading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,35 +44,48 @@ const [jobs, setJobs] = useState([]);
       .then((res) => res.json())
       .then((data) => setJobs(data));
   }, []);
+
+const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) setScrolled(true);
+      else setScrolled(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
    <div className="homepage">
-         {/* Navbar */}
-         <header className="navbar">
-           <div className="logo">
-             <img src={logo} alt="ProTech Logo" />
-             
-           </div>
-   
-           {/* Navigation */}
-           <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-             <Link to="/">Home</Link>
-             <Link to="/about">About</Link>
-             <Link to="/services">Services</Link>
-            <Link to="/careers">Careers</Link>
-            <Link to="/solution">Solution</Link>
-            <Link to="/expertise">Expertise</Link>
-             <Link to="/contact" className="contact-icon">📞</Link>
-           </nav>
-   
-           {/* Hamburger Icon */}
-           <button
-             className="menu-toggle"
-             aria-label="Toggle navigation"
-             onClick={() => setMenuOpen(!menuOpen)}
-           >
-             {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-           </button>
-         </header>
+         <nav className={`navbar ${scrolled ? "scrolled" : ""} ${menuOpen ? "open" : ""}`}>
+      <div className="nav-container">
+        <div className="nav-left">
+          <img src={logo} alt="Kumaran Systems Logo" className="nav-logo" />
+        </div>
+
+        <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
+          <li><a href="/" onClick={toggleMenu}>Home</a></li>
+            <li><a href="/about" onClick={toggleMenu}>About</a></li>
+          <li><a href="/services" onClick={toggleMenu}>Services</a></li>
+          <li><a href="/products" onClick={toggleMenu}>Products</a></li>
+         
+        
+          <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
+          
+        </ul>
+
+        <div className="nav-right">
+          <a href="/contact" className="get-in-touch">Get In Touch →</a>
+          <div className="hamburger" onClick={toggleMenu}>
+            {menuOpen ? <FiX /> : <FiMenu />}
+          </div>
+        </div>
+      </div>
+    </nav>
 
       {/* Video Background */}
       {/* <div className="background-video-container">
@@ -168,7 +181,7 @@ const [jobs, setJobs] = useState([]);
     We’ll keep your information on file and reach out if a suitable role becomes available.
   </p>
 </section>
- <div className="jobs-container">
+ {/* <div className="jobs-container">
       <h2 className="jobs-title">Available Jobs</h2>
       {jobs.length === 0 ? (
         <p>No jobs available.</p>
@@ -186,7 +199,7 @@ const [jobs, setJobs] = useState([]);
           ))}
         </ul>
       )}
-    </div>
+    </div> */}
 
       
    {/* Footer */}
@@ -203,18 +216,21 @@ const [jobs, setJobs] = useState([]);
 
         {/* Navigation Links */}
         <ul className="footer-nav">
-          <li><Link to="/">HOME</Link></li>
-          <li><Link to="/services">SERVICES</Link></li>
-          <li><Link to="/careers">CAREERS</Link></li>
-          <li><Link to="/contact">CONTACT</Link></li>
-          <li><Link to="/about">ABOUT</Link></li>
+         <li><Link to="/">HOME</Link></li>
+                       <li><Link to="/about">ABOUT</Link></li>
+                       <li><Link to="/services">SERVICES</Link></li>
+                      
+                       <li><Link to="/products">PRODUCTS</Link></li>
+                       <li><Link to="/solution">SOLUTIONS</Link></li>
+                        <li><Link to="/careers">CAREERS</Link></li>
+                       <li><Link to="/contact">CONTACT</Link></li>
         </ul>
       </div>
  <hr className="footer-divider" />
 
       <div className="footer-bottom">
         {/* Copyright */}
-        <p>© 2025 Manovate Technologies | Innovating The Future</p>
+        <p>© 2021 Manovate Technologies | Innovating The Future</p>
 
         {/* Social Icons */}
         <div className="footer-socials">

@@ -1,273 +1,301 @@
-
-
-import { useState } from "react";
-
-
- // Removed unused useEffect import
-import { Link } from "react-router-dom";
-import { FiMenu, FiX, FiXCircle, FiArrowRight } from "react-icons/fi";
-import { FaMapMarkerAlt,FaLinkedin,FaInstagram ,FaFacebook} from "react-icons/fa";
-import { HeadProvider, Title, Meta } from 'react-head';
-import "./Home.css";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./solution.css";
-import logo from "./movate1.png";
+import introImage from "./solution.jpg";
+import outroImage from "./solution1.jpg";
+import { HeadProvider, Title, Meta } from "react-head";
+import { Box, Typography } from "@mui/material";
+import logo from "./manovate.png";
+import { FiMenu, FiX } from "react-icons/fi";
+import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
+import {Link} from "react-router-dom";
 
-function Solution() {
+export default function Solutions() {
+  const navigate = useNavigate();
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
+
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedSolution, setSelectedSolution] = useState(null);
-  const [contentVisible, setContentVisible] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const solutions = [
-    {
-      title: "EdTech",
-      description: "Educational technology solutions that transform learning experiences through innovative digital tools and platforms.",
-      content: "Our EdTech solutions include learning management systems, virtual classrooms, interactive educational content, and student performance analytics. We help educational institutions transition to digital learning environments that enhance engagement and improve outcomes.",
-      icon: "📚"
-    },
-    {
-      title: "EdTech for E-government",
-      description: "Government-focused educational technology for public sector training and development programs.",
-      content: "We develop specialized EdTech platforms for government training programs, citizen education initiatives, and public servant skill development. Our solutions include compliance training systems, digital literacy programs, and interactive platforms for public policy education.",
-      icon: "🏛️"
-    },
-    {
-      title: "E-Commerce",
-      description: "Complete e-commerce solutions from platform development to payment integration and analytics.",
-      content: "Our e-commerce solutions include custom online store development, shopping cart systems, payment gateway integration, inventory management, and customer relationship management tools. We create seamless shopping experiences across all devices.",
-      icon: "🛒"
-    },
-    {
-      title: "Blockchain",
-      description: "Secure, transparent blockchain solutions for various industries including finance, supply chain, and more.",
-      content: "We develop blockchain-based solutions including smart contracts, decentralized applications, cryptocurrency wallets, and supply chain transparency systems. Our blockchain expertise helps businesses increase security, transparency, and efficiency in their operations.",
-      icon: "🔗"
-    },
-    {
-      title: "FinTech",
-      description: "Innovative financial technology solutions that revolutionize banking, investing, and payment systems.",
-      content: "Our FinTech solutions include mobile banking applications, digital payment systems, investment platforms, financial analytics tools, and regulatory technology (RegTech) solutions. We help financial institutions modernize their services and improve customer experiences.",
-      icon: "💹"
-    },
-    {
-      title: "E-government",
-      description: "Digital transformation solutions for government agencies to improve citizen services and operational efficiency.",
-      content: "We develop e-government platforms including citizen portals, digital service delivery systems, online permit applications, and government resource planning tools. Our solutions help governments become more efficient, transparent, and accessible to citizens.",
-      icon: "🏢"
-    },
-    {
-      title: "Healthcare in E-government",
-      description: "Technology solutions that bridge healthcare services with government systems for better public health management.",
-      content: "Our healthcare e-government solutions include electronic health records systems, telehealth platforms, public health monitoring tools, and healthcare resource management systems. We help government health agencies improve service delivery and public health outcomes.",
-      icon: "🏥"
-    },
-    {
-      title: "Software Development Consulting",
-      description: "Expert consulting services to guide your software development projects from conception to deployment.",
-      content: "Our consulting services include technology strategy development, architecture design, project management, quality assurance, and DevOps implementation. We help businesses build robust, scalable software solutions that align with their strategic objectives.",
-      icon: "💻"
-    },
-    {
-      title: "Digital Transformation Consulting",
-      description: "Strategic guidance to help businesses adapt to digital technologies and transform their operations.",
-      content: "We provide comprehensive digital transformation consulting including process digitization, technology adoption strategies, change management, and digital maturity assessment. Our consultants help organizations navigate digital disruption and leverage new technologies for competitive advantage.",
-      icon: "🔄"
-    },
-    {
-      title: "Demand Forecasting Software Development",
-      description: "Custom software solutions for accurate demand prediction and inventory optimization.",
-      content: "Our demand forecasting solutions use advanced algorithms and machine learning to predict market demand, optimize inventory levels, and improve supply chain efficiency. We develop custom forecasting tools integrated with your existing business systems.",
-      icon: "📊"
-    },
-    {
-      title: "CRM Development Services",
-      description: "Tailored customer relationship management systems to improve customer engagement and retention.",
-      content: "We develop custom CRM solutions that include customer data management, sales pipeline tracking, marketing automation, customer service tools, and analytics dashboards. Our CRMs are tailored to your specific business processes and customer engagement strategies.",
-      icon: "👥"
-    }
-  ];
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  const handleCardClick = (solution) => {
-    setSelectedSolution(solution);
-    setContentVisible(true);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeContent = () => {
-    setContentVisible(false);
-    setTimeout(() => setSelectedSolution(null), 300);
-    document.body.style.overflow = 'auto';
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) setScrolled(true);
+      else setScrolled(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-     <HeadProvider>
-        <Title>Digital Solutions & Business Innovation | Manovate 2025</Title>
+      <HeadProvider>
+        <Title>Solutions | Manovate Technology</Title>
         <Meta
           name="description"
-          content="Discover Manovate's cutting-edge digital solutions and business innovation strategies. Transform, optimize, and scale your operations for 2025 and beyond."
-        />
-        <Meta
-          name="keywords"
-          content="digital solutions 2025, business innovation, IT transformation, enterprise growth strategies, AI-powered digital solutions, cloud integration, business process automation, future-ready IT solutions, technology-driven business growth, digital transformation experts"
+          content="Explore Manovate’s IT and Non-IT solutions that drive efficiency, innovation, and growth across industries."
         />
       </HeadProvider>
-    <div className="homepage">
-      {/* Navbar */}
-      <header className="navbar">
-        <div className="logo">
-          <img src={logo} alt="ProTech Logo" />
+
+      <div>
+        {/* Hero Section */}
+        <nav className={`navbar ${scrolled ? "scrolled" : ""} ${menuOpen ? "open" : ""}`}>
+      <div className="nav-container">
+        <div className="nav-left">
+          <img src={logo} alt="Kumaran Systems Logo" className="nav-logo" />
         </div>
 
-        {/* Navigation */}
-        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/careers">Careers</Link>
-          <Link to="/solution">Solution</Link>
-          <Link to="/expertise">Expertise</Link>
-          <Link to="/contact" className="contact-icon">
-            📞
-          </Link>
-        </nav>
-
-        {/* Hamburger Icon */}
-        <button
-          className="menu-toggle"
-          aria-label="Toggle navigation"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-        </button>
-      </header>
-
-      {/* Solutions Section */}
-      <section className="solutions">
-        <div className="solutions-header">
-          <h1 className="solutions-title">Our Solutions</h1>
-          <p className="solutions-subtitle">Innovative technology solutions tailored to your business needs</p>
-        </div>
+        <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
+          <li><a href="/" onClick={toggleMenu}>Home</a></li>
+            <li><a href="/about" onClick={toggleMenu}>About</a></li>
+          <li><a href="/services" onClick={toggleMenu}>Services</a></li>
+          <li><a href="/products" onClick={toggleMenu}>Products</a></li>
+          <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
+         
         
-        <div className="solutions-grid">
-          {solutions.map((solution, index) => (
-            <div
-              key={index}
-              className="solution-card"
-              style={{ animationDelay: `${index * 0.1}s` }}
-              onClick={() => handleCardClick(solution)}
-            >
-              <div className="solution-icon">{solution.icon}</div>
-              <h3>{solution.title}</h3>
-              <p>{solution.description}</p>
-              <div className="solution-link">
-                Learn More <FiArrowRight />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+          <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
+          
+        </ul>
 
-      {/* Solution Content Modal */}
-      {selectedSolution && (
-        <div className={`solution-modal ${contentVisible ? 'active' : ''}`}>
-          <div className="solution-modal-content">
-            <button className="solution-modal-close" onClick={closeContent}>
-              <FiXCircle size={24} />
-            </button>
-            <div className="solution-modal-header">
-              <span className="modal-icon">{selectedSolution.icon}</span>
-              <h2>{selectedSolution.title}</h2>
-            </div>
-            <p className="solution-modal-description">{selectedSolution.description}</p>
-            <div className="solution-modal-details">
-              <h3>Overview</h3>
-              <p>{selectedSolution.content}</p>
-              
-              <div className="features-benefits">
-                <div className="features">
-                  <h3>Key Features</h3>
-                  <ul>
-                    <li>Customized to your specific needs</li>
-                    <li>Scalable architecture for future growth</li>
-                    <li>Integration with existing systems</li>
-                    <li>Ongoing support and maintenance</li>
-                  </ul>
-                </div>
-                
-                <div className="benefits">
-                  <h3>Benefits</h3>
-                  <ul>
-                    <li>Improved efficiency and productivity</li>
-                    <li>Enhanced user experience</li>
-                    <li>Data-driven insights</li>
-                    <li>Competitive advantage</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+        <div className="nav-right">
+          <a href="/contact" className="get-in-touch">Get In Touch →</a>
+          <div className="hamburger" onClick={toggleMenu}>
+            {menuOpen ? <FiX /> : <FiMenu />}
           </div>
         </div>
-      )}
-      {/* Footer */}
-      
-<footer className="footer">
-  {/* <div className="footer-logo">
-          <img src={logo} alt="footer-logo" />
-        </div> */}
-      <div className="footer-top">
-        {/* Logo */}
-        {/* <div className="footer-logo">
-          <img src={logo} alt="footer-logo" />
-        </div> */}
-
-        {/* Navigation Links */}
-        <ul className="footer-nav">
-          <li><Link to="/">HOME</Link></li>
-          <li><Link to="/services">SERVICES</Link></li>
-          <li><Link to="/careers">CAREERS</Link></li>
-          <li><Link to="/contact">CONTACT</Link></li>
-          <li><Link to="/about">ABOUT</Link></li>
-        </ul>
       </div>
- <hr className="footer-divider" />
-
-      <div className="footer-bottom">
-        {/* Copyright */}
-        <p>© 2025 Manovate Technologies | Innovating The Future</p>
-
-        {/* Social Icons */}
-        <div className="footer-socials">
-          <a href="https://www.linkedin.com/company/108395213/admin/dashboard/" target="_blank" rel="noreferrer">
-            <FaLinkedin />
-          </a>
-          
-          <a href="https://share.google/1muxM9QFVEQhZBK1k" target="_blank" rel="noreferrer">
- <FaMapMarkerAlt />
-          </a>
-                   <a
-            href="https://www.instagram.com/manovate_tech/"
-            target="_blank"
-            rel="noreferrer"
+    </nav>
+      <div
+        style={{
+          width: "100%",
+          height: "400px",
+          backgroundImage:
+              "linear-gradient(135deg, rgba(124, 170, 255, 0.9) 0%, rgba(0, 89, 255, 0.82) 100%), url('/images/breadcrumb.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "#fff",
+          textAlign: "center",
+          position: "relative",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.6)",
+          }}
+        ></div>
+        <div style={{ zIndex: 2 }}>
+          <h1 style={{ fontSize: "48px", margin: 0, fontWeight: 600 }}>
+            Solution
+          </h1>
+          <div style={{ marginTop: "10px", fontSize: "16px", color: "#ddd" }}>
+            <a
+              href="/"
+              style={{ color: "#fff", textDecoration: "none", marginRight: "5px" }}
             >
-            <FaInstagram />
-           </a>
-              <a
-            href="https://www.facebook.com/profile.php?id=61581412741189"
-            target="_blank"
-            rel="noreferrer"
-            >
-            <FaFacebook />
-            </a>
+              Home
+            </a>{" "}
+            &gt; <span>Solution</span>
+          </div>
         </div>
       </div>
-    </footer>
+
+        {/* Intro Image + Text Section */}
+        <div className="solutions-intro-section">
+          <div className="intro-image">
+            <img src={introImage} alt="Solutions Illustration" />
+          </div>
+          <div className="intro-text">
+            <h2>Solutions That Transform Businesses</h2>
+            <p>
+              At <strong>Manovate Technology</strong>, we turn business challenges into intelligent, scalable IT and Non-IT solutions.
+ Our goal is to help organizations innovate faster, operate smarter, and grow sustainably in a connected world.
+ From digital development to automation, cloud, and enterprise systems, we create solutions that deliver measurable outcomes.
+ We combine strategy, technology, and execution to drive transformation across industries.
+ Every solution we build is designed to enhance performance, efficiency, and long-term value.
+            </p>
+          </div>
+        </div>
+
+        {/* --- Solutions Grid Section --- */}
+<Box className="solutions-grid">
+  <Typography variant="h4" className="solutions-subtitle">Our Solution</Typography>
+  <br></br>
+
+  <Box className="solutions-grid-container">
+    {/* 1. Digital & Development Solutions */}
+    <Box className={`solution-card ${loaded ? "fade-in" : ""}`}>
+      <Typography variant="h3">Digital & Development Solutions</Typography>
+      <ul>
+        <li>Website & Mobile Apps: Responsive, secure, and fast digital platforms.</li>
+        <li>E-commerce Platforms: Scalable solutions for seamless customer experiences.</li>
+        <li>Custom Software: Tailored applications that optimize operations and deliver measurable business impact.</li>
+      </ul>
+    </Box>
+
+    {/* 2. AI & Automation Solutions */}
+    <Box className={`solution-card ${loaded ? "fade-in" : ""}`}>
+      <Typography variant="h3">AI & Automation Solutions</Typography>
+      <ul>
+        <li>Machine Learning & AI: Predictive analytics, recommendation systems, and intelligent automation.</li>
+        <li>Workflow Automation: Streamlining business processes for efficiency.</li>
+        <li>Chatbots & Virtual Assistants: Enhancing engagement and operational speed.</li>
+        <li>IoT & Computer Vision: Smart integrations for data-driven insights.</li>
+      </ul>
+    </Box>
+
+    {/* 3. Cloud, SaaS & Communication */}
+    <Box className={`solution-card ${loaded ? "fade-in" : ""}`}>
+      <Typography variant="h3">Cloud, SaaS & Communication</Typography>
+      <ul>
+        <li>Cloud Solutions & Integration: Scalable, secure, and flexible cloud architectures.</li>
+        <li>SaaS Applications: Enterprise-ready tools to drive business continuity.</li>
+        <li>Unified Communications (UCaaS): Seamless collaboration and connectivity.</li>
+      </ul>
+    </Box>
+
+    {/* 4. Enterprise Tools & Security */}
+    <Box className={`solution-card ${loaded ? "fade-in" : ""}`}>
+      <Typography variant="h3">Enterprise Tools & Security</Typography>
+      <ul>
+        <li>CRM / ERP Systems: Optimized for productivity and business intelligence.</li>
+        <li>HRMS & Inventory Management: Streamlined processes for workforce and assets.</li>
+        <li>Cybersecurity Services: Audits, compliance, and protection against evolving threats.</li>
+      </ul>
+    </Box>
+
+    {/* 5. Non-IT Solutions */}
+    <Box className={`solution-card ${loaded ? "fade-in" : ""}`}>
+      <Typography variant="h3">Non-IT Solutions</Typography>
+      <ul>
+        <li>Business Strategy & Operations: Branding, accounting, and financial operations solutions.</li>
+        <li>Marketing & Customer Engagement: Digital marketing, content management, and CX optimization.</li>
+        <li>Administrative Support & Scheduling: Efficient operational support for smoother workflows.</li>
+      </ul>
+    </Box>
+
+    <Box className={`solution-card ${loaded ? "fade-in" : ""}`}>
+      <Typography variant="h3">Technology Consulting & Support</Typography>
+      <ul>
+        <li>Empowering businesses with strategic guidance, continuous improvement, and end-to-end tech support.</li>
+        <li>IT Consulting & Strategy: Aligning technology with business goals for sustainable growth.</li>
+        <li>System Integration: Connecting digital ecosystems for smooth workflows.</li>
+        <li>Maintenance & Support: Ensuring performance, uptime, and scalability.</li>
+      </ul>
+    </Box>
+  </Box>
+</Box>
 
 
+        {/* Outro Section */}
+{/* <div className="solutions-outro-section">
+  <div className="outro-text">
+    <h3>How We Deliver Value</h3>
+    <p>
+      Our solutions are designed not just to solve problems, but to create measurable
+      business impact. By combining IT and Non-IT expertise, we enable organizations
+      to innovate, scale, and operate efficiently.
+    </p> */}
+
+    {/* Stylish Link */}
+    {/* <a href="/services" className="explore-link">
+      Explore All Services →
+    </a>
+  </div>
+
+  <div className="outro-image">
+    <img src={outroImage} alt="Custom Solutions Illustration" />
+  </div>
+</div> */}
 
 
-    </div>
+        {/* CTA Section */}
+        {/* <div className="solutions-cta">
+          <p className="cta-text">
+            Have a project in mind? Let’s build something amazing together!
+          </p>
+          <button className="cta-button" onClick={handleContactClick}>
+            Contact Us
+          </button>
+        </div> */}
+      </div>
+
+           {/* Footer */}
+            
+      {/* Footer */}
+            
+      <footer className="footer">
+        {/* <div className="footer-logo">
+                <img src={logo} alt="footer-logo" />
+              </div> */}
+            <div className="footer-top">
+              {/* Logo */}
+              {/* <div className="footer-logo">
+                <img src={logo} alt="footer-logo" />
+              </div> */}
+      
+              {/* Navigation Links */}
+              <ul className="footer-nav">
+                <li><Link to="/">HOME</Link></li>
+                <li><Link to="/about">ABOUT</Link></li>
+                <li><Link to="/services">SERVICES</Link></li>
+                
+                <li><Link to="/products">PRODUCTS</Link></li>
+                <li><Link to="/solution">SOLUTIONS</Link></li>
+                 <li><Link to="/careers">CAREERS</Link></li>
+                <li><Link to="/contact">CONTACT</Link></li>
+              </ul>
+            </div>
+       <hr className="footer-divider" />
+      
+            <div className="footer-bottom">
+              {/* Copyright */}
+              <p>© 2021 Manovate Technologies | Innovating The Future</p>
+      
+              {/* Social Icons */}
+              <div className="footer-socials">
+                <a href="https://www.linkedin.com/company/108395213/admin/dashboard/" target="_blank" rel="noreferrer">
+                  <FaLinkedin />
+                </a>
+                
+                <a href="https://share.google/1muxM9QFVEQhZBK1k" target="_blank" rel="noreferrer">
+       <FaMapMarkerAlt />
+                </a>
+                <a
+        href="https://www.instagram.com/manovate_tech/"
+        target="_blank"
+        rel="noreferrer"
+        >
+        <FaInstagram />
+       </a>
+          <a
+                  href="https://www.facebook.com/profile.php?id=61581412741189"
+                  target="_blank"
+                  rel="noreferrer"
+                  >
+                  <FaFacebook />
+                  </a>
+              </div>
+            </div>
+          </footer>
+      
     </>
   );
 }
-
-export default Solution;

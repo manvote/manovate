@@ -29,6 +29,7 @@
 .navbar.scrolled {
   background: rgba(10, 15, 60, 0.95);
   backdrop-filter: blur(10px);
+    min-height: 70px;
   /* padding: 12px 60px; */
 }
 
@@ -41,7 +42,7 @@
 }
 
 .nav-left img.nav-logo {
-  height: 140px;
+  height: 192px;
   width: auto;
   object-fit: contain;
   margin-left: -56px;
@@ -175,12 +176,17 @@
   }
   .hamburger {
     display: block !important;
-     margin-right: 120px;
+      margin-right: -50px;
   }
 
   .get-in-touch {
     display: none !important;
   }
+  .nav-left img.nav-logo{
+   height: 192px;
+  width: auto;
+  object-fit: contain;
+ }
 }
 
 /* Keep navbar above background elements */
@@ -189,6 +195,7 @@
   position: fixed;
   width: 100%;
 }
+
 
 /* Make sure background video or hero doesn't overlap */
 .background-video {
@@ -206,7 +213,7 @@
   }
     .hamburger {
     display: block !important;
-     margin-right: 50px;
+     margin-right: 10px;
   }
   .nav-left img.nav-logo {
   height: 140px;
@@ -219,7 +226,7 @@
 
 
 /* Hero Section */
-.hero-section {
+.hhero-section {
    background: linear-gradient(135deg, #0B0F3D 0%, #1B2360 100%);;
   height: 100vh;
   display: flex;
@@ -230,7 +237,7 @@
   padding-top: 80px;
 }
 
-.hero-overlay {
+.hhero-overlay {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -239,37 +246,50 @@
   z-index: 2;
 }
 
-.hero-content {
-  max-width: 750px;
+.hhero-content {
+  margin-left: 150px;
+  max-width: 950px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+
 }
 
-.hero-title {
+.hhero-title {
   font-size: 68px;
   color: #5DA9FF;
   line-height: 1.2;
   font-weight: 700;
   font-family: "Quicksand", sans-serif;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
-.hero-title h1{
+.hhero-title h1{
+    font-size: 88px;
   color: #5DA9FF;
 }
-.hero-title span {
+.hhero-title span {
   color: #fcfcfc;
   font-family: "Quicksand", sans-serif;
 }
 
-.hero-subtitle {
-  margin-top: 18px;
-  font-size: 18px;
+.hhero-subtitle {
+ margin-left: 20px;
+  font-size: 30px;
   color: #e0e0e0;
-  max-width: 500px;
+  max-width: 800px;
   font-family: "Quicksand", sans-serif;
 }
 
-.hero-buttons {
+.hhero-buttons {
   margin-top: 30px;
   display: flex;
   gap: 15px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
   
   
 }
@@ -315,7 +335,7 @@
 }
 
 /* Hero Image */
-.hero-image img {
+.hhero-image img {
   width: 600px;
   height: 600px;
  
@@ -353,7 +373,7 @@
 }
 
 /* Adjust z-index layers */
-.hero-overlay {
+.hhero-overlay {
   position: relative;
   z-index: 2;
 }
@@ -367,27 +387,29 @@
 }
 /* Responsive Design */
 @media (max-width: 992px) {
-  .hero-overlay {
+  .hhero-overlay {
     flex-direction: column-reverse;
     text-align: center;
   }
 
-  .hero-image img {
+  .hhero-image img {
     width: 300px;
     height: 300px;
     margin-bottom: 20px;
   }
-
-  .hero-title {
-    font-size: 79px;
+ .hhero-content h1{
+    font-size: 63px;
+  }
+  .hhero-title {
+    font-size: 55px;
   }
 
-  .hero-subtitle {
-    font-size: 36px;
+  .hhero-subtitle {
+    font-size: 25px;
     text-align: center;
      max-width: 800px;
   }
-  .hero-buttons {
+  .hhero-buttons {
   margin-top: 30px;
   display: flex;
   gap: 15px;
@@ -395,6 +417,9 @@
   text-align: center;
   justify-content: center;
   
+}
+.hhero-content {
+  margin-left: 10px;
 }
 }
 
@@ -431,15 +456,15 @@
 } */
 
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 32px;
+  .hhero-content h1{
+    font-size: 51px;
   }
-
-  .hero-subtitle {
-    font-size: 24px;
+ 
+  .hhero-title {
+    font-size: 55px;
   }
-.hero-title {
-  font-size: 46px;
+.hhero-title{
+font-size: 55px;
   color: #5DA9FF;
   line-height: 1.2;
   font-weight: 700;
@@ -451,7 +476,7 @@
     font-size: 14px;
   }
 
-  .hero-image img {
+  .hhero-image img {
     width: 250px;
   }
 }

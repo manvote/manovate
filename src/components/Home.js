@@ -4,7 +4,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
 import "./Home.css";
 import { HeadProvider, Title, Meta } from 'react-head';
-import { Menu, X, ArrowRight, ChevronRight, ChevronLeft } from "lucide-react";
+
 
  // Unused? Consider removing if not used.
 // import phone from "./phone-solid-full.svg";
@@ -40,7 +40,7 @@ function Home() {
   }, []);
 
  const videoRef = useRef(null);
-  const videos = [hero, hero1, hero2]; // Add more video imports here
+  const videos = React.useMemo(() => [hero, hero1, hero2], [hero, hero1, hero2]); // Add more video imports here
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
     useEffect(() => {
@@ -108,29 +108,16 @@ function Home() {
           <img src={logo} alt="Kumaran Systems Logo" className="nav-logo" />
         </div>
 
-<<<<<<< HEAD
-        {/* Navigation */}
-        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-         <Link to="/careers">Careers</Link>
-         <Link to="/solution">Solution</Link>
-         <Link to="/ourproducts">Our Products</Link>
-          <Link to="/contact" className="contact-icon">📞</Link>
-        </nav>
-=======
         <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
           <li><a href="/" onClick={toggleMenu}>Home</a></li>
             <li><a href="/about" onClick={toggleMenu}>About</a></li>
           <li><a href="/services" onClick={toggleMenu}>Services</a></li>
           <li><a href="/products" onClick={toggleMenu}>Products</a></li>
-         
+          <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
         
           <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
           
         </ul>
->>>>>>> 6744aaf82a85fd5514854772541b8ff192b6ee9f
 
         <div className="nav-right">
           <a href="/contact" className="get-in-touch">Get In Touch →</a>
@@ -460,6 +447,7 @@ function Home() {
           <li><Link to="/careers">CAREERS</Link></li>
           <li><Link to="/contact">CONTACT</Link></li>
           <li><Link to="/about">ABOUT</Link></li>
+          <li><Link to="/solution">SOLUTIONS</Link></li>
         </ul>
       </div>
  <hr className="footer-divider" />

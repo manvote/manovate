@@ -7,10 +7,16 @@ import hoverPhoto from "./hover-image.jpg"; // Small corner image
 import LanguageIcon from "@mui/icons-material/Language";
 import AndroidIcon from "@mui/icons-material/Android";
 import AppleIcon from "@mui/icons-material/Apple";
-import WatchIcon from "@mui/icons-material/Watch";
-import TvIcon from "@mui/icons-material/Tv";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import { useState } from "react";
+import "./about.css";
+import { useEffect } from "react";
+import logo from "./manovate.png";
+import { FiMenu, FiX } from "react-icons/fi";
+import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
+import SearchIcon from "@mui/icons-material/Search";        // for SEO
+import BrushIcon from "@mui/icons-material/Brush";          // for Designing
+
 
 const OfferIcon = ({ icon, label, color }) => {
   const [active, setActive] = useState(false);
@@ -21,6 +27,10 @@ const OfferIcon = ({ icon, label, color }) => {
   };
 
   return (
+
+    
+    
+
     <Box
       onClick={handleClick}
       sx={{
@@ -199,8 +209,48 @@ const RightContentFlex = styled(Box)({
 });
 
 const About = () => {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) setScrolled(true);
+      else setScrolled(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""} ${menuOpen ? "open" : ""}`}>
+      <div className="nav-container">
+        <div className="nav-left">
+          <img src={logo} alt="Kumaran Systems Logo" className="nav-logo" />
+        </div>
+
+        <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
+          <li><a href="/" onClick={toggleMenu}>Home</a></li>
+            <li><a href="/about" onClick={toggleMenu}>About</a></li>
+          <li><a href="/services" onClick={toggleMenu}>Services</a></li>
+          <li><a href="/products" onClick={toggleMenu}>Products</a></li>
+          <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
+        
+          <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
+          
+        </ul>
+
+        <div className="nav-right">
+          <a href="/contact" className="get-in-touch">Get In Touch →</a>
+          <div className="hamburger" onClick={toggleMenu}>
+            {menuOpen ? <FiX /> : <FiMenu />}
+          </div>
+        </div>
+      </div>
+    </nav>
+
       {/* Hero Banner */}
       <HeroSection>
         <HeroContent>
@@ -277,7 +327,10 @@ const About = () => {
               fontFamily: '"Plus Jakarta Sans", sans-serif',
             }}
           >
-            At Manovate, we specialize in transforming your ideas into digital solutions that drive results. With over 8 years of experience, our team ensures every project is delivered with precision, creativity, and cutting-edge technology.
+            At Manovate Technologies, ideas evolve into intelligent solutions that drive growth and
+innovation. We help businesses shape smarter systems, automate workflows, and create digital
+experiences that move people and performance forward.
+
           </Typography>
 
           <Typography
@@ -288,7 +341,10 @@ const About = () => {
               fontFamily: '"Plus Jakarta Sans", sans-serif',
             }}
           >
-            Our approach combines strategic planning, modern design, and innovative development to provide solutions that truly empower your business.
+            Our strength lies in uniting technology and business strategy to help organizations operate
+intelligently and grow sustainably.
+From IT solutions to strategic Non-IT services, every project we take on is built to solve real
+challenges and unlock measurable results.
           </Typography>
         </RightContentFlex>
 
@@ -355,8 +411,8 @@ const About = () => {
       { icon: <LanguageIcon />, label: "Website", color: "#2196F3" },
       { icon: <AndroidIcon />, label: "Android", color: "#00E676" },
       { icon: <AppleIcon />, label: "iOS", color: "#E5E5E5" },
-      { icon: <WatchIcon />, label: "Watch", color: "#FF6F61" },
-      { icon: <TvIcon />, label: "TV", color: "#FBC02D" },
+      { icon: <SearchIcon />, label: "SEO", color: "#FF6F61" },
+      { icon: <BrushIcon />, label: "Designing", color: "#FBC02D" },
       { icon: <RocketLaunchIcon />, label: "IoT", color: "#7C4DFF" },
     ].map((item, i) => (
       <OfferIcon key={i} icon={item.icon} label={item.label} color={item.color} />
@@ -487,7 +543,7 @@ const About = () => {
       letterSpacing: 2,
     }}
   >
-    Our Process
+    Our Priniciples
   </Typography>
   <Typography
     variant="h3"
@@ -512,11 +568,11 @@ const About = () => {
     }}
   >
     {[
-      { step: "1", title: "Discovery", desc: "Understanding your goals, users, and challenges." },
-      { step: "2", title: "Design", desc: "Crafting user experiences that engage and inspire." },
-      { step: "3", title: "Development", desc: "Engineering high-performance digital solutions." },
-      { step: "4", title: "Delivery", desc: "Ensuring seamless launches with full QA and optimization." },
-      { step: "5", title: "Growth", desc: "Monitoring, analyzing, and scaling for long-term success." },
+      { title: "Integrity", desc: "Transparency and accountability in every partnership." },
+      { title: "Innovation", desc: "New ideas that drive smarter solutions." },
+      { title: "Excellence", desc: "Precision and quality in execution." },
+      { title: "Collaboration", desc: " To deliver measurable outcomes" },
+      { title: "Adaptability", desc: "Evolving with change to stay ahead." },
     ].map((item, i) => (
       <Box
         key={i}
@@ -654,6 +710,63 @@ const About = () => {
     ))}
   </Box>
 </Box>
+
+     {/* Footer */}
+      
+{/* Footer */}
+      
+<footer className="footer">
+  {/* <div className="footer-logo">
+          <img src={logo} alt="footer-logo" />
+        </div> */}
+      <div className="footer-top">
+        {/* Logo */}
+        {/* <div className="footer-logo">
+          <img src={logo} alt="footer-logo" />
+        </div> */}
+
+        {/* Navigation Links */}
+        <ul className="footer-nav">
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/services">SERVICES</Link></li>
+          <li><Link to="/careers">CAREERS</Link></li>
+          <li><Link to="/contact">CONTACT</Link></li>
+          <li><Link to="/about">ABOUT</Link></li>
+          <li><Link to="/solution">SOLUTIONS</Link></li>
+        </ul>
+      </div>
+ <hr className="footer-divider" />
+
+      <div className="footer-bottom">
+        {/* Copyright */}
+        <p>© 2025 Manovate Technologies | Innovating The Future</p>
+
+        {/* Social Icons */}
+        <div className="footer-socials">
+          <a href="https://www.linkedin.com/company/108395213/admin/dashboard/" target="_blank" rel="noreferrer">
+            <FaLinkedin />
+          </a>
+          
+          <a href="https://share.google/1muxM9QFVEQhZBK1k" target="_blank" rel="noreferrer">
+ <FaMapMarkerAlt />
+          </a>
+          <a
+  href="https://www.instagram.com/manovate_tech/"
+  target="_blank"
+  rel="noreferrer"
+  >
+  <FaInstagram />
+ </a>
+    <a
+            href="https://www.facebook.com/profile.php?id=61581412741189"
+            target="_blank"
+            rel="noreferrer"
+            >
+            <FaFacebook />
+            </a>
+        </div>
+      </div>
+    </footer>
 
 
     </>

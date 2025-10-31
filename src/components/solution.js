@@ -5,7 +5,10 @@ import introImage from "./solution.jpg";
 import outroImage from "./solution1.jpg";
 import { HeadProvider, Title, Meta } from "react-head";
 import { Box, Typography } from "@mui/material";
-
+import logo from "./manovate.png";
+import { FiMenu, FiX } from "react-icons/fi";
+import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 export default function Solutions() {
   const navigate = useNavigate();
@@ -19,6 +22,20 @@ export default function Solutions() {
     navigate("/contact");
   };
 
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) setScrolled(true);
+      else setScrolled(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <HeadProvider>
@@ -31,6 +48,32 @@ export default function Solutions() {
 
       <div>
         {/* Hero Section */}
+        <nav className={`navbar ${scrolled ? "scrolled" : ""} ${menuOpen ? "open" : ""}`}>
+      <div className="nav-container">
+        <div className="nav-left">
+          <img src={logo} alt="Kumaran Systems Logo" className="nav-logo" />
+        </div>
+
+        <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
+          <li><a href="/" onClick={toggleMenu}>Home</a></li>
+            <li><a href="/about" onClick={toggleMenu}>About</a></li>
+          <li><a href="/services" onClick={toggleMenu}>Services</a></li>
+          <li><a href="/products" onClick={toggleMenu}>Products</a></li>
+          <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
+         
+        
+          <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
+          
+        </ul>
+
+        <div className="nav-right">
+          <a href="/contact" className="get-in-touch">Get In Touch →</a>
+          <div className="hamburger" onClick={toggleMenu}>
+            {menuOpen ? <FiX /> : <FiMenu />}
+          </div>
+        </div>
+      </div>
+    </nav>
       <div
         style={{
           width: "100%",
@@ -82,16 +125,18 @@ export default function Solutions() {
           <div className="intro-text">
             <h2>Solutions That Transform Businesses</h2>
             <p>
-              At <strong>Manovate Technology</strong>, we turn challenges into scalable IT and
-              Non-IT solutions that drive efficiency, innovation, and growth across
-              industries.
+              At <strong>Manovate Technology</strong>, we turn business challenges into intelligent, scalable IT and Non-IT solutions.
+ Our goal is to help organizations innovate faster, operate smarter, and grow sustainably in a connected world.
+ From digital development to automation, cloud, and enterprise systems, we create solutions that deliver measurable outcomes.
+ We combine strategy, technology, and execution to drive transformation across industries.
+ Every solution we build is designed to enhance performance, efficiency, and long-term value.
             </p>
           </div>
         </div>
 
         {/* --- Solutions Grid Section --- */}
 <Box className="solutions-grid">
-  <Typography variant="h4" className="solutions-subtitle">Our Solution Pillars</Typography>
+  <Typography variant="h4" className="solutions-subtitle">Our Solution</Typography>
   <br></br>
 
   <Box className="solutions-grid-container">
@@ -145,6 +190,16 @@ export default function Solutions() {
         <li>Administrative Support & Scheduling: Efficient operational support for smoother workflows.</li>
       </ul>
     </Box>
+
+    <Box className={`solution-card ${loaded ? "fade-in" : ""}`}>
+      <Typography variant="h3">Technology Consulting & Support</Typography>
+      <ul>
+        <li>Empowering businesses with strategic guidance, continuous improvement, and end-to-end tech support.</li>
+        <li>IT Consulting & Strategy: Aligning technology with business goals for sustainable growth.</li>
+        <li>System Integration: Connecting digital ecosystems for smooth workflows.</li>
+        <li>Maintenance & Support: Ensuring performance, uptime, and scalability.</li>
+      </ul>
+    </Box>
   </Box>
 </Box>
 
@@ -181,6 +236,64 @@ export default function Solutions() {
           </button>
         </div>
       </div>
+
+           {/* Footer */}
+            
+      {/* Footer */}
+            
+      <footer className="footer">
+        {/* <div className="footer-logo">
+                <img src={logo} alt="footer-logo" />
+              </div> */}
+            <div className="footer-top">
+              {/* Logo */}
+              {/* <div className="footer-logo">
+                <img src={logo} alt="footer-logo" />
+              </div> */}
+      
+              {/* Navigation Links */}
+              <ul className="footer-nav">
+                <li><Link to="/">HOME</Link></li>
+                <li><Link to="/services">SERVICES</Link></li>
+                <li><Link to="/careers">CAREERS</Link></li>
+                <li><Link to="/contact">CONTACT</Link></li>
+                <li><Link to="/about">ABOUT</Link></li>
+                <li><Link to="/solution">SOLUTIONS</Link></li>
+              </ul>
+            </div>
+       <hr className="footer-divider" />
+      
+            <div className="footer-bottom">
+              {/* Copyright */}
+              <p>© 2025 Manovate Technologies | Innovating The Future</p>
+      
+              {/* Social Icons */}
+              <div className="footer-socials">
+                <a href="https://www.linkedin.com/company/108395213/admin/dashboard/" target="_blank" rel="noreferrer">
+                  <FaLinkedin />
+                </a>
+                
+                <a href="https://share.google/1muxM9QFVEQhZBK1k" target="_blank" rel="noreferrer">
+       <FaMapMarkerAlt />
+                </a>
+                <a
+        href="https://www.instagram.com/manovate_tech/"
+        target="_blank"
+        rel="noreferrer"
+        >
+        <FaInstagram />
+       </a>
+          <a
+                  href="https://www.facebook.com/profile.php?id=61581412741189"
+                  target="_blank"
+                  rel="noreferrer"
+                  >
+                  <FaFacebook />
+                  </a>
+              </div>
+            </div>
+          </footer>
+      
     </>
   );
 }

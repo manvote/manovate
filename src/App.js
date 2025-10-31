@@ -5,10 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/services";
-<<<<<<< HEAD
-=======
 
->>>>>>> 6744aaf82a85fd5514854772541b8ff192b6ee9f
 import Contact  from "./components/contact";
 import Careers  from "./components/careers";
 import Loader from "./components/Loader";
@@ -39,18 +36,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About/>}/>
         <Route path="/services" element={<Services/>}/>
-<<<<<<< HEAD
-        <Route path="/contact" element={<Contact/>}/>
-         <Route path="/careers" element={<Careers/>}/>
-         <Route path="/solution" element={<Solution/>}/>
-        <Route path="/ourproducts" element={<OurProducts/>}/> 
-=======
+
         
         <Route path="/contact" element={<Contact/>}/>
          <Route path="/careers" element={<Careers/>}/>
-         <Route path="/solution" element={<Solution/>}/>
-        <Route path="/products" element={<Expertise/>}/> 
->>>>>>> 6744aaf82a85fd5514854772541b8ff192b6ee9f
+        <Route path="/solution" element={<Solution/>}/>
+        <Route path="/products" element={<OurProducts/>}/> 
+
         {/* <Route path="/DonorList" element={<DonorList />} />
         <Route path="/DoctorList" element={<DoctorList />} />
         <Route path="/fitness" element={<Fitnesstracker/>}/>

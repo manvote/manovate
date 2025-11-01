@@ -60,7 +60,7 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
-    }, 3000); // ⏱ Change video every 8 seconds (adjust as needed)
+    }, 4000); // ⏱ Change video every 8 seconds (adjust as needed)
 
     return () => clearInterval(interval);
   }, [videos.length]);

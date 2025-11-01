@@ -288,7 +288,7 @@ const About = () => {
         <ImageBoxFlex>
           <MainImage src={mainPhoto} alt="About Main" />
           <SmallImage src={hoverPhoto} alt="Small Corner" />
-          <ExperienceBox>8 Years Experience</ExperienceBox>
+          <ExperienceBox>6 Years Experience</ExperienceBox>
         </ImageBoxFlex>
 
         {/* Right Content */}

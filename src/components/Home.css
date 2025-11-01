@@ -304,11 +304,13 @@
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
+    text-decoration: none;
 }
 
 .btn-primary:hover {
    background: transparent;
   color: white;
+
   
  
    /* border-radius: 30px;
@@ -326,6 +328,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none;
  
 }
 
@@ -419,7 +422,7 @@
   
 }
 .hhero-content {
-  margin-left: 10px;
+  margin-left: 9px;
 }
 }
 
@@ -1147,7 +1150,8 @@ font-size: 55px;
   }
 
   .cta-image {
-    max-width: 220px;
+    min-width: 280px;
+  height: 280px;
   }
 
   .cta-section {
@@ -1172,7 +1176,8 @@ font-size: 55px;
   }
 
   .cta-image {
-    max-width: 180px;
+    min-width: 280px;
+  height: 280px;
   }
 
   .cta-button {

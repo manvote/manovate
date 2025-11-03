@@ -43,14 +43,7 @@ function App() {
         <Route path="/solution" element={<Solution/>}/>
         <Route path="/products" element={<OurProducts/>}/> 
 
-        {/* <Route path="/DonorList" element={<DonorList />} />
-        <Route path="/DoctorList" element={<DoctorList />} />
-        <Route path="/fitness" element={<Fitnesstracker/>}/>
-        <Route path="/medician" element={<Mediciantrack/>}/>
-        <Route path="/Register" element={<Registeration/>}/>
-        <Route path="/Login" element={<Login/>}/>
-        <Route path="/Donorreg" element={<Donorreg/>}/>
-        <Route path="/Donorfind" element={<FindDonor/>}/> */}
+      
         
       </Routes>
     </Router>

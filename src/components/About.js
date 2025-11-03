@@ -223,8 +223,12 @@ const About = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  
   return (
+    
     <>
+  
     <nav className={`navbar ${scrolled ? "scrolled" : ""} ${menuOpen ? "open" : ""}`}>
       <div className="nav-container">
         <div className="nav-left">

@@ -9,7 +9,7 @@ const links = [
   { url: '/contact', changefreq: 'weekly', priority: 0.8 },
   { url: '/careers', changefreq: 'monthly', priority: 0.6 },
   { url: '/solution', changefreq: 'weekly', priority: 0.7 },
-  { url: '/expertise', changefreq: 'weekly', priority: 0.7 },
+  { url: '/products', changefreq: 'weekly', priority: 0.7 },
 ];
 
 const sitemap = new SitemapStream({ hostname: 'https://manovate.co.in' });

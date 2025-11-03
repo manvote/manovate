@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Breadcrumbs } from "@mui/material";
+import { Box, Typography, Breadcrumbs, Link } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 import aboutBanner from "./breadcrumb.jpg"; // Hero banner
 import mainPhoto from "./experience.jpg";   // Big image
@@ -16,7 +16,6 @@ import { FiMenu, FiX } from "react-icons/fi";
 import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
 import SearchIcon from "@mui/icons-material/Search";        // for SEO
 import BrushIcon from "@mui/icons-material/Brush";          // for Designing
-import { Link } from "react-router-dom";
 
 
 const OfferIcon = ({ icon, label, color }) => {
@@ -289,7 +288,7 @@ const About = () => {
         <ImageBoxFlex>
           <MainImage src={mainPhoto} alt="About Main" />
           <SmallImage src={hoverPhoto} alt="Small Corner" />
-          <ExperienceBox>6 Years Experience</ExperienceBox>
+          <ExperienceBox>8 Years Experience</ExperienceBox>
         </ImageBoxFlex>
 
         {/* Right Content */}
@@ -714,36 +713,62 @@ challenges and unlock measurable results.
 
      {/* Footer */}
       
- <footer className="footer">
-    <div className="footer-top">
-      <ul className="footer-nav">
-        <li><Link to="/">HOME</Link></li>
-        <li><Link to="/services">SERVICES</Link></li>
-        <li><Link to="/careers">CAREERS</Link></li>
-        <li><Link to="/contact">CONTACT</Link></li>
-        <li><Link to="/about">ABOUT</Link></li>
-        <li><Link to="/solution">SOLUTIONS</Link></li>
-      </ul>
-    </div>
-    <hr className="footer-divider" />
-    <div className="footer-bottom">
-      <p>© 2025 Manovate Technologies | Innovating The Future</p>
-      <div className="footer-socials">
-        <a href="https://www.linkedin.com/company/108395213/admin/dashboard/" target="_blank" rel="noreferrer">
-          <FaLinkedin />
-        </a>
-        <a href="https://share.google/1muxM9QFVEQhZBK1k" target="_blank" rel="noreferrer">
-          <FaMapMarkerAlt />
-        </a>
-        <a href="https://www.instagram.com/manovate_tech/" target="_blank" rel="noreferrer">
-          <FaInstagram />
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61581412741189" target="_blank" rel="noreferrer">
-          <FaFacebook />
-        </a>
+{/* Footer */}
+      
+<footer className="footer">
+  {/* <div className="footer-logo">
+          <img src={logo} alt="footer-logo" />
+        </div> */}
+      <div className="footer-top">
+        {/* Logo */}
+        {/* <div className="footer-logo">
+          <img src={logo} alt="footer-logo" />
+        </div> */}
+
+        {/* Navigation Links */}
+        <ul className="footer-nav">
+          <li><Link to="/">HOME</Link></li>
+                <li><Link to="/about">ABOUT</Link></li>
+                <li><Link to="/services">SERVICES</Link></li>
+              
+                <li><Link to="/products">PRODUCTS</Link></li>
+                <li><Link to="/solution">SOLUTIONS</Link></li>
+                 <li><Link to="/careers">CAREERS</Link></li>
+                <li><Link to="/contact">CONTACT</Link></li>
+        </ul>
       </div>
-    </div>
-  </footer>
+ <hr className="footer-divider" />
+
+      <div className="footer-bottom">
+        {/* Copyright */}
+        <p>© 2021 Manovate Technologies | Innovating The Future</p>
+
+        {/* Social Icons */}
+        <div className="footer-socials">
+          <a href="https://www.linkedin.com/company/108395213/admin/dashboard/" target="_blank" rel="noreferrer">
+            <FaLinkedin />
+          </a>
+          
+          <a href="https://share.google/1muxM9QFVEQhZBK1k" target="_blank" rel="noreferrer">
+ <FaMapMarkerAlt />
+          </a>
+          <a
+  href="https://www.instagram.com/manovate_tech/"
+  target="_blank"
+  rel="noreferrer"
+  >
+  <FaInstagram />
+ </a>
+    <a
+            href="https://www.facebook.com/profile.php?id=61581412741189"
+            target="_blank"
+            rel="noreferrer"
+            >
+            <FaFacebook />
+            </a>
+        </div>
+      </div>
+    </footer>
 
 
     </>

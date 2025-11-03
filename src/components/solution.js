@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import "./solution.css";
 import introImage from "./solution.jpg";
 import outroImage from "./solution1.jpg";
@@ -11,14 +11,16 @@ import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa"
 import {Link} from "react-router-dom";
 
 export default function Solutions() {
-
+  const navigate = useNavigate();
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     setLoaded(true);
   }, []);
 
- 
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -203,17 +205,17 @@ export default function Solutions() {
 
 
         {/* Outro Section */}
-<div className="solutions-outro-section">
+{/* <div className="solutions-outro-section">
   <div className="outro-text">
     <h3>How We Deliver Value</h3>
     <p>
       Our solutions are designed not just to solve problems, but to create measurable
       business impact. By combining IT and Non-IT expertise, we enable organizations
       to innovate, scale, and operate efficiently.
-    </p>
+    </p> */}
 
     {/* Stylish Link */}
-    <a href="/services" className="explore-link">
+    {/* <a href="/services" className="explore-link">
       Explore All Services →
     </a>
   </div>
@@ -221,10 +223,18 @@ export default function Solutions() {
   <div className="outro-image">
     <img src={outroImage} alt="Custom Solutions Illustration" />
   </div>
-</div>
+</div> */}
 
 
-        
+        {/* CTA Section */}
+        {/* <div className="solutions-cta">
+          <p className="cta-text">
+            Have a project in mind? Let’s build something amazing together!
+          </p>
+          <button className="cta-button" onClick={handleContactClick}>
+            Contact Us
+          </button>
+        </div> */}
       </div>
 
            {/* Footer */}
@@ -244,18 +254,20 @@ export default function Solutions() {
               {/* Navigation Links */}
               <ul className="footer-nav">
                 <li><Link to="/">HOME</Link></li>
-                <li><Link to="/services">SERVICES</Link></li>
-                <li><Link to="/careers">CAREERS</Link></li>
-                <li><Link to="/contact">CONTACT</Link></li>
                 <li><Link to="/about">ABOUT</Link></li>
+                <li><Link to="/services">SERVICES</Link></li>
+                
+                <li><Link to="/products">PRODUCTS</Link></li>
                 <li><Link to="/solution">SOLUTIONS</Link></li>
+                 <li><Link to="/careers">CAREERS</Link></li>
+                <li><Link to="/contact">CONTACT</Link></li>
               </ul>
             </div>
        <hr className="footer-divider" />
       
             <div className="footer-bottom">
               {/* Copyright */}
-              <p>© 2025 Manovate Technologies | Innovating The Future</p>
+              <p>© 2021 Manovate Technologies | Innovating The Future</p>
       
               {/* Social Icons */}
               <div className="footer-socials">

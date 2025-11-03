@@ -2,7 +2,7 @@ import React, { useEffect,useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { HeadProvider, Title, Meta } from 'react-head';
-import logo from "./movate1.png";
+import logo from "./manovate.png";
 import { FaMapMarkerAlt,FaLinkedin ,FaInstagram,FaFacebook} from "react-icons/fa";
 import "./Home.css";
 import "./contact.css";
@@ -115,7 +115,8 @@ function Contact() {
             <li><a href="/about" onClick={toggleMenu}>About</a></li>
           <li><a href="/services" onClick={toggleMenu}>Services</a></li>
           <li><a href="/products" onClick={toggleMenu}>Products</a></li>
-          <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
+         
+        
           <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
           
         </ul>
@@ -228,20 +229,21 @@ Contact us today to see how our tailored ServiceNow solutions can drive real res
 
         {/* Navigation Links */}
         <ul className="footer-nav">
-          <li><Link to="/">HOME</Link></li>
-          <li><Link to="/services">SERVICES</Link></li>
-          <li><Link to="/careers">CAREERS</Link></li>
-          <li><Link to="/contact">CONTACT</Link></li>
-          <li><Link to="/about">ABOUT</Link></li>
-          <li><Link to="/products">PRODUCTS</Link></li>
-          <li><Link to="/solution">SOLUTIONS</Link></li>
+           <li><Link to="/">HOME</Link></li>
+                         <li><Link to="/about">ABOUT</Link></li>
+                         <li><Link to="/services">SERVICES</Link></li>
+                        
+                         <li><Link to="/products">PRODUCTS</Link></li>
+                         <li><Link to="/solution">SOLUTIONS</Link></li>
+                          <li><Link to="/careers">CAREERS</Link></li>
+                         <li><Link to="/contact">CONTACT</Link></li>
         </ul>
       </div>
  <hr className="footer-divider" />
 
       <div className="footer-bottom">
         {/* Copyright */}
-        <p>© 2025 Manovate Technologies | Innovating The Future</p>
+        <p>© 2021 Manovate Technologies | Innovating The Future</p>
 
         {/* Social Icons */}
         <div className="footer-socials">

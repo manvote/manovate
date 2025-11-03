@@ -1373,9 +1373,10 @@ return (
         <div className="divider"></div>
         <div className="hours-list">
           {[
-            { day: "Mon – Sat", time: "10.00 AM – 4.00 PM" },
-            { day: "Sun", time: "09.00 AM – 4.00 PM" },
-            { day: "Friday", time: "Closed" },
+            { day: "Mon – Fri", time: "9.30 AM – 6.30 PM" },
+             { day: "Saturday", time: "09.30 AM – 1.30 PM" },
+            { day: "Sun", time: "Closed" },
+           
             { day: "Emergency", time: "24 hours" },
           ].map((item, i) => (
             <div className="hour-item" key={i}>
@@ -1393,7 +1394,7 @@ return (
         <img src="/images/support.jpg" alt="Support" />
         <div className="support-text">
           <h3>Need Help? Call Us</h3>
-          <p>+1 234 567 890</p>
+          <p>+91 9787066569</p>
         </div>
       </div>
     </div>
@@ -1433,17 +1434,19 @@ return (
   <footer className="footer">
     <div className="footer-top">
       <ul className="footer-nav">
-        <li><Link to="/">HOME</Link></li>
-        <li><Link to="/services">SERVICES</Link></li>
-        <li><Link to="/careers">CAREERS</Link></li>
-        <li><Link to="/contact">CONTACT</Link></li>
-        <li><Link to="/about">ABOUT</Link></li>
-        <li><Link to="/solution">SOLUTIONS</Link></li>
+         <li><Link to="/">HOME</Link></li>
+                       <li><Link to="/about">ABOUT</Link></li>
+                       <li><Link to="/services">SERVICES</Link></li>
+                      
+                       <li><Link to="/products">PRODUCTS</Link></li>
+                       <li><Link to="/solution">SOLUTIONS</Link></li>
+                        <li><Link to="/careers">CAREERS</Link></li>
+                       <li><Link to="/contact">CONTACT</Link></li>
       </ul>
     </div>
     <hr className="footer-divider" />
     <div className="footer-bottom">
-      <p>© 2025 Manovate Technologies | Innovating The Future</p>
+      <p>© 2021 Manovate Technologies | Innovating The Future</p>
       <div className="footer-socials">
         <a href="https://www.linkedin.com/company/108395213/admin/dashboard/" target="_blank" rel="noreferrer">
           <FaLinkedin />

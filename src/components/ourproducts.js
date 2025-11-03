@@ -1112,19 +1112,21 @@ export default function OurProducts() {
 
         {/* Navigation Links */}
         <ul className="footer-nav">
-          <li><Link to="/">HOME</Link></li>
-          <li><Link to="/services">SERVICES</Link></li>
-          <li><Link to="/careers">CAREERS</Link></li>
-          <li><Link to="/contact">CONTACT</Link></li>
-          <li><Link to="/about">ABOUT</Link></li>
-          <li><Link to="/solution">SOLUTIONS</Link></li>
+            <li><Link to="/">HOME</Link></li>
+                          <li><Link to="/about">ABOUT</Link></li>
+                          <li><Link to="/services">SERVICES</Link></li>
+                       
+                          <li><Link to="/products">PRODUCTS</Link></li>
+                          <li><Link to="/solution">SOLUTIONS</Link></li>
+                           <li><Link to="/careers">CAREERS</Link></li>
+                          <li><Link to="/contact">CONTACT</Link></li>
         </ul>
       </div>
  <hr className="footer-divider" />
 
       <div className="footer-bottom">
         {/* Copyright */}
-        <p>© 2025 Manovate Technologies | Innovating The Future</p>
+        <p>© 2021 Manovate Technologies | Innovating The Future</p>
 
         {/* Social Icons */}
         <div className="footer-socials">

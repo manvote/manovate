@@ -16,7 +16,8 @@
 .navbar.scrolled {
   background: rgba(10, 15, 60, 0.95);
   backdrop-filter: blur(10px);
-  padding: 12px 60px;
+    min-height: 70px;
+  /* padding: 12px 60px; */
 }
 
 .nav-container {
@@ -28,16 +29,16 @@
 }
 
 .nav-left img.nav-logo {
-  height: 140px;
+  height: 192px;
   width: auto;
   object-fit: contain;
-  margin-left: -26px;
+  margin-left: -56px;
 }
 
 /* ===== Desktop Links ===== */
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   list-style: none;
 }
 
@@ -162,12 +163,17 @@
   }
   .hamburger {
     display: block !important;
-     margin-right: 120px;
+     margin-right: -50px;
   }
 
   .get-in-touch {
     display: none !important;
   }
+  .nav-left img.nav-logo{
+   height: 192px;
+  width: auto;
+  object-fit: contain;
+ }
 }
 
 /* Keep navbar above background elements */
@@ -193,7 +199,12 @@
   }
     .hamburger {
     display: block !important;
-     margin-right: 80px;
+     margin-right: 10px;
   }
+  .nav-left img.nav-logo {
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+  margin-left: -10px;
 }
-
+}

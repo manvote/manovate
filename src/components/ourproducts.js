@@ -279,7 +279,7 @@ It enables businesses to deliver <b>intelligent insights</b>, foster <b>data-dri
 },
 
 {
-  id: 14,
+  id: 11,
   title: "Data Analysis & DataPrep System",
   subtitle: "Transforming Raw Data into Actionable Intelligence",
   description: `<b>The Data Analysis & DataPrep System</b> is a comprehensive platform engineered to simplify and streamline the entire data lifecycle — from raw data acquisition to insightful analytics.<br><br>
@@ -314,7 +314,7 @@ By automating the most time-consuming parts of data management and empowering us
 },
 
 {
-  id: 15,
+  id: 12,
   title: "Payroll Application (Web + Mobile)",
   subtitle: "Automated, Secure, and Scalable Payroll Management",
   description: `<b>The Payroll Application (Web + Mobile)</b> is a comprehensive, cloud-based payroll management solution designed to automate and simplify every aspect of employee compensation and workforce administration.<br><br>
@@ -351,8 +351,8 @@ It enhances organizational productivity, empowers employees, and ensures every p
 },
 
 {
-  id: 16,
-  title: "E-Commerce Application (Amazon / Flipkart Style)",
+  id: 13,
+  title: "E-Commerce Application",
   subtitle: "Smart, Scalable, and Customer-Centric Online Marketplace",
   description: `<b>The E-Commerce Application (Amazon / Flipkart Style)</b> is a full-scale digital commerce platform engineered to redefine how businesses sell and customers shop online.<br><br>
 
@@ -388,7 +388,7 @@ It empowers businesses to operate efficiently, reach wider audiences, and delive
 },
 
 {
-  id: 17,
+  id: 14,
   title: "HR Management System (Employee & Workforce Platform)",
   subtitle: "Streamlined, Automated, and Data-Driven Workforce Management",
   description: `<b>The HR Management System (Employee & Workforce Platform)</b> is a comprehensive digital solution designed to transform traditional HR operations into a streamlined, automated, and data-driven experience.<br><br>
@@ -423,7 +423,7 @@ It empowers organizations to operate efficiently, engage employees effectively, 
 },
 
 {
-  id: 18,
+  id: 15,
   title: "Customer Relationship Management (CRM) System",
   subtitle: "Streamline Relationships, Sales, and Customer Engagement",
   description: `<b>The Customer Relationship Management (CRM) System</b> is a comprehensive digital platform designed to streamline how organizations manage their relationships with leads, customers, and partners.<br><br>
@@ -456,7 +456,7 @@ It enables organizations to nurture relationships, optimize workflows, and achie
 },
 
 {
-  id: 19,
+  id: 16,
   title: "Appointment & Booking Management System",
   subtitle: "Seamless Scheduling and Smart Automation",
   description: `<b>The Appointment & Booking Management System</b> is a robust, cloud-based platform designed to simplify scheduling, automate workflows, and deliver a seamless booking experience for both businesses and customers.<br><br>
@@ -493,7 +493,7 @@ It enhances operational efficiency, reduces manual intervention, and empowers bu
 },
 
 {
-  id: 20,
+  id: 17,
   title: "Recruitment & Applicant Tracking System (ATS)",
   subtitle: "AI-Powered Recruitment Automation Platform",
   description: `<b>The Recruitment & Applicant Tracking System (ATS)</b> is a comprehensive, AI-enabled hiring platform designed to simplify, automate, and optimize the recruitment process for organizations of any scale.<br><br>
@@ -530,7 +530,7 @@ It empowers organizations to build stronger teams, improve operational efficienc
 },
 
 {
-  id: 21,
+  id: 18,
   title: "Event Management System (Web + Mobile)",
   subtitle: "Smart, Automated Event Planning and Coordination",
   description: `<b>The Event Management System (Web + Mobile)</b> is an all-in-one digital platform designed to simplify and automate the end-to-end management of events — from planning and registration to hosting and post-event analysis.<br><br>
@@ -571,7 +571,7 @@ It empowers organizations to deliver exceptional events with precision, engageme
 },
 
 {
-  id: 22,
+  id: 19,
   title: "Retail POS System (Web + Mobile)",
   subtitle: "Smart Retail Management for Modern Businesses",
   description: `<b>The Retail POS System (Web + Mobile)</b> is a comprehensive retail management solution developed to streamline point-of-sale operations, enhance customer experience, and optimize business performance across multiple branches.<br><br>
@@ -610,7 +610,7 @@ It empowers businesses to deliver superior service, maximize efficiency, and mai
 },
 
 {
-  id: 23,
+  id: 20,
   title: "Privacy-Based Browser (Web + Mobile)",
   subtitle: "Secure, Private, and Intelligent Web Experience",
   description: `<b>The Privacy-Based Browser (Web + Mobile)</b> is a next-generation web browsing solution engineered to provide a <b>secure, private, and efficient</b> online experience.<br><br>
@@ -649,7 +649,7 @@ It empowers individuals and organizations to browse confidently, knowing that th
 },
 
 {
-  id: 24,
+  id: 21,
   title: "Food and Beverages (Café) Billing Software",
   subtitle: "Smart Café & Restaurant Management Solution",
   description: `<b>The Food and Beverages (Café) Billing Software</b> is an advanced, all-in-one management solution developed to streamline café and restaurant operations.<br><br>
@@ -707,7 +707,7 @@ const fadeInUp = {
 // --- Styled components for the card layout
 const PageOuter = styled("div")({
   minHeight: "100vh",
-  background: "linear-gradient(180deg,#001a33 0%, #002b4a 100%)",
+  background: "linear-gradient(135deg, #0B0F3D 0%, #1B2360 100%)",
   padding: "48px",
   boxSizing: "border-box",
   fontFamily: "'Poppins', sans-serif",
@@ -837,12 +837,13 @@ const SidebarBox = styled("div")({
   background: "rgba(255,255,255,0.04)",
   borderRadius: 16,
   padding: 28,
-  height: 620,
+  minHeight: "1900px",
   overflowY: "auto",
   border: "1px solid rgba(255,255,255,0.06)",
   boxShadow: "0 18px 40px rgba(0,0,0,0.45)",
   scrollbarWidth: "thin",
   scrollbarColor: "#64b5ff rgba(255,255,255,0.02)",
+  maxHeight: "80vh",
 
   "&::-webkit-scrollbar": {
     width: "10px",
@@ -859,7 +860,8 @@ const SidebarBox = styled("div")({
   "@media (max-width: 1024px)": {
     position: "relative",
     top: 0,
-    height: "auto",
+    minHeight: "auto", // ✅ override this so no long empty space
+    height: "auto", // ✅ allow it to resize properly
     maxHeight: "none",
     overflowY: "hidden",
     overflowX: "auto",
@@ -1043,18 +1045,7 @@ export default function OurProducts() {
           {/* Right Sidebar */}
           <Sidebar>
             <SidebarBox>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: 800,
-                  mb: 2,
-                  color: "#e8f8ff",
-                  textAlign: "center",
-                  fontSize: 18,
-                }}
-              >
-                All Projects
-              </Typography>
+              
 
               <Box>
                 {products.map((p) => (

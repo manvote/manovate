@@ -72,7 +72,7 @@ const [menuOpen, setMenuOpen] = useState(false);
             <li><a href="/about" onClick={toggleMenu}>About</a></li>
           <li><a href="/services" onClick={toggleMenu}>Services</a></li>
           <li><a href="/products" onClick={toggleMenu}>Products</a></li>
-         
+          <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
         
           <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
           
@@ -221,6 +221,8 @@ const [menuOpen, setMenuOpen] = useState(false);
           <li><Link to="/careers">CAREERS</Link></li>
           <li><Link to="/contact">CONTACT</Link></li>
           <li><Link to="/about">ABOUT</Link></li>
+          <li><Link to="/products">PRODUCTS</Link></li>
+          <li><Link to="/solution">SOLUTIONS</Link></li>
         </ul>
       </div>
  <hr className="footer-divider" />

@@ -146,6 +146,76 @@ body {
   transform: scale(1.1);
 }
 
+
+/* =========================
+   OUTRO SECTION (DESKTOP)
+========================= */
+.solutions-outro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 80px 100px;
+  background: #f8fafc; /* subtle light background */
+}
+
+.outro-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.outro-text h3 {
+  font-size: 2rem;
+  color: #0d47a1;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.outro-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Stylish link */
+.explore-link {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  color: #0d47a1;
+  font-size: 1.05rem;
+  border: 2px solid #0d47a1;
+  padding: 10px 22px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.explore-link:hover {
+  background: #0d47a1;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Image styling */
+.outro-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.outro-image img {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.outro-image img:hover {
+  transform: scale(1.03);
+}
+
 /* Show hamburger only on mobile screens */
 
 /* ===== Mobile Menu ===== */
@@ -651,125 +721,51 @@ img { max-width: 100%; display:block; }
     padding: 20px;
   }
 }
+/* FOOTER */
 
-/* =========================
-   CTA Section — Desktop View
-   ========================= */
-@media (min-width: 1024px) {
-  .solutions-cta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    padding: 70px var(--container-padding);
-    margin-top: 40px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #1565c0, #1e88e5);
-    box-shadow: 0 8px 25px rgba(21, 101, 192, 0.2);
-    max-width: var(--max-width);
-    margin-left: auto;
-    margin-right: auto;
+@media (max-width: 768px) {
+  .solutions-grid {
+    padding: 30px 15px;
+    text-align: center;
   }
 
-  .cta-text {
+  .solutions-subtitle {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #ffffff;
+    margin-bottom: 15px;
+  }
+
+  .solutions-grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .solution-card {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    max-width: 70%;
-    line-height: 1.4;
+  }
+
+  .solution-card h3 {
+    font-size: 1.2rem;
+    color: #0d47a1;
+    margin-bottom: 10px;
+  }
+
+  .solution-card ul {
+    padding-left: 20px;
     margin: 0;
   }
 
-  .cta-button {
-    background: #ffffff;
-    color: #1565c0;
-    border: none;
-    padding: 14px 38px;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
-  }
-
-  .cta-button:hover {
-    background: #0d47a1;
-    color: #ffffff;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(13, 71, 161, 0.4);
+  .solution-card li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: #333;
   }
 }
-
-/* =========================
-   Outro Section — Desktop View
-   ========================= */
-@media (min-width: 1024px) {
-  .solutions-outro-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px var(--container-padding);
-    max-width: var(--max-width);
-    margin: 0 auto;
-    gap: 60px;
-  }
-
-  .outro-text {
-    flex: 1 1 50%;
-    max-width: 50%;
-    padding-right: 40px;
-  }
-
-  .outro-text h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--primary-600);
-    margin-bottom: 16px;
-  }
-
-  .outro-text p {
-    color: #555;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 24px;
-  }
-
-  .explore-link {
-    font-size: 1.1rem;
-    color: #1565c0;
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-  }
-
-  .explore-link:hover {
-    color: #0d47a1;
-    border-bottom: 2px solid #1565c0;
-    transform: translateX(5px);
-  }
-
-  .outro-image {
-    flex: 1 1 50%;
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .outro-image img {
-    width: 90%;
-    height: auto;
-    border-radius: var(--radius);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    transition: transform 0.4s ease;
-  }
-
-  .outro-image img:hover {
-    transform: scale(1.03);
-  }
-}
-
 

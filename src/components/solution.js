@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import "./solution.css";
 import introImage from "./solution.jpg";
 import outroImage from "./solution1.jpg";
@@ -11,16 +11,14 @@ import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa"
 import {Link} from "react-router-dom";
 
 export default function Solutions() {
-  const navigate = useNavigate();
+
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     setLoaded(true);
   }, []);
 
-  const handleContactClick = () => {
-    navigate("/contact");
-  };
+ 
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -226,15 +224,7 @@ export default function Solutions() {
 </div>
 
 
-        {/* CTA Section */}
-        <div className="solutions-cta">
-          <p className="cta-text">
-            Have a project in mind? Let’s build something amazing together!
-          </p>
-          <button className="cta-button" onClick={handleContactClick}>
-            Contact Us
-          </button>
-        </div>
+        
       </div>
 
            {/* Footer */}

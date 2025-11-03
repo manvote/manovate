@@ -352,6 +352,7 @@
   width: 100%;
   display: block;
   transition: transform 0.4s ease;
+  height: 250px;
 }
 
 .support-section img:hover {
@@ -424,7 +425,7 @@
 
 .benefits-image img {
   width: 100%;
-  height: auto;
+  height: 280px;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 6px 18px rgba(13, 110, 253, 0.15);

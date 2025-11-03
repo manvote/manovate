@@ -1259,6 +1259,7 @@ const [selectedService, setSelectedService] = useState(servicesData.IT[0]);
 const [hovered, setHovered] = useState(null);
 const [menuOpen, setMenuOpen] = useState(false);
 const [scrolled, setScrolled] = useState(false);
+const contentRef = React.useRef(null);
 
 const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -1350,7 +1351,13 @@ return (
             className={`sidebar-item ${
               selectedService.id === service.id ? "active" : ""
             } ${hovered === service.id ? "hovered" : ""}`}
-            onClick={() => setSelectedService(service)}
+            onClick={() => {
+  setSelectedService(service);
+  setTimeout(() => {
+    contentRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, 100);
+}}
+
             onMouseEnter={() => setHovered(service.id)}
             onMouseLeave={() => setHovered(null)}
           >
@@ -1392,7 +1399,7 @@ return (
     </div>
 
     {/* RIGHT SIDE */}
-    <div className="services-right">
+    <div className="services-right" ref={contentRef}>
       <div className="content-card">
         <h2>{selectedService.title}</h2>
         <p dangerouslySetInnerHTML={{ __html: selectedService.description }}></p>

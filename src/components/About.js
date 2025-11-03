@@ -13,7 +13,7 @@ import "./about.css";
 import { useEffect } from "react";
 import logo from "./manovate.png";
 import { FiMenu, FiX } from "react-icons/fi";
-import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
+import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook,FaComments } from "react-icons/fa";
 import SearchIcon from "@mui/icons-material/Search";        // for SEO
 import BrushIcon from "@mui/icons-material/Brush";          // for Designing
 
@@ -25,6 +25,10 @@ const OfferIcon = ({ icon, label, color }) => {
     setActive(true);
     setTimeout(() => setActive(false), 1000); // reset animation
   };
+
+  
+
+
 
   return (
 
@@ -212,7 +216,29 @@ const About = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
+  const [messages, setMessages] = useState([{ sender: "bot", text: "👋 Hi there! I'm Manovate Assistant. How can I help you today?" }]);
+  const [input, setInput] = useState("");
 
+     const sendMessage = async () => {
+    if (!input.trim()) return;
+
+    const newMessages = [...messages, { sender: "user", text: input }];
+    setMessages(newMessages);
+    setInput("");
+
+    try {
+      const res = await fetch("https://manovatebackend.onrender.com/api/chatbot/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: input }),
+      });
+      const data = await res.json();
+      setMessages([...newMessages, { sender: "bot", text: data.reply }]);
+    } catch {
+      setMessages([...newMessages, { sender: "bot", text: "❌ Unable to connect to the server." }]);
+    }
+  };
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   useEffect(() => {
@@ -714,6 +740,40 @@ challenges and unlock measurable results.
     ))}
   </Box>
 </Box>
+
+
+
+ <div className="chatbot-container">
+          {chatOpen ? (
+            <div className="chatbot-box">
+              <div className="chatbot-header">
+                <h4>Manovate Assistant</h4>
+                <button onClick={() => setChatOpen(false)}>×</button>
+              </div>
+              <div className="chatbot-messages">
+                {messages.map((msg, idx) => (
+                  <div key={idx} className={`chat-message ${msg.sender}`}>
+                    {msg.text}
+                  </div>
+                ))}
+              </div>
+              <div className="chatbot-input">
+                <input
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="Type your message..."
+                  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+                />
+                <button onClick={sendMessage}>Send</button>
+              </div>
+            </div>
+          ) : (
+            <button className="chatbot-toggle" onClick={() => setChatOpen(true)}>
+              <FaComments />
+            </button>
+          )}
+        </div>
 
      {/* Footer */}
       

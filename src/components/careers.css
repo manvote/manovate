@@ -237,7 +237,15 @@
   height: 70px;
   margin-top: 1rem;
 }
+@media (max-width: 1400px) {
+  .careers-hero {
+     height: 30vh;
+  }
+  .careers-content h1{
+    margin-top: 35px;
+  }
 
+}
 /* Responsive */
 @media (max-width: 768px) {
   .careers-content h1 {

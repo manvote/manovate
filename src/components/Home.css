@@ -924,7 +924,11 @@ font-size: 55px;
   font-size: 15px;
   margin: 0;
 }
-
+@media (max-width:1400px){
+  .experience-badget{
+      margin-left: 40px;
+  }
+}
 /* ===== Responsive About Section ===== */
 
 /* Medium screens (tablets and small laptops) */

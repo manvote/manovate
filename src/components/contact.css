@@ -225,12 +225,25 @@
           /* Center vertically */
   flex-direction: column;     /* Stack text + logo */
   /* text-align: center; */
-  height: 20vh;               /* Take most of the screen */
+  height: 30vh;               /* Take most of the screen */
   /* background: linear-gradient(135deg, #0099ff, #0066cc);  */
   background-image: url("careersbg.png");
   color: white;
   padding: 2rem;
 }
+
+@media (max-width: 1400px) {
+  .contact-content {
+    height: 30vh;
+  
+}
+.contact-content h1{
+  margin-top: 30px;
+}
+.contact-content h3{
+  margin-top: 0px;
+  margin-bottom: 30px;
+}}
 .contact-title {
   text-align: center;
   margin-bottom: 50px;

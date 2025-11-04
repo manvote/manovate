@@ -181,8 +181,7 @@ Contact us today to see how our tailored ServiceNow solutions can drive real res
             <p><strong>Email:</strong> info@manovate.co.in</p>
              <p><strong>Address:</strong> <br/>
              <strong>Chennai : </strong>GREETA TOWERS, Industrial Estate, Perungudi, Chennai, Tamil Nadu 600096 <br/>
-             <strong>Bengaluru : </strong>
-             1st Floor, 94, Rashtriya Vidyalaya Rd, Basavanagudi, Bengaluru, Karnataka 560004</p>
+            </p>
           </div>
 
           {/* Contact Form */}

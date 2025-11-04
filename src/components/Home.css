@@ -532,7 +532,11 @@ font-size: 55px;
   align-items: stretch;
   padding: 0 40px;
 }
-
+@media (max-width: 1400px) {
+.services-grid{
+   gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}}
 .service-card {
   background: #fff;
   border-radius: 16px;

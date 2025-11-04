@@ -195,7 +195,7 @@ const [menuOpen, setMenuOpen] = useState(false);
     </form>
 
 <section class="job-postings">
-  <span class="section-label">JOB POSTINGS</span>
+  {/* <span class="section-label">JOB POSTINGS</span> */}
   <h2>Your Next Opportunity Starts Here</h2>
   <p>
     We’re always looking for talented individuals to join our team. Explore our current openings 

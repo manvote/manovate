@@ -219,6 +219,9 @@
   opacity: 0;
   animation: fadeInUp 1s ease forwards;
   animation-delay: 0.8s;
+    justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .contact-content{
   display: flex;
@@ -230,8 +233,15 @@
   background-image: url("careersbg.png");
   color: white;
   padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
+.contact-hero h1{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 @media (max-width: 1400px) {
   .contact-content {
     height: 40vh;

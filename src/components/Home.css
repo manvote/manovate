@@ -392,6 +392,7 @@
 @media (max-width:1400px){
   .hhero-content{
       margin-left: 75px;
+      margin-bottom: 100px;
   }
 }
 /* Responsive Design */
@@ -931,6 +932,7 @@ font-size: 55px;
 @media (max-width:1400px){
   .experience-badget{
       margin-left: 40px;
+      padding: 0px 35px;
   }
 }
 /* ===== Responsive About Section ===== */

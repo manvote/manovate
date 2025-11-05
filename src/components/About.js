@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Typography, Breadcrumbs, Link } from "@mui/material";
+import { Link } from "react-router-dom";
+import { Box, Typography, Breadcrumbs} from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 import aboutBanner from "./breadcrumb.jpg"; // Hero banner
 import mainPhoto from "./experience.jpg";   // Big image
@@ -266,7 +267,7 @@ const About = () => {
             <li><a href="/about" onClick={toggleMenu}>About</a></li>
           <li><a href="/services" onClick={toggleMenu}>Services</a></li>
           <li><a href="/products" onClick={toggleMenu}>Products</a></li>
-          <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
+          <li><a href="/solutions" onClick={toggleMenu}>Solutions</a></li>
         
           <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
           
@@ -304,10 +305,7 @@ const About = () => {
               "& .MuiLink-root": { color: "#ddd", textDecoration: "none" },
             }}
           >
-            <Link underline="hover" href="/">
-              Home
-            </Link>
-            <Typography color="inherit">About Us</Typography>
+           
           </Breadcrumbs>
         </HeroContent>
       </HeroSection>
@@ -796,7 +794,7 @@ challenges and unlock measurable results.
                 <li><Link to="/services">SERVICES</Link></li>
               
                 <li><Link to="/products">PRODUCTS</Link></li>
-                <li><Link to="/solution">SOLUTIONS</Link></li>
+                <li><Link to="/solutions">SOLUTIONS</Link></li>
                  <li><Link to="/careers">CAREERS</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
         </ul>

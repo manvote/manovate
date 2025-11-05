@@ -83,7 +83,7 @@ export default function Solutions() {
             <li><a href="/about" onClick={toggleMenu}>About</a></li>
           <li><a href="/services" onClick={toggleMenu}>Services</a></li>
           <li><a href="/products" onClick={toggleMenu}>Products</a></li>
-          <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
+          <li><a href="/solutions" onClick={toggleMenu}>Solutions</a></li>
          
         
           <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
@@ -130,13 +130,13 @@ export default function Solutions() {
             Solution
           </h1>
           <div style={{ marginTop: "10px", fontSize: "16px", color: "#ddd" }}>
-            <a
-              href="/"
-              style={{ color: "#fff", textDecoration: "none", marginRight: "5px" }}
-            >
-              Home
-            </a>{" "}
-            &gt; <span>Solution</span>
+                      {/* <a
+                        href="/"
+                        style={{ color: "#fff", textDecoration: "none", marginRight: "5px" }}
+                      >
+                        Home
+                      </a>{" "}
+                      &gt; <span>Solution</span> */}
           </div>
         </div>
       </div>
@@ -314,7 +314,7 @@ export default function Solutions() {
                 <li><Link to="/services">SERVICES</Link></li>
                 
                 <li><Link to="/products">PRODUCTS</Link></li>
-                <li><Link to="/solution">SOLUTIONS</Link></li>
+                <li><Link to="/solutions">SOLUTIONS</Link></li>
                  <li><Link to="/careers">CAREERS</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
               </ul>

@@ -1321,7 +1321,7 @@ return (
         <li><a href="/about" onClick={toggleMenu}>About</a></li>
         <li><a href="/services" onClick={toggleMenu}>Services</a></li>
         <li><a href="/products" onClick={toggleMenu}>Products</a></li>
-        <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
+        <li><a href="/solutions" onClick={toggleMenu}>Solutions</a></li>
         <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
       </ul>
 
@@ -1340,7 +1340,7 @@ return (
     <div className="hero-content">
       <h1>Our Services</h1>
       <div className="breadcrumbs">
-        <a href="/">Home</a> &gt; <span>Services</span>
+        {/* <a href="/">Home</a> &gt; <span>Services</span> */}
       </div>
     </div>
   </div>
@@ -1486,7 +1486,7 @@ return (
                        <li><Link to="/services">SERVICES</Link></li>
                       
                        <li><Link to="/products">PRODUCTS</Link></li>
-                       <li><Link to="/solution">SOLUTIONS</Link></li>
+                       <li><Link to="/solutions">SOLUTIONS</Link></li>
                         <li><Link to="/careers">CAREERS</Link></li>
                        <li><Link to="/contact">CONTACT</Link></li>
       </ul>

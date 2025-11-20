@@ -156,7 +156,7 @@ function Contact() {
 
     <section class="contact-hero">
   <div class="contact-content">
-    <h1>Contact Manovate </h1>
+    {/* <h1>Contact Manovate </h1> */}
 <h3>Explore our talent, curiosity, and ideas to a team that’s redefining innovation.</h3>
     
   </div>
@@ -182,6 +182,7 @@ Contact us today to see how our tailored ServiceNow solutions can drive real res
              <p><strong>Address:</strong> <br/>
              <strong>Chennai : </strong>GREETA TOWERS, Industrial Estate, Perungudi, Chennai, Tamil Nadu 600096 <br/>
             </p>
+            <p><strong>Banglore : </strong>1st Floor, 94, Rashtriya Vidyalaya Rd, Basavanagudi, Bengaluru, Karnataka 560004 <br/></p>
           </div>
 
           {/* Contact Form */}

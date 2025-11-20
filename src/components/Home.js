@@ -105,11 +105,11 @@ function Home() {
   }, [currentVideoIndex, videos]);
 
     const values = [
-    { icon: "📚", title: "Innovation", text: "Constantly seeking new and better ways to solve IT challenges." },
-    { icon: "🔍", title: "Integrity", text: "Operating with honesty, transparency, and ethical behavior." },
-    { icon: "🤝", title: "Customer-Centricity", text: "Putting clients' needs at the forefront of our operations." },
-    { icon: "👥", title: "Collaboration", text: "Working closely with clients to achieve mutual success." },
-    { icon: "⚙️", title: "Quality", text: "Delivering top-notch IT solutions, prices, and services." },
+    { icon: "📚", title: "Innovation", text: "Creating ideas to drive smarter solutions forward rapidly." },
+    { icon: "🔍", title: "Integrity", text: "Upholding honesty, accountability, and unwavering trust." },
+    { icon: "🤝", title: "Collaboration", text: "Uniting with partners to achieve common organizational goals." },
+    { icon: "👥", title: "Adaptability", text: "Staying agile, evolving quickly to meet changing demands." },
+    { icon: "⚙️", title: "Excellence", text: "Delivering precision,high quality, and measurable results." },
     { icon: "⏱", title: "Flexibility", text: "Delivering the result with flexible times and solutions." },
   ];
 

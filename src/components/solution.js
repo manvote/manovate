@@ -1,50 +1,26 @@
 import React, { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./solution.css";
 import introImage from "./solution.jpg";
-
+import outroImage from "./solution1.jpg";
 import { HeadProvider, Title, Meta } from "react-head";
 import { Box, Typography } from "@mui/material";
 import logo from "./manovate.png";
 import { FiMenu, FiX } from "react-icons/fi";
-import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook,FaComments } from "react-icons/fa";
+import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
 import {Link} from "react-router-dom";
 
 export default function Solutions() {
-
-    const [chatOpen, setChatOpen] = useState(false);
-  const [messages, setMessages] = useState([{ sender: "bot", text: "👋 Hi there! I'm Manovate Assistant. How can I help you today?" }]);
-  const [input, setInput] = useState("");
-
-     const sendMessage = async () => {
-    if (!input.trim()) return;
-
-    const newMessages = [...messages, { sender: "user", text: input }];
-    setMessages(newMessages);
-    setInput("");
-
-    try {
-      const res = await fetch("https://manovatebackend.onrender.com/api/chatbot/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
-      });
-      const data = await res.json();
-      setMessages([...newMessages, { sender: "bot", text: data.reply }]);
-    } catch {
-      setMessages([...newMessages, { sender: "bot", text: "❌ Unable to connect to the server." }]);
-    }
-  };
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     setLoaded(true);
   }, []);
 
-  // const handleContactClick = () => {
-  //   navigate("/contact");
-  // };
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -83,7 +59,7 @@ export default function Solutions() {
             <li><a href="/about" onClick={toggleMenu}>About</a></li>
           <li><a href="/services" onClick={toggleMenu}>Services</a></li>
           <li><a href="/products" onClick={toggleMenu}>Products</a></li>
-          <li><a href="/solutions" onClick={toggleMenu}>Solutions</a></li>
+          <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
          
         
           <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
@@ -129,15 +105,7 @@ export default function Solutions() {
           <h1 style={{ fontSize: "48px", margin: 0, fontWeight: 600 }}>
             Solution
           </h1>
-          <div style={{ marginTop: "10px", fontSize: "16px", color: "#ddd" }}>
-                      {/* <a
-                        href="/"
-                        style={{ color: "#fff", textDecoration: "none", marginRight: "5px" }}
-                      >
-                        Home
-                      </a>{" "}
-                      &gt; <span>Solution</span> */}
-          </div>
+          
         </div>
       </div>
 
@@ -229,17 +197,17 @@ export default function Solutions() {
 
 
         {/* Outro Section */}
-{/* <div className="solutions-outro-section">
+ <div className="solutions-outro-section">
   <div className="outro-text">
     <h3>How We Deliver Value</h3>
     <p>
       Our solutions are designed not just to solve problems, but to create measurable
       business impact. By combining IT and Non-IT expertise, we enable organizations
       to innovate, scale, and operate efficiently.
-    </p> */}
+    </p> 
 
     {/* Stylish Link */}
-    {/* <a href="/services" className="explore-link">
+     <a href="/services" className="explore-link">
       Explore All Services →
     </a>
   </div>
@@ -247,52 +215,20 @@ export default function Solutions() {
   <div className="outro-image">
     <img src={outroImage} alt="Custom Solutions Illustration" />
   </div>
-</div> */}
+</div> 
 
 
         {/* CTA Section */}
-        {/* <div className="solutions-cta">
+         <div className="solutions-cta">
           <p className="cta-text">
             Have a project in mind? Let’s build something amazing together!
           </p>
           <button className="cta-button" onClick={handleContactClick}>
             Contact Us
           </button>
-        </div> */}
+        </div> 
       </div>
 
-
- <div className="chatbot-container">
-          {chatOpen ? (
-            <div className="chatbot-box">
-              <div className="chatbot-header">
-                <h4>Manovate Assistant</h4>
-                <button onClick={() => setChatOpen(false)}>×</button>
-              </div>
-              <div className="chatbot-messages">
-                {messages.map((msg, idx) => (
-                  <div key={idx} className={`chat-message ${msg.sender}`}>
-                    {msg.text}
-                  </div>
-                ))}
-              </div>
-              <div className="chatbot-input">
-                <input
-                  type="text"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  placeholder="Type your message..."
-                  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-                />
-                <button onClick={sendMessage}>Send</button>
-              </div>
-            </div>
-          ) : (
-            <button className="chatbot-toggle" onClick={() => setChatOpen(true)}>
-              <FaComments />
-            </button>
-          )}
-        </div>
            {/* Footer */}
             
       {/* Footer */}
@@ -314,7 +250,7 @@ export default function Solutions() {
                 <li><Link to="/services">SERVICES</Link></li>
                 
                 <li><Link to="/products">PRODUCTS</Link></li>
-                <li><Link to="/solutions">SOLUTIONS</Link></li>
+                <li><Link to="/solution">SOLUTIONS</Link></li>
                  <li><Link to="/careers">CAREERS</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
               </ul>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { HeadProvider, Title, Meta } from "react-head";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaMapMarkerAlt, FaLinkedin, FaInstagram, FaFacebook ,FaComments} from "react-icons/fa";
+import { FaMapMarkerAlt, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./services.css";
 import logo from "./manovate.png";
@@ -39,6 +39,9 @@ IT: [
 {
 id: 1,
 title: "Website Design & Development Services",
+metaTitle: "Custom Website Design & Development Services | Manovate Technologies",
+metaDescription: "Get professional website design and development services from Manovate Technologies. Our team delivers custom, responsive, and SEO-friendly websites that drive results. Let's build your digital presence today!",
+metaKeywords: "Custom Website Design, Web Development Services, Responsive Web Design, SEO-Friendly Websites, User-Centered Design, UI/UX Design, E-commerce Integration, Content Management Systems, Website Maintenance, Website Support, Web Development Company, Chennai Web Design, India Web Development, Custom Web Solutions, Mobile-First Design, Cross-Platform Development, High-Performance Websites, Secure Web Development, Website Optimization, Search Engine Optimization, Web Design Trends, Digital Presence, Online Business Solutions, Website Redesign, Web Application Development, Front-End Development, Back-End Development, Full-Stack Development, Web Development Agency, Website Design Services",
 description: `<b>Custom Website Design and Development Solutions for Every Business</b><br><br>
 At <b>Manovate Technologies</b>, we design and develop modern, responsive, and high-performing
 websites that bring your brand to life online.
@@ -93,6 +96,9 @@ converts leads, and strengthens your market presence`,
 {
       id: 2,
       title: "Chatbot Development Services",
+      metaTitle:"AI-Powered Chatbot Development Services | Manovate Technologies",
+      metaDescription:"Transform customer engagement with our AI-driven chatbot solutions. Automate conversations, enhance user experiences, and drive business growth with our expert chatbot development services.",
+      metaKeywords:"Chatbot Development, AI-Powered Chatbots, Conversational AI, Customer Support Automation, Lead Generation Bots, E-commerce Chatbots, System Integration, Chatbot Solutions, AI-Driven Automation, Digital Transformation, Customer Engagement, Automation Solutions, Natural Language Processing, Machine Learning, Chatbot Development Company, AI Chatbot Solutions, Conversational Interfaces, Customer Service Automation, Chatbot Development Services, Intelligent Chatbots, Automated Customer Support, Chatbot Integration, AI-Powered Customer Engagement, Chatbot Analytics, Chatbot Marketing, Chatbot Sales, Enterprise Chatbot Solutions, Cloud-Based Chatbots, Chatbot Development Platform, Conversational Marketing",
       description: `<b>AI-Powered Chatbots for Intelligent Customer Engagement</b><br><br>
 At <b>Manovate Technologies</b>, we develop intelligent chatbot solutions that help businesses
 connect, engage, and support customers effortlessly.<br><br>
@@ -145,6 +151,9 @@ together.<br><br>`,
   {
   id: 3,
   title: "E-Commerce Platform Development Services",
+  metaTitle:"E-Commerce Platform Development Services | Manovate Technologies",
+  metaDescription:"Get custom e-commerce platform development services from Manovate Technologies. Our team builds scalable, secure, and high-performance online stores that drive sales and growth.",
+  metaKeywords:"E-commerce Platform Development, E-commerce Website Development, Custom E-commerce Solutions, Shopify Development, WooCommerce Development, Magento Development, Headless Commerce, Omnichannel Shopping Experience, Mobile-First Store Design, AI-Driven Personalization, Secure Payments, Data Protection, Analytics & Performance Optimization, Conversion-Optimized Design, UX/UI Design, SEO-Friendly Stores, E-commerce Solutions, Digital Commerce, Online Store Development, Custom E-commerce Platforms, Scalable E-commerce Solutions, E-commerce Website Design, E-commerce Development Company, E-commerce Platform Development Services, Cloud-Based E-commerce, Mobile Commerce Solutions, Personalized E-commerce Experience, E-commerce Security, E-commerce Growth Strategies",
   description: `<b>E-Commerce Website Development Services for Scalable Online Growth</b><br><br>
 At <b>Manovate Technologies</b>, we build powerful, conversion-focused e-commerce
 platforms that help businesses sell smarter, scale faster, and deliver seamless shopping
@@ -192,6 +201,9 @@ brand stand out in the competitive online marketplace.<br><br>`,
 {
   id: 4,
   title: "Mobile Application Development Services",
+  metaTitle:"Mobile Application Development Services | Manovate Technologies",
+  metaDescription:"Get custom mobile app development services from Manovate Technologies. Our team builds intuitive, high-performance apps for Android and iOS that drive engagement and growth.",
+  metaKeywords:"Mobile Application Development, Mobile App Development, Custom Mobile Apps, Cross-Platform App Development, Native App Development, Android App Development, iOS App Development, Mobile App Design, User Interface Design, User Experience Design, App Development Company, Mobile App Development Services, Custom Mobile App Development, Mobile App Development Solutions, Scalable Mobile Apps, Secure Mobile Apps, React Native App Development, Flutter App Development, Mobile App Development Frameworks, Mobile App Development Trends, Mobile App Development Best Practices, Custom Mobile Solutions, Mobile App Development for Enterprises, Mobile App Development for Startups, App Development for Android, App Development for iOS, Mobile App Maintenance, Mobile App Support, Mobile App Development Company",
   description: `<b>Mobile App Development Services That Drive Engagement and Growth</b><br><br>
 At <b>Manovate Technologies</b>, we create custom mobile applications that help
 businesses connect better with their customers, improve operations, and stay
@@ -241,6 +253,9 @@ operations, and helps you connect with customers anywhere, anytime.<br><br>`,
 {
   id: 5,
   title: "Custom Software Development Services",
+  metaTitle:"Custom Software Development Services | Expert Solutions",
+  metaDescription:"Get custom software development services from Manovate Technologies. Our expert team builds tailored solutions that drive business growth and efficiency.",
+  metaKeywords:"Custom Software Development, Software Development Services, Tailored Software Solutions, Business Software Development, Enterprise Software Development, Custom Business Applications, Workflow Automation, Process Automation, Web Applications, Desktop Applications, Integration Services, Modernization Services, Software Maintenance, Software Support, Scalable Software Solutions, Secure Software Development, Agile Software Development, Custom Application Development, Business Process Automation, Software Development Company, Custom Software Solutions, Enterprise Software Solutions, Software Development Trends, Software Development Best Practices, Custom Software Development Company, Business Software Solutions, Software Development Expertise, Software Development for Business, Custom Software Development Services",
   description: `<b>Tailored Software Solutions That Simplify, Scale, and Drive Growth</b><br><br>
 At <b>Manovate Technologies</b>, we develop custom software solutions designed to
 fit your unique business workflows and long-term goals.<br><br>
@@ -290,6 +305,9 @@ efficiency, improves collaboration, and drives measurable business success.<br><
 {
   id: 6,
   title: "Workflow Automation Services",
+  metaTitle:"Automate Business Processes | Workflow Automation Solutions",
+  metaDescription:"Boost efficiency and productivity with our workflow automation services. Our expert team helps you automate business processes and achieve measurable results.",
+  metaKeywords:"Workflow Automation, Business Process Automation, Automation Services, Productivity Solutions, Efficiency Improvement, AI Automation, Machine Learning Automation, Process Optimization, Workflow Management, Automation Technology, Business Automation, Digital Transformation, Workflow Streamlining, Task Automation, Document Automation, Data Automation, Workflow Integration, CRM Automation, ERP Automation, Business Process Management, Automation Strategy, Workflow Solutions, Productivity Tools, Business Efficiency, Automation Expertise, Workflow Consulting, Process Automation Services, Automation Implementation, Workflow Optimization Services, Business Process Automation Solutions",
   description: `<b>Streamline Operations and Boost Productivity With Smart Automation</b><br><br>
 At <b>Manovate Technologies</b>, we help businesses transform manual,
 time-consuming tasks into automated, efficient workflows.<br><br>
@@ -340,6 +358,9 @@ gains.<br><br>`,
 {
   id: 7,
   title: "Recommendation System Development Services",
+  metaTitle:"AI-Powered Recommendation Engines | Boost Engagement & Sales",
+  metaDescription:"Boost engagement and sales with our recommendation system development services. Our AI-powered solutions deliver personalized product and content suggestions in real-time.",
+  metaKeywords:"AI-Powered Recommendation Engines, Recommendation System Development, Personalized Product Suggestions, Real-Time Recommendations, AI-Driven Personalization, Machine Learning Recommendation Systems, Content Recommendation Systems, Product Recommendation Engines, User Behavior Analysis, Predictive Analytics, E-commerce Personalization, Digital Experience Personalization, Recommendation System Integration, CRM Integration, Content Platform Integration, AI-Based Recommendation Systems, Recommendation Algorithm Development, Data-Driven Recommendation Systems, Personalization Technology, Recommendation System Optimization, Customer Experience Enhancement, Engagement Boosting Solutions, Sales Enhancement Solutions, Recommendation System Development Company, AI-Powered Recommendation Solutions, Real-Time Recommendation Systems, Personalized Marketing Solutions, Recommendation System Services, AI Recommendation Engines, Personalized Content Recommendations",
   description: `<b>Personalized Recommendations That Drive Engagement and Sales</b><br><br>
 At <b>Manovate Technologies</b>, we build intelligent recommendation systems that
 deliver personalized product, content, and service suggestions to your customers
@@ -392,6 +413,9 @@ personalization.<br><br>`,
 {
   id: 8,
   title: "Machine Learning Solutions",
+  metaTitle:"Machine Learning Solutions | AI-Driven Insights & Automation",
+  metaDescription:"Unlock the power of machine learning with our expert solutions. Analyze patterns, predict outcomes, and automate complex processes to drive business growth.",
+  metaKeywords:"Machine Learning Solutions, AI-Driven Insights, Predictive Analytics, Data Classification, Natural Language Processing, Computer Vision Solutions, Recommendation Systems, Automation Models, Optimization Models, Machine Learning Expertise, Custom-Built Algorithms, Scalable Machine Learning, Secure Machine Learning, Continuous Improvement, Data-Driven Decision Making, AI-Powered Solutions, Machine Learning Applications, Business Intelligence Solutions, Data Analytics, Machine Learning Development, AI Solutions, Predictive Modeling, Data Mining, Machine Learning Consulting, AI-Driven Automation, Intelligent Systems, Business Process Optimization, Machine Learning Services, AI-Powered Insights, Data Science Solutions",
   description: `<b>Transform Data Into Actionable Intelligence</b><br><br>
 At <b>Manovate Technologies</b>, we deliver machine learning solutions that help
 businesses make smarter, data-driven decisions and automate complex
@@ -441,6 +465,9 @@ Let’s build intelligent systems that help your business grow smarter every day
 {
   id:9,
   title: "Computer Vision Solutions",
+  metaTitle:"Expert Computer Vision Services & Solutions",
+  metaDescription:"Unlock the power of computer vision with our expert services and solutions. Automate visual tasks, improve decision-making, and drive business growth with our AI-driven technology.",
+  metaKeywords:"Computer Vision Services, Computer Vision Solutions, Image Recognition, Video Analysis, AI-Driven Technology, Visual Task Automation, Business Intelligence, Decision-Making, Business Growth, Expert Services, AI-Powered Solutions, Computer Vision Consulting, Custom Solutions, Scalable Solutions, Industry-Specific Solutions, Integration Services, Support Services, Maintenance Services, Computer Vision Development, Machine Learning, Deep Learning, Neural Networks, Object Detection, Facial Recognition, Quality Inspection, Automated Inspection, Visual Inspection, Smart City Solutions, Industrial Automation, Business Transformation",
   description: `<b>Empowering Businesses With Intelligent Visual Insights</b><br><br>
 At <b>Manovate Technologies</b>, we develop advanced computer vision solutions
 that help businesses see, analyze, and act on visual data in real time.<br><br>
@@ -1254,35 +1281,12 @@ productivity and operational excellence.<br><br>`,
 // ==========================================================================
 
 const Services = () => {
-
-    const [chatOpen, setChatOpen] = useState(false);
-  const [messages, setMessages] = useState([{ sender: "bot", text: "👋 Hi there! I'm Manovate Assistant. How can I help you today?" }]);
-  const [input, setInput] = useState("");
-
-     const sendMessage = async () => {
-    if (!input.trim()) return;
-
-    const newMessages = [...messages, { sender: "user", text: input }];
-    setMessages(newMessages);
-    setInput("");
-
-    try {
-      const res = await fetch("https://manovatebackend.onrender.com/api/chatbot/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
-      });
-      const data = await res.json();
-      setMessages([...newMessages, { sender: "bot", text: data.reply }]);
-    } catch {
-      setMessages([...newMessages, { sender: "bot", text: "❌ Unable to connect to the server." }]);
-    }
-  };
 const [category, setCategory] = useState("IT");
 const [selectedService, setSelectedService] = useState(servicesData.IT[0]);
 const [hovered, setHovered] = useState(null);
 const [menuOpen, setMenuOpen] = useState(false);
 const [scrolled, setScrolled] = useState(false);
+const contentRef = React.useRef(null);
 
 const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -1305,8 +1309,26 @@ const handleContactClick = () => {
 return (
 <>
 <HeadProvider>
-<Title>Manovate Services | Scalable IT & Non-IT Solutions</Title>
-<Meta name="description" content="Explore Manovate Technologies’ IT and Non-IT Services — professional, innovative, and scalable solutions for every business need." />
+  <Title>
+    {selectedService.metaTitle ||
+      "Manovate Services | Scalable IT & Non-IT Solutions"}
+  </Title>
+
+  <Meta
+    name="description"
+    content={
+      selectedService.metaDescription ||
+      "Explore Manovate Technologies’ IT and Non-IT Services — professional, innovative, and scalable solutions for every business need."
+    }
+  />
+
+  <Meta
+    name="keywords"
+    content={
+      selectedService.metaKeywords ||
+      "IT Services, Non-IT Services, Manovate Technologies, Digital Solutions, Web Development, AI Chatbots"
+    }
+  />
 </HeadProvider>
 
   {/* NAVBAR */}
@@ -1321,7 +1343,7 @@ return (
         <li><a href="/about" onClick={toggleMenu}>About</a></li>
         <li><a href="/services" onClick={toggleMenu}>Services</a></li>
         <li><a href="/products" onClick={toggleMenu}>Products</a></li>
-        <li><a href="/solutions" onClick={toggleMenu}>Solutions</a></li>
+        <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
         <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
       </ul>
 
@@ -1339,9 +1361,6 @@ return (
     <div className="overlay"></div>
     <div className="hero-content">
       <h1>Our Services</h1>
-      <div className="breadcrumbs">
-        {/* <a href="/">Home</a> &gt; <span>Services</span> */}
-      </div>
     </div>
   </div>
 
@@ -1374,7 +1393,13 @@ return (
             className={`sidebar-item ${
               selectedService.id === service.id ? "active" : ""
             } ${hovered === service.id ? "hovered" : ""}`}
-            onClick={() => setSelectedService(service)}
+            onClick={() => {
+  setSelectedService(service);
+  setTimeout(() => {
+    contentRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, 100);
+}}
+
             onMouseEnter={() => setHovered(service.id)}
             onMouseLeave={() => setHovered(null)}
           >
@@ -1417,7 +1442,7 @@ return (
     </div>
 
     {/* RIGHT SIDE */}
-    <div className="services-right">
+    <div className="services-right" ref={contentRef}>
       <div className="content-card">
         <h2>{selectedService.title}</h2>
         <p dangerouslySetInnerHTML={{ __html: selectedService.description }}></p>
@@ -1444,37 +1469,7 @@ return (
       </ul>
     </div>
   </div>
- <div className="chatbot-container">
-          {chatOpen ? (
-            <div className="chatbot-box">
-              <div className="chatbot-header">
-                <h4>Manovate Assistant</h4>
-                <button onClick={() => setChatOpen(false)}>×</button>
-              </div>
-              <div className="chatbot-messages">
-                {messages.map((msg, idx) => (
-                  <div key={idx} className={`chat-message ${msg.sender}`}>
-                    {msg.text}
-                  </div>
-                ))}
-              </div>
-              <div className="chatbot-input">
-                <input
-                  type="text"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  placeholder="Type your message..."
-                  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-                />
-                <button onClick={sendMessage}>Send</button>
-              </div>
-            </div>
-          ) : (
-            <button className="chatbot-toggle" onClick={() => setChatOpen(true)}>
-              <FaComments />
-            </button>
-          )}
-        </div>
+
   
 
   {/* FOOTER */}
@@ -1486,7 +1481,7 @@ return (
                        <li><Link to="/services">SERVICES</Link></li>
                       
                        <li><Link to="/products">PRODUCTS</Link></li>
-                       <li><Link to="/solutions">SOLUTIONS</Link></li>
+                       <li><Link to="/solution">SOLUTIONS</Link></li>
                         <li><Link to="/careers">CAREERS</Link></li>
                        <li><Link to="/contact">CONTACT</Link></li>
       </ul>

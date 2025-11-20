@@ -8,7 +8,7 @@ import introImage from "./solution.jpg";
 import "./ourproducts.css"; // ✅ linked external CSS
 import logo from "./manovate.png";
 import { FiMenu, FiX } from "react-icons/fi";
-import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook,FaComments } from "react-icons/fa";
+import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
 import {Link} from "react-router-dom";
 import data from "./data.jpg";
 import hospitality from "./hospitality.jpg";
@@ -31,580 +31,828 @@ import event from "./event.jpg";
 import retail from "./retail.jpg";
 import privacy from "./privacy.jpg";
 import beverage from "./beverage.jpg";
+import { useNavigate } from "react-router-dom";
 
 const products = [
-
-
 {
   id: 1,
   title: "Messaging Application",
   subtitle: "Modern Communication Platform",
-  description: `<b>The Messaging Application</b> is a next-generation communication platform designed to enable secure, reliable, and real-time interaction among users across the globe.<br><br>
-Built with a focus on <b>speed, simplicity, and scalability</b>, the system allows individuals and groups to connect seamlessly through text messages, multimedia sharing, and voice or video calls.<br><br>
-The application is engineered with a <b>user-first approach</b>, delivering an intuitive interface that enhances accessibility while maintaining top-tier performance.<br><br>
-Through its robust <b>cloud-backed infrastructure</b>, it supports uninterrupted data synchronization, ensuring users can transition effortlessly between devices without losing their chat history or preferences.<br><br>
-Beyond messaging, the platform fosters engagement through features like <b>media sharing, stories, and real-time notifications</b>.<br><br>
-Each interaction is backed by <b>state-of-the-art encryption protocols</b>, ensuring total privacy and data integrity.<br><br>
-With <b>cloud-based backup</b> and intelligent data handling, users can securely store and restore their conversations with ease.<br><br>
-The system architecture follows <b>modern design principles</b>, combining scalability, responsiveness, and efficiency.<br><br>
-It supports <b>millions of concurrent users</b> through WebSocket-driven communication channels, providing instant message delivery and live updates.<br><br>
-The integration of <b>analytics and administrative tools</b> allows system operators to monitor platform performance, maintain compliance, and deliver an optimized user experience.<br><br>
-In essence, this project redefines the standards of digital communication by offering a <b>unified, secure, and user-centric messaging ecosystem</b>.<br><br>
-It merges <b>technology, convenience, and privacy</b> into a single platform that empowers individuals, teams, and organizations to stay connected anytime, anywhere.<br><br>`,
+  description: `
+  <b>A fast, secure, and intuitive messaging solution</b> for personal, group, and business communication.<br><br>
+  Stay connected through <b>real-time chat, calls, media sharing, privacy controls,</b> and <b>multi-device access</b> — fully protected with <b>end-to-end encryption</b>.<br><br>
+
+  <b>Key Features</b><br><br>
+  • Quick and secure login with OTP or password<br>
+  • Smart user profiles with photo, status, and privacy settings<br>
+  • Auto-sync contacts to find existing users + invite new ones<br>
+  • Real-time chat with typing, delivery, and read indicators<br>
+  • Group chats with admin controls and media sharing<br>
+  • HD voice and video calls (1-to-1 and group)<br>
+  • 24-hour status/stories with text, photo, and video<br>
+  • Fast media sharing with auto-compression and preview<br>
+  • Smart search for users, chats, files, and media<br>
+  • Star and archive conversations for easy organization<br>
+  • Safe communication with block, report, and privacy controls<br>
+  • Push notifications with mute and custom preferences<br>
+  • Cloud backup and restore with auto-schedule options<br>
+  • Multi-device sync across web and mobile<br>
+  • Usage analytics for engagement and performance insights<br><br>
+
+  <b>Benefits</b><br><br>
+  • Smooth, secure & engaging messaging experience<br>
+  • Boosts user activity with groups, stories & rich media<br>
+  • Ideal for personal, social & professional communication<br>
+  • Scalable & reliable for large user networks<br><br>
+
+  <b>Customization</b><br><br>
+  We provide flexible customization options to align the product with your business workflows, branding, and operational needs.<br><br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
+
+  <b>Ideal For</b><br><br>
+  Personal & Community Apps, Startups, Schools, Teams, Organizations, and Branded Messaging Platforms.<br><br>
+  `,
   image: message,
   info: {
     Category: "Web App",
-  }
+  },
 },
 
 {
   id: 2,
-  title: "Swiggy-Style Food Delivery Application",
-  subtitle: "Smart Food Ordering & Delivery System",
-  description: `<b>The Swiggy-Style Food Delivery Application</b> is a comprehensive digital ecosystem designed to streamline the end-to-end food ordering and delivery process.<br><br>
-Built with a focus on <b>convenience, efficiency, and security</b>, the platform connects customers, restaurants, and delivery partners in real time to deliver an unparalleled ordering experience.<br><br>
-At its core, the application enables users to explore nearby restaurants, browse digital menus, customize their orders, and complete secure transactions — all within a modern and responsive interface.<br><br>
-From first-time users to frequent customers, the system ensures <b>intuitive navigation, personalized recommendations, and effortless reordering</b> through intelligent caching and role-based access.<br><br>
-The platform is engineered for <b>scalability and reliability</b>, supporting thousands of concurrent users through real-time synchronization and cloud-based infrastructure.<br><br>
-Delivery partners benefit from optimized route management, live order tracking, and transparent earnings reports, while restaurants can efficiently manage menus, monitor orders, and review performance through an integrated dashboard.<br><br>
-Every transaction is protected through <b>secure payment gateways, encrypted sessions, and verified authentication protocols</b>.<br><br>
-Customers enjoy real-time updates from order placement to delivery completion, backed by <b>GPS-based tracking and automated notifications</b>.<br><br>
-Additionally, a robust review system promotes transparency and continuous service improvement across all stakeholders.<br><br>
-Administrative users are equipped with powerful tools to oversee operations, monitor platform activity, and generate <b>data-driven insights</b>.<br><br>
-Advanced analytics visualize key metrics such as <b>top-performing restaurants, delivery efficiency, and peak demand hours</b>, empowering decision-makers with actionable intelligence.<br><br>
-Designed with a <b>mobile-first architecture</b> and built on modular APIs, this food delivery system represents a seamless blend of <b>user experience, operational excellence, and technological innovation</b> — redefining the way people order, deliver, and experience food in the digital era.<br><br>`,
-  image: food,
+  title: "Online Food Ordering & Delivery Platform",
+  subtitle: "End-to-End Food Delivery Ecosystem",
+  description: `
+  <b>A complete online food ordering and delivery platform</b> designed for customers, restaurants, and delivery partners.<br><br>
+  Manage menus, orders, payments, tracking, delivery operations, and customer engagement seamlessly across web and mobile.<br><br>
+
+  A <b>scalable and user-friendly food delivery system</b> that connects customers with nearby restaurants, enables smooth ordering, secure payments, real-time delivery tracking, and efficient partner & admin operations.<br><br>
+  Built to support <b>single-city or multi-city food delivery businesses</b> with automation, analytics, and powerful admin controls.<br><br>
+
+  <b>Key Features</b><br>
+  • Customer app for browsing restaurants, placing orders & live tracking<br>
+  • Restaurant management for menu, pricing, orders, and earnings<br>
+  • Delivery partner app for accepting orders, navigation & daily earnings<br>
+  • Smart search, filters, cuisines & personalized recommendations<br>
+  • Secure login with role-based access (Customer, Partner, Admin)<br>
+  • Multiple delivery addresses & saved preferences<br>
+  • Real-time order tracking with live GPS map & ETA updates<br>
+  • Online & offline payment options with automated receipts<br>
+  • Optimized order lifecycle<br>
+  • Promo codes, offers & automated discounts<br>
+  • Push notifications for orders, offers & delivery updates<br>
+  • In-app chat & support ticket system<br>
+  • Analytics for sales, orders, top items, peak hours & performance<br>
+  • Admin dashboard to manage users, partners, restaurants & reports<br>
+  • Daily cloud backup, multi-device sync & data security<br><br>
+
+  <b>Business Benefits</b><br>
+  • Launch your own food delivery ecosystem with low operational effort<br>
+  • Enhances customer experience with fast, transparent ordering<br>
+  • Streamlines restaurant and delivery partner operations<br>
+  • Boosts sales with offers, recommendations & repeat customer engagement<br>
+  • Real-time insights for business growth and decision-making<br><br>
+
+  <b>Customization</b><br>
+  We provide flexible customization options to align the product with your business workflows, branding, and operational needs.<br><br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
+
+  <b>Ideal For</b><br>
+  Entrepreneurs, Food Delivery Startups, Restaurants, Cloud Kitchens, Food Courts, and Businesses planning to launch their own food delivery platform.<br><br>
+  `,
+  image: food, // replace with your actual image variable or import
   info: {
-    Category: "Web App",
-  }
+    Category: "Web & Mobile App",
+  },
 },
 
 {
   id: 3,
   title: "Textile & Clothing Billing Software",
-  subtitle: "Smart Retail Management System",
-  description: `<b>The Textile & Clothing Billing Software</b> is a fully integrated retail management system engineered to streamline operations across textile stores, fashion boutiques, and apparel warehouses.<br><br>
-Designed with a focus on <b>accuracy, efficiency, and scalability</b>, the system unifies billing, inventory, purchasing, and accounting processes into one seamless platform.<br><br>
-This solution empowers businesses to handle day-to-day transactions with <b>precision and speed</b>.<br><br>
-From point-of-sale billing to supplier management, every workflow is digitally optimized to reduce manual effort and operational errors.<br><br>
-The system automatically manages inventory levels, tracks product variants such as <b>size and color</b>, and synchronizes stock movements across branches or warehouses in real time.<br><br>
-Advanced billing and payment modules ensure <b>flexible transactions</b> through multiple modes, including cash, card, and UPI, while <b>secure authentication mechanisms</b> safeguard sensitive business data.<br><br>
-With <b>barcode integration</b>, each product can be identified, billed, and tracked instantly, improving accuracy at every touchpoint.<br><br>
-The platform’s powerful <b>reporting and analytics engine</b> provides actionable insights into <b>sales trends, customer preferences, and profit performance</b>.<br><br>
-It supports <b>data-driven decision-making</b> through interactive dashboards and downloadable summaries, helping management optimize business growth and operational efficiency.<br><br>
-From backend controls to staff permissions, every function is built on a <b>robust security framework</b> that ensures transparency and accountability.<br><br>
-<b>Audit logs, expense tracking, and automated profit calculations</b> further enhance reliability.<br><br>
-By combining <b>automation, intelligence, and ease of use</b>, this software redefines how textile and clothing retailers operate.<br><br>
-It not only simplifies daily business workflows but also enables <b>long-term scalability and digital transformation</b> within the retail environment — helping businesses focus less on processes and more on delivering quality customer experiences.<br><br>`,
-  image: texttile,
+  subtitle: "Smart Retail Software for Textile Businesses",
+  description: `
+  <b>A complete billing and inventory solution</b> tailored for garment stores, boutiques, fabric shops, and multi-brand clothing outlets.<br><br>
+  Streamline sales, stock, purchases, and customer management with fast POS, barcode billing, variant tracking, and smart insights to grow your textile business with ease.<br><br>
+
+  Built for the <b>apparel and textile industry</b>, this software handles end-to-end store operations including billing, stock, supplier purchases, size and color variants, offers, returns, staff control, and branch management.<br><br>
+  The intuitive interface makes counter billing faster, reduces stock errors, and improves profitability.<br><br>
+  Works on web and mobile with <b>cloud sync</b> for single or multi-store use.<br><br>
+
+  <b>Core Features</b><br>
+  • Fast POS billing with barcode / QR scanning, discounts, and GST<br>
+  • Product, category, and brand management with images and SKUs<br>
+  • Size, color, and variant-wise stock tracking<br>
+  • Inventory with low stock alerts, stock transfer, and multi-branch support<br>
+  • Expense tracking and profit summary dashboard<br><br>
+
+  <b>Business Value</b><br>
+  • Faster billing and improved customer experience<br>
+  • Reduced stock loss with accurate variant-wise tracking<br>
+  • Better control of expenses, purchases, and supplier payments<br>
+  • Smart insights to boost sales, repeat customers, and margins<br>
+  • Transparency and accountability with staff roles and logs<br><br>
+
+  <b>Customization</b><br>
+  Easily configure product variants, tax, invoice template, print format, barcode labels, loyalty rules, and user permissions to match your textile business workflow.<br><br>
+
+  <b>Ideal For</b><br>
+  Garment stores, boutiques, ethnic wear outlets, kids wear shops, fabric and textile retailers, saree and suit stores, innerwear shops, wholesale clothing traders, and multi-branch apparel brands.<br><br>
+
+  <b>Why Choose Us</b><br>
+  Simple, fast, and industry-ready. Get secure cloud access, reliable support, easy onboarding, and regular enhancements designed specifically for textile businesses.<br><br>
+  `,
+  image: texttile, // replace with your actual image import or variable
   info: {
-    Category: "Software",
-  }
-}
-,
+    Category: "Web & Desktop App",
+  },
+},
+
 {
   id: 4,
-  title: "Healthcare & Medical Billing Software",
-  subtitle: "Comprehensive Hospital Management Platform",
-  description: `<b>The Healthcare & Medical Billing Software</b> is a comprehensive hospital management platform engineered to optimize every aspect of <b>patient care, administrative workflow, and financial processing</b>.<br><br>
-Designed with <b>precision, scalability, and data integrity</b> at its core, the system enables hospitals, clinics, and healthcare networks to deliver high-quality service while maintaining operational efficiency.<br><br>
-This solution seamlessly integrates <b>patient registration, appointment scheduling, inpatient management, pharmacy operations, laboratory coordination, and billing</b> into one centralized platform.<br><br>
-It automates routine administrative tasks, reduces manual errors, and ensures <b>accurate, real-time data flow</b> between departments.<br><br>
-From a patient’s first visit to their final discharge, every record is <b>securely stored, easily accessible, and systematically organized</b>.<br><br>
-The billing engine is built to handle <b>complex hospital transactions</b> effortlessly — including consultations, diagnostics, surgeries, pharmacy sales, and room charges.<br><br>
-It supports <b>multi-mode payments, insurance claims, and automated invoice generation</b> with complete tax and compliance management.<br><br>
-By connecting <b>finance, clinical, and inventory systems</b>, it offers hospitals a single source of truth for financial and operational data.<br><br>
-Doctors, administrators, and staff benefit from <b>real-time dashboards</b> that provide visibility into hospital operations — patient occupancy, revenue flow, and departmental performance.<br><br>
-The system’s <b>advanced analytics and reporting tools</b> empower decision-makers to monitor key metrics, identify inefficiencies, and make data-driven improvements.<br><br>
-<b>Security</b> is a top priority. With <b>role-based access control, encrypted authentication, and audit logging</b>, the platform ensures that sensitive medical and financial data is always protected.<br><br>
-<b>Notifications and alerts</b> enhance responsiveness, while the built-in audit trail upholds accountability and regulatory compliance.<br><br>
-Designed for <b>multi-branch scalability</b>, the software adapts effortlessly to various healthcare environments — from small clinics to large hospitals.<br><br>
-By combining <b>automation, intelligence, and reliability</b>, it redefines medical administration into a seamless, transparent, and patient-focused experience.<br><br>`,
-  image: medical,
+  title: "Hospital Billing & Revenue Management System",
+  subtitle: "Smart, Secure & Streamlined Healthcare Billing",
+  description: `
+  <b>Simplify hospital billing, boost accuracy, and deliver a seamless patient payment experience.</b><br><br>
+  Our smart medical billing system brings together <b>patient records, appointments, insurance, payments, pharmacy, lab, and IPD billing</b> in one secure platform — helping hospitals speed up operations, reduce manual errors, and ensure faster revenue recovery.<br><br>
+
+  A <b>complete billing and revenue management solution</b> for hospitals, clinics, and healthcare centers. From patient registration and doctor consultation billing to IPD, lab, insurance, and pharmacy invoicing — everything is centralized for efficiency.<br><br>
+
+  <b>Core Features</b><br>
+  • Patient registration with visit history and digital records<br>
+  • Automated invoice generation with tax, discounts, and insurance splits<br>
+  • Partial payments, dues tracking, receipts, and mode-wise collection reports<br>
+  • Doctor management with schedules and consultation fee mapping<br>
+  • Daily, weekly, and monthly revenue, department-wise, and doctor-wise analytics<br>
+  • GST-compliant invoices, exports, and audit-ready reports<br><br>
+
+  <b>Business Value</b><br>
+  • Faster billing and reduced wait times for patients<br>
+  • Accurate revenue tracking with minimal leakages<br>
+  • Better compliance with insurance and financial audits<br>
+  • Centralized data for smarter medical and business decisions<br>
+  • Improved coordination between reception, billing, pharmacy, lab, and wards<br><br>
+
+  <b>Customization</b><br>
+  We provide flexible customization options to align the product with your business workflows, branding, and operational needs.<br><br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
+
+  <b>Ideal For</b><br>
+  Hospitals, clinics, multi-specialty centers, nursing homes, diagnostic centers, day-care centers, and healthcare chains.<br><br>
+
+  <b>Why Choose Us</b><br>
+  Trusted, secure, and healthcare-ready. Quick onboarding, reliable support, and configurable modules to match your hospital workflow and scale.<br><br>
+  `,
+  image: medical, // replace with your actual image import or variable
   info: {
-    Category: "Software",
-  }
-}
-,
+    Category: "Web & Mobile App",
+  },
+},
+
 {
   id: 5,
-  title: "Beauty & Wellness Billing Software",
-  subtitle: "Smart Management Platform for Salons, Spas & Wellness Centers",
-  description: `<b>The Beauty & Wellness Billing Software</b> is a comprehensive management platform developed to simplify and enhance operations across <b>salons, spas, gyms, and wellness centers</b>.<br><br>
-It unifies essential business functions — including <b>appointment scheduling, billing, customer management, staff coordination, and analytics</b> — into a single, intelligent system.<br><br>
-Designed with a deep understanding of the <b>wellness industry</b>, the software provides an elegant and efficient user experience for both service providers and customers.<br><br>
-Front-desk teams can <b>schedule appointments, assign staff, and generate bills</b> in seconds, while customers enjoy <b>personalized, streamlined service interactions</b>.<br><br>
-At its core, the solution integrates <b>robust billing and point-of-sale capabilities</b>, allowing businesses to process payments across multiple methods — from cash and cards to UPI and digital wallets.<br><br>
-<b>Loyalty and membership modules</b> automatically apply discounts, track benefits, and boost customer retention with minimal effort.<br><br>
-For management, the platform offers <b>complete visibility into operations</b> through a centralized dashboard.<br><br>
-It tracks <b>sales performance, staff productivity, service popularity, and customer engagement trends</b>.<br><br>
-<b>Advanced reporting and analytics</b> transform raw data into actionable business insights, empowering owners to make smarter, growth-oriented decisions.<br><br>
-<b>Security and reliability</b> are built into every layer.<br><br>
-<b>Role-based access controls</b> ensure data privacy, while <b>cloud-based backups</b> guarantee business continuity and peace of mind.<br><br>
-The software’s <b>modular and scalable architecture</b> allows it to adapt to both small independent studios and multi-branch franchise networks.<br><br>
-In essence, this solution transforms <b>beauty and wellness businesses</b> into digitally empowered, customer-centric enterprises — enabling them to deliver exceptional service experiences while maintaining operational excellence and sustainable growth.<br><br>`,
-  image: beauty,
+  title: "Salon, Spa & Wellness Management System",
+  subtitle: "All-in-One Beauty & Wellness Business Software",
+  description: `
+  <b>Give your customers a premium experience while simplifying your daily operations.</b><br><br>
+  This all-in-one software helps you manage <b>bookings, staff, billing, memberships, packages, POS,</b> and <b>customer loyalty</b> — all from one smart platform.<br><br>
+
+  A <b>modern billing and customer management system</b> built for beauty and wellness businesses.<br><br>
+  From appointment scheduling to service catalog, memberships, product sales, inventory, and loyalty — everything works seamlessly across web and mobile.<br><br>
+  Deliver faster service, boost revenue, and build customer relationships that last.<br><br>
+
+  <b>Core Features</b><br>
+  • Customer profiles with service history, preferences & memberships<br>
+  • Service catalog with pricing, duration, combos & packages<br>
+  • Smart appointment booking with staff selection & instant confirmations<br>
+  • POS billing for services & product sales with offers and loyalty points<br>
+  • Cloud backup, privacy-focused security & multi-role access<br><br>
+
+  <b>Business Value</b><br>
+  • Faster check-ins, smoother billing & better customer experience<br>
+  • Higher repeat visits with loyalty, memberships & reminders<br>
+  • Better staff efficiency with scheduling & performance insights<br>
+  • Real-time view of sales, services, expenses & business health<br>
+  • Reduced manual work with automation and digital records<br><br>
+
+  <b>Customization</b><br>
+  We provide flexible customization options to align the product with your business workflows, branding, and operational needs.<br><br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
+
+  <b>Ideal For</b><br>
+  Salons, beauty clinics, spas, massage centers, nail bars, gyms, yoga studios, and wellness centers looking to digitize operations and grow revenue.<br><br>
+
+  <b>Why Choose Us</b><br>
+  Modern UI, quick setup, reliable performance, and built-in growth tools. Designed to help beauty and wellness businesses run smarter, increase repeat customers, and scale with ease.<br><br>
+  `,
+  image: beauty, // replace with your actual image import or variable
   info: {
-    Category: "Software",
-  }
+    Category: "Web & Mobile App",
+  },
 }
+
 ,
 {
   id: 6,
-  title: "Educational Sector Billing Software",
-  subtitle: "Smart Financial & Administrative Management Platform for Institutions",
-  description: `<b>The Educational Sector Billing Software</b> is a comprehensive digital platform designed to modernize and automate the <b>financial and administrative operations</b> of educational institutions.<br><br>
-Suitable for <b>schools, colleges, coaching centers, and training academies</b>, it brings together all essential processes — from <b>fee billing and payment tracking to attendance management and academic scheduling</b> — into one integrated ecosystem.<br><br>
-The platform provides a <b>unified interface</b> for administrators, teachers, accountants, and students to manage daily activities with precision and ease.<br><br>
-It automates the billing lifecycle, handling <b>fee structures, discounts, scholarships, and installments</b> seamlessly while ensuring transparent financial operations.<br><br>
-Payments are processed through <b>multiple secure gateways</b>, and all transactions are automatically logged for <b>auditing and reporting</b>.<br><br>
-Beyond billing, the system enhances the academic experience through modules that manage <b>student profiles, course enrollments, attendance records, and examination results</b>.<br><br>
-<b>Real-time dashboards</b> give administrators visibility into institutional performance, while detailed <b>analytics</b> support informed decision-making.<br><br>
-Staff can efficiently manage batches, schedules, and faculty assignments without manual errors or duplication.<br><br>
-<b>Data security and reliability</b> are at the foundation of this solution.<br><br>
-With <b>encrypted authentication, role-based access control, and cloud-based backup architecture</b>, it ensures that all academic and financial information remains safe and recoverable.<br><br>
-The platform also supports <b>seamless scalability</b>, making it suitable for institutions of any size — from small learning centers to multi-branch organizations.<br><br>
-By combining <b>automation, analytics, and accessibility</b>, this software redefines educational management.<br><br>
-It not only simplifies operations but also fosters <b>transparency, accountability, and growth</b> across every department, empowering institutions to focus more on learning outcomes and less on administrative challenges.<br><br>`,
-  image: educational,
+  title: "School & College Management System",
+  subtitle: "Smart ERP for Education Institutions",
+  description: `
+  <b>A smart, user-friendly platform</b> built for Schools, Colleges, Coaching Centers, and Training Institutes to digitalize student records, automate fee billing, and streamline daily academic and administrative operations.<br><br>
+  Manage admissions, courses, batches, fees, payments, exams, attendance, reports, and communication effortlessly on web and mobile.<br><br>
+
+  <b>Key Features</b><br>
+  • Secure login with role-based access for Admin, Staff, Teachers & Students<br>
+  • Complete student profile with attendance, academics, and fee history<br>
+  • Course & batch management with timetable scheduling and teacher mapping<br>
+  • Custom fee structures with installments, discounts & scholarships<br>
+  • Auto-generated invoices, receipts, due alerts & fee reminders<br>
+  • Supports cash, card, UPI & net-banking payments with receipt tracking<br>
+  • Student & staff attendance with summary and reports<br>
+  • Exam scheduling, marks entry & online results for students<br>
+  • Library, hostel & transport management modules included<br>
+  • Centralized reports & analytics for fees, academics & attendance<br>
+  • Smart notifications through SMS, Email or App<br>
+  • Cloud backup and data security for safe and reliable access anytime<br><br>
+
+  <b>Benefits</b><br>
+  • Saves time through automated billing and fee collection<br>
+  • Reduces manual workload with centralized digital management<br>
+  • Improves transparency for parents, students, staff, and management<br>
+  • Enhances efficiency in academics, operations & communication<br>
+  • Ensures accuracy, security, and error-free data handling<br><br>
+
+  <b>Customization</b><br>
+  We provide flexible customization options to align the product with your business workflows, branding, and operational needs.<br><br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
+
+  <b>Ideal For</b><br>
+  Schools, Colleges, Universities, Coaching Centers, Training Institutes, and Education Groups looking to modernize administration and fee management.<br><br>
+  `,
+  image: educational, // replace with your actual image import or variable
   info: {
-    Category: "Software",
-  }
+    Category: "Web & Mobile App",
+  },
 }
 ,
 {
   id: 7,
-  title: "Hospitality & Tourism Billing Software",
-  subtitle: "End-to-End Management System for Hotels, Resorts & Travel Agencies",
-  description: `<b>The Hospitality & Tourism Billing Software</b> is an advanced digital platform built to modernize the operations of <b>hotels, resorts, and travel agencies</b>.<br><br>
-It delivers an end-to-end solution for <b>guest management, reservations, billing, staff coordination, and analytics</b> — transforming traditional hospitality workflows into a seamless, technology-driven experience.<br><br>
-The platform brings together all key functions under one system, ensuring that every department — from <b>front desk to housekeeping</b> — works in perfect synchronization.<br><br>
-<b>Guest information, room bookings, restaurant orders, and service requests</b> are centrally managed, reducing manual tasks and improving efficiency.<br><br>
-Whether handling individual stays or group tours, the software ensures a consistent, high-quality experience for every guest.<br><br>
-At its core, the <b>billing engine</b> is built for <b>speed, accuracy, and transparency</b>.<br><br>
-It automatically generates invoices for <b>room stays, services, and packages</b>, integrating <b>tax calculations, discounts, and loyalty rewards</b> in real time.<br><br>
-<b>Secure payment gateways</b> support multiple transaction methods, enabling guests to pay effortlessly through cash, card, or digital wallets.<br><br>
-Managers and administrators gain access to <b>powerful analytics</b> that provide actionable insights into <b>occupancy, revenue, and staff productivity</b>.<br><br>
-<b>Visual dashboards</b> highlight performance metrics, helping decision-makers identify trends, optimize pricing, and improve profitability.<br><br>
-The platform also supports <b>multi-property management</b>, allowing hotel chains and travel groups to oversee operations across different locations from a centralized interface.<br><br>
-<b>Data security</b> is built into every layer, with <b>encrypted authentication, cloud backups, and role-based access</b> ensuring complete control and protection.<br><br>
-Whether it’s a single boutique resort or a large hospitality group, the software adapts to every scale with <b>reliability and scalability</b>.<br><br>
-By combining <b>automation, intelligence, and user-friendly design</b>, this solution redefines the standards of hospitality management.<br><br>
-It empowers businesses to deliver <b>personalized guest experiences</b>, streamline administrative workflows, and maximize operational efficiency — setting the foundation for <b>long-term growth and customer loyalty</b> in the modern tourism industry.<br><br>`,
-  image: hospitality,
+  title: "Hotel & Hospitality Management System",
+  subtitle: "All-in-One Hotel & Guest Experience Platform",
+  description: `
+  <b>A complete billing, reservation, and guest experience management solution</b> for hotels, resorts, travel agencies, and tour operators.<br><br>
+  Streamline bookings, billing, room service, payments, staff, and guest experience from a single platform.<br><br>
+  Designed for <b>front desk, operations, and guest convenience</b> with secure access and automation.<br><br>
+
+  A <b>smart hospitality management system</b> that centralizes reservations, room allocation, billing, restaurant & room service orders, tour packages, payments, staff scheduling, loyalty, and guest history.<br><br>
+  It improves occupancy, enhances guest experience, reduces manual work, and ensures accurate billing across services.<br><br>
+
+  <b>Key Features</b><br>
+  • Secure login for Admin, Staff, and Guests with role-based access<br>
+  • Guest profiles with stay history, preferences, and loyalty points<br>
+  • Room management with real-time availability and status tracking<br>
+  • Online and front desk booking with instant confirmation<br>
+  • Automated room allocation and occupancy overview<br>
+  • Front desk billing for room charges, services, packages & add-ons<br>
+  • Restaurant and room service order management linked to billing<br>
+  • Notifications for bookings, check-in/out, payments, and service updates<br><br>
+
+  <b>Business Benefits</b><br>
+  • Boost guest satisfaction and repeat visits<br>
+  • Reduce billing errors and manual overhead<br>
+  • Increase occupancy and revenue with packages & upselling<br>
+  • Real-time visibility of rooms, services, and staff performance<br>
+  • Faster check-in/check-out and paperless operations<br><br>
+
+  <b>Customization</b><br>
+  We provide flexible customization options to align the product with your business workflows, branding, and operational needs.<br><br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
+
+  <b>Ideal For</b><br>
+  Hotels, Resorts, Boutique Stays, Homestays, Serviced Apartments, Travel Agencies, Tour Operators, Guest Houses, and Hospitality Chains.<br><br>
+  `,
+  image: hospitality, // replace with your actual image import or variable
   info: {
-    Category: "Software",
-  }
+    Category: "Web & Mobile App",
+  },
 }
 ,
 {
   id: 8,
-  title: "Automation Testing Software",
-  subtitle: "Intelligent Quality Assurance Platform for Web, Mobile & API Testing",
-  description: `<b>The Automation Testing Software</b> is an advanced testing platform engineered to streamline and automate <b>quality assurance</b> across web, mobile, and API applications.<br><br>
-Built for modern development teams, it simplifies complex testing workflows while delivering <b>precision, speed, and scalability</b> in every stage of the software testing process.<br><br>
-This platform centralizes all testing activities — from <b>planning and test creation to execution, analysis, and reporting</b>.<br><br>
-Its intelligent architecture supports multiple testing levels, empowering <b>QA professionals, developers, and automation engineers</b> to collaborate efficiently within a unified environment.<br><br>
-The system supports various automation approaches, allowing both <b>no-code test creation</b> for non-technical users and <b>full-code scripting</b> for advanced developers.<br><br>
-A key strength of this solution lies in its <b>AI-driven self-healing engine</b>.<br><br>
-The platform automatically detects <b>UI or structural changes</b> within applications, updates locators, and repairs failing tests in real time — drastically reducing maintenance costs.<br><br>
-It ensures that automated test suites remain <b>resilient</b> even as products evolve rapidly.<br><br>
-The platform integrates seamlessly with <b>continuous integration and deployment (CI/CD) tools</b>, enabling teams to trigger automated test runs directly from their pipelines.<br><br>
-<b>Parallel test execution</b> across multiple browsers, operating systems, and devices ensures comprehensive coverage with minimal time investment.<br><br>
-<b>Detailed reports and analytics dashboards</b> provide visibility into execution results, performance trends, and areas requiring optimization.<br><br>
-<b>Security and scalability</b> are built into the core of the system.<br><br>
-With <b>encrypted data handling, cloud-ready infrastructure, and role-based access control</b>, it guarantees the integrity of sensitive testing data.<br><br>
-Whether deployed for small development teams or enterprise-level environments, the platform scales effortlessly to meet the demands of diverse projects.<br><br>
-In essence, this <b>Automation Testing Software</b> transforms quality assurance into an <b>intelligent, data-driven process</b>.<br><br>
-It empowers organizations to release faster, reduce manual effort, and maintain product quality at scale — redefining how teams approach <b>software reliability in the modern DevOps ecosystem</b>.<br><br>`,
-  image: automation,
+  title: "Automation Testing Platform",
+  subtitle: "Smarter, Faster & Reliable Software Testing",
+  description: `
+  <b>A simple, smart, and time-saving automation testing solution</b> that helps teams test faster, deliver bug-free software, and reduce manual work.<br><br>
+  Create, run, and manage tests effortlessly across <b>Web, Mobile, and API</b> — all in one platform.<br><br>
+
+  <b>Key Features</b><br>
+  • Easy login with secure role access for Testers, Leads & Admins<br>
+  • Create test cases with simple No-Code steps, or advanced scripting if needed<br>
+  • Manage all projects, test plans & test cases from one place<br>
+  • Test Web, Mobile & API apps without switching tools<br>
+  • Run multiple tests at the same time to speed up execution<br>
+  • Data-driven testing using Excel/CSV to cover more scenarios<br>
+  • Smart AI auto-fixes broken tests to avoid repeated failures<br>
+  • Live dashboard showing test progress, results, logs & screenshots<br>
+  • Connect with CI/CD tools to run tests automatically on every update<br>
+  • Import API collections and convert them into ready test cases<br>
+  • Team collaboration with comments, issue notes & alerts<br>
+  • Download reports in PDF/Excel and schedule auto-reports<br>
+  • Strong role-based access and secure project data control<br>
+  • Cloud backup & version tracking to avoid losing test data<br><br>
+
+  <b>Benefits</b><br>
+  • Saves hours of manual testing and speeds up software releases<br>
+  • Reduces errors and ensures more stable, high-quality products<br>
+  • Makes automation easy for beginners and powerful for experts<br>
+  • Helps teams work faster, smarter, and more efficiently<br><br>
+
+  <b>Customization</b><br>
+  We provide flexible customization options to align the product with your business workflows, branding, and operational needs.<br><br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
+
+  <b>Ideal For</b><br>
+  QA Teams, Developers, Software Companies, IT Teams, Startups, and Enterprises wanting faster, accurate, and hassle-free automation testing.<br><br>
+  `,
+  image: automation, // replace with your actual image import
   info: {
-    Category: "Software",
-  }
+    Category: "Web Platform",
+  },
 }
 ,
 {
   id: 9,
-  title: "Email System Application",
-  subtitle: "Smart, Secure, and Collaborative Communication Platform",
-  description: `<b>The Email System Application</b> is a comprehensive communication platform designed to enhance <b>productivity, collaboration, and security</b> across organizational communication.<br><br>
-It integrates <b>advanced email functionalities</b>, intelligent organization tools, and collaborative features into a single, unified ecosystem that adapts to both individual and enterprise needs.<br><br>
-Built with a focus on <b>speed, usability, and data integrity</b>, the system allows users to send, receive, and manage emails seamlessly across web and mobile platforms.<br><br>
-It consolidates all communication into structured inboxes, supports threaded conversations, and ensures that every interaction — from composing messages to managing attachments — happens efficiently and securely.<br><br>
-Beyond traditional emailing, the application promotes <b>workplace collaboration</b> by introducing shared inboxes, internal notes, and real-time team discussions.<br><br>
-Departments can coordinate tasks, assign responsibilities, and manage communication workflows directly within the platform, eliminating the need for external tools.<br><br>
-<b>Integration</b> is at the heart of the system.<br><br>
-It connects effortlessly with <b>calendars, contact directories, CRM systems, and third-party applications</b>, creating a unified workspace that supports scheduling, data sharing, and event management.<br><br>
-With <b>smart search, automated filters, and customizable labels</b>, users can organize their digital communication landscape with precision and clarity.<br><br>
-<b>Security</b> is a cornerstone of the solution.<br><br>
-It employs <b>strong encryption, spam detection, and access control mechanisms</b> to ensure that sensitive data remains confidential and compliant with industry standards.<br><br>
-The system also supports <b>multi-device synchronization, offline access, and cloud-based backups</b>, ensuring consistent availability and protection of user data.<br><br>
-By combining <b>intuitive design, advanced technology, and enterprise-grade reliability</b>, this Email System Application reimagines how organizations communicate.<br><br>
-It delivers an <b>intelligent, secure, and collaborative environment</b> that empowers teams to connect efficiently, manage communication effectively, and operate with confidence in a <b>digital-first world</b>.<br><br>`,
-  image: email,
+  title: "Business Email Platform",
+  subtitle: "Smart, Secure & Efficient Communication for Teams",
+  description: `
+  <b>A smart and secure email platform</b> for businesses, teams, and organizations to communicate efficiently, manage emails, contacts, calendars, files, and collaboration — all from one centralized system, accessible on both web and mobile.<br><br>
+
+  This email solution makes communication <b>simple, organized, and secure</b>. It includes easy login access, a clean mailbox interface, contact management, calendar scheduling, collaboration tools, and strong data protection. Designed for smooth performance across devices, it helps individuals and teams stay productive and well-connected.<br><br>
+
+  <b>Key Features</b><br>
+  • Secure sign-in with role-based access<br>
+  • Organized mailbox: Inbox, Sent, Drafts, Spam, Trash & Conversation View<br>
+  • Smart folders, labels, and filters to auto-organize emails<br>
+  • Fast search and sorting for quick email retrieval<br>
+  • Calendar for meetings, reminders, and event invites<br>
+  • Contact list with add, edit, import, export & group options<br>
+  • File and attachment management with preview & download<br>
+  • Strong spam protection and security controls<br>
+  • Admin dashboard for user, domain, storage & policy management<br>
+  • Shared inbox, internal notes, team chat & collaboration tools<br>
+  • Integrations with CRM, project tools, Slack & more<br>
+  • Email usage reports and analytics for performance tracking<br>
+  • Mobile app with instant alerts, syncing & offline access<br><br>
+
+  <b>Benefits</b><br>
+  • Clear and organized communication<br>
+  • Saves time with smart automation and filters<br>
+  • Boosts team productivity and coordination<br>
+  • High-level security protection for emails and data<br>
+  • Works smoothly on both web and mobile for anytime access<br><br>
+
+  <b>Customization</b><br>
+  We provide flexible customization options to align the product with your business workflows, branding, and operational needs.<br><br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
+
+  <b>Ideal For</b><br>
+  Businesses, Teams, Startups, Corporates, Schools, Agencies, and any organization that needs a reliable and secure email system.<br><br>
+  `,
+  image: email, // replace with your image import
   info: {
-    Category: "Web App",
-  }
+    Category: "Communication Platform",
+  },
 }
 ,
 {
   id: 10,
-  title: "Embedded Business Intelligence (BI) Software",
-  subtitle: "Integrated Analytics for Smarter Decision-Making",
-  description: `<b>The Embedded Business Intelligence (BI) Software</b> is an advanced analytics platform designed to integrate seamlessly within existing applications, providing users with <b>powerful, real-time insights</b> without leaving their workflow.<br><br>
+  title: "Embedded BI & Analytics Platform",
+  subtitle: "Real-Time Dashboards, AI Insights & Reporting Inside Your App",
+  description: `
+  <b>A powerful embedded BI solution</b> that brings real-time dashboards, AI insights, reporting, and data analytics directly inside your web and mobile applications. Enable users to access, analyze, and act on data instantly without switching tools. Fully secure, customizable, white-labelled, and built for scale.<br><br>
 
-It bridges the gap between raw data and strategic decision-making by embedding <b>dynamic dashboards, reports, and AI-driven analytics</b> directly into your product ecosystem.<br><br>
+  <b>Key Features</b><br>
+  • Secure login with role-based access, SSO, and granular permissions<br>
+  • No-code report builder with drag-and-drop widgets and visualizations for self-service analytics<br>
+  • Real-time interactive dashboards with charts, KPIs, drill-downs, and multi-layer data exploration<br>
+  • Embed dashboards in web & mobile apps using APIs, SDK, or iFrame with token-based access<br>
+  • Connect multiple data sources — databases, APIs, cloud apps, or files with auto-refresh<br>
+  • AI-powered insights with trend analysis, forecasting, anomaly alerts & smart recommendations<br>
+  • White-labelling with custom branding, themes, fonts & layout for a native experience<br>
+  • Role-based dashboards showing personalized data for Admins, Managers, or Customers<br>
+  • API integration for connecting with external systems or 3rd-party analytics tools<br>
+  • Enterprise-grade security with encryption, audit logs, and compliance support<br><br>
 
-Built for <b>developers, data analysts, and enterprise users</b> alike, this solution transforms how organizations access, visualize, and interact with data.<br><br>
+  <b>Benefits</b><br>
+  • Empowers users with analytics directly inside your product — no external tools required<br>
+  • Enables data-driven decisions across teams and departments<br>
+  • Reduces development effort with ready-to-embed dashboards, access control & APIs<br>
+  • Enhances user engagement, product value & customer retention<br>
+  • Saves time with automated reporting, scheduled insights & instant alerts<br>
+  • Ensures full brand consistency with white-labelled design<br>
+  • Scales effortlessly with your application’s growth from small to enterprise level<br><br>
 
-Through a unified interface, businesses can embed intuitive dashboards, generate interactive reports, and deliver <b>personalized analytics experiences</b> tailored to each user’s role and context.<br><br>
+  <b>Customization</b><br>
+  We provide flexible customization options to align the product with your workflows, branding, and operational needs.<br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
 
-The platform ensures <b>real-time data connectivity</b> with multiple sources, enabling accurate and timely insights across all levels of decision-making.<br><br>
-
-The system’s <b>AI-powered analytics engine</b> automatically identifies patterns, forecasts outcomes, and highlights key performance indicators, empowering users to move from observation to action.<br><br>
-
-With <b>responsive visualizations</b> and interactive elements such as filters, drill-downs, and contextual commenting, teams can collaborate effectively and uncover deeper business insights.<br><br>
-
-<b>Scalability and security</b> are at the heart of this solution.<br><br>
-
-Built on a <b>cloud-ready architecture</b>, it supports large data volumes, high concurrency, and <b>enterprise-level encryption</b>, ensuring complete reliability and data protection.<br><br>
-
-<b>White-label customization</b> allows organizations to align every visual and interface element with their branding, offering a cohesive user experience within their existing environment.<br><br>
-
-In essence, the Embedded BI Software redefines business intelligence by integrating <b>advanced analytics where decisions happen</b> — inside the applications users rely on every day.<br><br>
-
-It enables businesses to deliver <b>intelligent insights</b>, foster <b>data-driven cultures</b>, and accelerate growth by turning every product interaction into a source of <b>strategic value</b>.<br><br>`,
-  image: embedded,
+  <b>Ideal For</b><br>
+  SaaS products, ERPs, CRMs, FinTech, EdTech, HealthTech, HRMS, Ecommerce Platforms, and any application that wants to offer built-in BI analytics to users.<br><br>
+  `,
+  image: embedded, // replace with your imported image variable
   info: {
-    Category: "Web App",
-  }
+    Category: "Analytics & Business Intelligence",
+  },
+}
+,
+
+{
+  id: 11,
+  title: "Data Analysis & DataPrep System",
+  subtitle: "Turn Raw Data into Actionable Insights Effortlessly",
+  description: `
+  <b>Turn raw, scattered data into meaningful business intelligence</b> with speed, accuracy, and zero complexity. Our Data Analysis & DataPrep System simplifies the entire data lifecycle — from data collection and cleaning to transformation, visualization, and insights — all in one smart platform.<br><br>
+
+  Built for businesses, analysts, and data-driven teams, this system converts complex datasets into clean, structured, and analysis-ready information. It automates data cleaning, standardization, and integration to eliminate manual effort, reduce errors, and accelerate decision-making.<br><br>
+
+  <b>Core Features</b><br>
+  • Automated data cleaning, transformation, and enrichment<br>
+  • Connect spreadsheets, databases, APIs, apps, and cloud storage<br>
+  • Merge and unify multiple datasets into a single data model<br>
+  • Identify patterns, outliers, anomalies, and correlations<br>
+  • Visual dashboards for KPI tracking, trends, and performance insights<br>
+  • Export processed data to BI tools or share directly with teams<br>
+  • Scalable cloud-based architecture with fast processing<br>
+  • Role-based access, version control, and secure data governance<br>
+  • Real-time collaboration and report sharing across departments<br><br>
+
+  <b>Business Value</b><br>
+  • Saves hours of manual data preparation and formatting<br>
+  • Improves data accuracy, consistency, and trust<br>
+  • Enables faster and smarter business decisions<br>
+  • Uncovers insights hidden in raw data<br>
+  • Ensures standardized reporting across the organization<br><br>
+
+  <b>Customization</b><br>
+  We provide flexible customization options to align the product with your business workflows, branding, and operational needs.<br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
+
+  <b>Ideal For</b><br>
+  Organizations, analytics teams, consultants, finance, marketing, HR, operations, startups, enterprises, and anyone who works with data-driven insights.<br><br>
+
+  <b>Why Choose Us</b><br>
+  A powerful, intuitive, and secure platform that automates the hard part of data preparation and delivers insights with clarity. Easy to deploy, quick to learn, and flexible enough to scale with business growth.<br><br>
+  `,
+  image: data, // replace with your actual imported image variable
+  info: {
+    Category: "Data Analytics & Preparation",
+  },
+},
+
+{
+  id: 12,
+  title: "Payroll Management System",
+  subtitle: "Smart, Accurate & Hassle-Free Payroll Automation",
+  description: `
+  <b>A complete payroll management system</b> designed to simplify salary processing, employee management, attendance, tax compliance, and payslip distribution. Accessible on both web and mobile, it ensures accuracy, transparency, and hassle-free payroll operations for businesses of all sizes.<br><br>
+
+  This Payroll Application automates end-to-end payroll activities including employee onboarding, attendance tracking, salary calculation, tax deductions, reimbursement claims, and payslip generation. With built-in compliance support and employee self-service access, it reduces manual work and ensures timely and error-free payroll every month.<br><br>
+
+  <b>Key Features</b><br>
+  • Secure login for Admin, HR & Employees with role-based access<br>
+  • Employee records with salary, job role, attendance & leave details<br>
+  • Salary structure setup with earnings, deductions & allowances<br>
+  • Automated payroll processing with net salary calculation<br>
+  • Payslip generation, email delivery & mobile download access<br>
+  • Attendance & leave tracking with approval workflows<br>
+  • Compliance for PF, ESI, TDS & statutory deductions<br>
+  • Employee tax declarations & proof submission<br>
+  • Reimbursement & expense claim management<br>
+  • Real-time payroll, tax & attendance reports (Excel/PDF export)<br>
+  • Employee Self-Service Portal (ESS) for payslips, tax & leave info<br>
+  • Multi-branch/company support for large organizations<br>
+  • Cloud backup, data security & access control settings<br>
+  • Integrations with HR, accounting and third-party systems<br><br>
+
+  <b>Benefits</b><br>
+  • Saves time with automated monthly payroll runs<br>
+  • Reduces errors with accurate calculations & compliance checks<br>
+  • Improves transparency with employee self-service access<br>
+  • Enhances HR productivity with integrated workflows<br>
+  • Secure and reliable for both web and mobile users<br><br>
+
+  <b>Customization</b><br>
+  We provide flexible customization options to align the product with your business workflows, branding, and operational needs.<br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
+
+  <b>Ideal For</b><br>
+  Companies, SMEs, Corporates, Startups, HR Teams, Payroll Service Providers, Multi-branch Businesses, Schools, Hospitals, and Organizations managing staff salaries.<br><br>
+  `,
+  image: payroll, // replace with your actual image import
+  info: {
+    Category: "HR & Payroll Automation",
+  },
+},
+
+{
+  id: 13,
+  title: "E-Commerce Platform",
+  subtitle: "Modern, Scalable & Feature-Rich Online Shopping System",
+  description: `
+  <b>A modern and scalable e-commerce platform</b> designed for online stores and marketplaces. Sell products, manage orders, accept payments, track deliveries, handle returns, and deliver a seamless shopping experience across web and mobile.<br><br>
+
+  <b>Key Features</b><br>
+  • Secure login with role-based access for Customer, Seller & Admin<br>
+  • User profiles with multiple addresses, saved payment methods & synced wishlist<br>
+  • Product catalog with categories, variants, images, pricing & stock visibility<br>
+  • Smart search with filters for price, brand, rating, category & quick suggestions<br>
+  • Personalized recommendations & related product suggestions for higher conversions<br>
+  • Cart management with auto-calculated pricing, tax, discounts & delivery charges<br>
+  • Smooth checkout with wallet, promo codes, gift cards & multiple payment options<br>
+  • Real-time order tracking with status updates from purchase to delivery<br>
+  • Easy cancellations, returns, refunds & replacement support<br>
+  • Seller dashboard to manage products, pricing, stock, orders & performance analytics<br>
+  • Inventory auto-sync with orders, low-stock alerts & SKU-wise stock tracking<br>
+  • Ratings & reviews with moderation for quality and authenticity<br>
+  • Offers, coupons, deals & flash sale management<br>
+  • Notifications via App/SMS/Email for orders, deliveries & promotions<br>
+  • Admin panel for users, sellers, products, payments, revenue & marketplace control<br>
+  • Real-time sales, product & customer analytics for business insights<br>
+  • Cloud backup, security & multi-device data sync<br><br>
+
+  <b>Benefits</b><br><br>
+  • Boosts online sales with a smooth and intuitive shopping experience<br>
+  • Reduces manual operations with automation & analytics<br>
+  • Improves customer engagement and repeat purchases<br>
+  • Enables sellers to manage listings, stock & orders efficiently<br>
+  • Ensures secure, reliable, and scalable e-commerce operations<br><br>
+
+  <b>Customization</b><br><br>
+  We provide flexible customization options to align the product with your business workflows, branding, and operational needs.<br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
+
+  <b>Ideal For</b><br><br>
+  Online Stores, Multi-Vendor Marketplaces, Retailers, D2C Brands, Wholesalers, Distributors, and Startups looking to build a powerful e-commerce platform.<br><br>
+  `,
+  image: ecommerce, // replace with your actual image import
+  info: {
+    Category: "E-Commerce & Marketplace",
+  },
 },
 
 {
   id: 14,
-  title: "Data Analysis & DataPrep System",
-  subtitle: "Transforming Raw Data into Actionable Intelligence",
-  description: `<b>The Data Analysis & DataPrep System</b> is a comprehensive platform engineered to simplify and streamline the entire data lifecycle — from raw data acquisition to insightful analytics.<br><br>
+  title: "Human Resource Management System (HRMS)",
+  subtitle: "Smart, Automated & Scalable Workforce Management Platform",
+  description: `
+  <b>Streamline HR operations, empower employees with self-service access, and manage your entire workforce on one intelligent platform.</b> From onboarding to attendance, payroll, performance reviews, and workflows, this HRMS reduces manual work, boosts transparency, and helps HR teams focus on people — not paperwork.<br><br>
 
-Designed for businesses and professionals who rely on <b>data-driven decision-making</b>, it bridges the gap between complex datasets and meaningful outcomes.<br><br>
+  <b>A modern HR and employee management software</b> designed to simplify workforce administration for growing companies. The platform unifies employee records, attendance, shifts, leave, performance, payroll sync, documents, and approvals into one secure system accessible on web and mobile. With role-based access and automation, HR teams, managers, and employees stay connected and efficient.<br><br>
 
-At its core, the system automates the process of <b>data cleaning, transformation, and integration</b>. It intelligently detects errors, removes inconsistencies, and standardizes formats, ensuring that every dataset is reliable and analysis-ready.<br><br>
+  <b>Core Features</b><br>
+  • Centralized employee database with digital records & documents<br>
+  • Attendance tracking with check-in/out, GPS, biometrics & leave management<br>
+  • Timesheets & project-wise work hour logging with manager approvals<br>
+  • Shift scheduling with automated reminders and swap options<br>
+  • Payroll-ready data with salary structure mapping & payslip history<br>
+  • Performance reviews with goals, feedback, scorecards & appraisals<br>
+  • Employee Self-Service (ESS) portal for profile, requests, and updates<br>
+  • API integrations with payroll, finance & third-party tools<br><br>
 
-This automation eliminates the need for tedious manual intervention, drastically improving efficiency and accuracy across analytical workflows.<br><br>
+  <b>Business Value</b><br>
+  • Reduces manual HR workload and accelerates approvals<br>
+  • Enables accurate attendance–to–payroll mapping with zero errors<br>
+  • Improves employee experience, engagement, and transparency<br>
+  • Supports data-driven HR decisions through real-time insights<br>
+  • Ensures compliance, data security & centralized control<br><br>
 
-The platform supports <b>seamless data connectivity</b> with multiple sources — including spreadsheets, databases, APIs, and cloud storage — enabling users to unify disparate data into a single, cohesive structure.<br><br>
+  <b>Customization</b><br>
+  We provide flexible customization options to align the product with your business workflows, branding, and operational needs.<br>
+  Our approach focuses on adapting features and user experience to suit your processes — ensuring the solution fits your business rather than the other way around.<br><br>
 
-Through its intelligent processing engine, it identifies <b>patterns, outliers, and correlations</b>, helping users discover insights that might otherwise remain hidden.<br><br>
+  <b>Ideal For</b><br>
+  Small to large businesses, IT companies, startups, BPOs, manufacturing, retail, healthcare, education, agencies, and multi-branch organizations.<br><br>
 
-Once data is prepared, users can explore it through an <b>interactive, visual dashboard</b> that provides an in-depth understanding of business performance, trends, and key metrics.<br><br>
-
-These dashboards are designed for clarity, making it easy for both technical and non-technical users to interpret complex data with ease.<br><br>
-
-<b>Security, scalability, and collaboration</b> are at the foundation of this solution.<br><br>
-
-Role-based access controls ensure data privacy, while <b>cloud-based architecture</b> guarantees reliability and performance even under large-scale workloads.<br><br>
-
-Teams can collaborate in real time, share reports, and maintain data consistency across departments.<br><br>
-
-In essence, this <b>Data Analysis & DataPrep System</b> transforms how organizations handle and utilize data.<br><br>
-
-By automating the most time-consuming parts of data management and empowering users with <b>actionable insights</b>, it enables faster, smarter, and more strategic business decisions — turning data into a true <b>competitive advantage</b>.<br><br>`,
-  image: data,
+  <b>Why Choose Us</b><br>
+  Easy to implement, highly configurable, and built to scale. With automation, mobile access, and strong controls, it transforms HR from paperwork to productivity.<br><br>
+  `,
+  image: hrms, // replace with your actual imported image
   info: {
-    Category: "Web App",
-  }
+    Category: "HR & Workforce Management",
+  },
 },
 
 {
   id: 15,
-  title: "Payroll Application (Web + Mobile)",
-  subtitle: "Automated, Secure, and Scalable Payroll Management",
-  description: `<b>The Payroll Application (Web + Mobile)</b> is a comprehensive, cloud-based payroll management solution designed to automate and simplify every aspect of employee compensation and workforce administration.<br><br>
+  title: "Customer Relationship Management (CRM) System",
+  subtitle: "Smarter Sales, Stronger Relationships, Seamless Collaboration",
+  description: `
+  <b>Unlock smarter customer relationships, faster sales cycles, and seamless team collaboration</b> with a modern CRM designed for growth. Manage leads, contacts, deals, tasks, communication, and customer support in one place. Gain real-time visibility of your pipeline, improve conversions, and deliver personalized experiences that keep customers loyal.<br><br>
 
-Built for scalability and precision, it serves organizations of all sizes — from startups to enterprises — ensuring <b>compliance, accuracy, and efficiency</b> in payroll operations.<br><br>
+  <b>A unified Customer Relationship Management platform</b> built to streamline sales, marketing, and support operations. The intuitive interface helps teams work efficiently from day one by bringing all customer touchpoints into a single view.<br><br>
 
-At its foundation, the system centralizes <b>employee information, attendance, leave, and salary structures</b>, providing a unified view of the workforce.<br><br>
+  <b>Core Features</b><br>
+  • Lead tracking with source tagging and conversion history<br>
+  • Contact and account management with communication timeline<br>
+  • Kanban-style sales pipeline for clear deal movement and forecasting<br>
+  • Built-in email, calls, chat, and activity logging<br>
+  • Tasks, reminders, calendar sync, and meeting alerts<br>
+  • Integrations with email, payment, marketing, and third-party apps<br><br>
 
-The payroll engine automates complex calculations — including gross pay, deductions, bonuses, and tax withholdings — while integrating directly with attendance systems to ensure seamless synchronization.<br><br>
+  <b>Business Value</b><br>
+  • Faster lead-to-deal conversion and higher revenue<br>
+  • Centralized customer data reduces manual work and errors<br>
+  • Better team collaboration and accountability<br>
+  • Improved customer experience and long-term retention<br>
+  • Actionable insights for strategic decision-making<br>
+  • Scales with your business without operational complexity<br><br>
 
-This not only minimizes human intervention but also ensures <b>real-time accuracy and transparency</b>.<br><br>
+  <b>Customization</b><br>
+  Flexible to match your business processes, industry needs, team structure, and data rules.<br>
+  Configure fields, modules, pipelines, approvals, automations, and reports based on your workflows.<br><br>
 
-The application extends beyond payroll management by empowering employees with a <b>self-service portal</b> accessible via web and mobile devices.<br><br>
+  <b>Ideal For</b><br>
+  Businesses aiming to centralize customer data, boost sales productivity, automate workflows, and improve customer service.<br>
+  Perfect for growing companies that handle recurring customer interactions, multi-channel sales, or field and remote teams.<br><br>
 
-Employees can securely view their payslips, download tax documents, update personal details, and submit leave or reimbursement requests — reducing HR dependency and promoting autonomy.<br><br>
-
-<b>Compliance and security</b> are integral to the system’s architecture.<br><br>
-
-It automatically handles statutory obligations such as <b>PF, ESI, and TDS</b>, and generates detailed reports aligned with government regulations.<br><br>
-
-With advanced <b>encryption protocols, cloud-based backups, and role-based access control</b>, sensitive payroll data remains fully protected.<br><br>
-
-In addition, the platform features robust <b>analytics and dashboards</b> that deliver actionable insights into workforce costs, tax summaries, and payroll trends.<br><br>
-
-Multi-branch organizations can manage distributed payrolls from a single dashboard, standardizing processes while maintaining flexibility at each level.<br><br>
-
-Ultimately, the <b>Payroll Application</b> redefines payroll management by combining <b>automation, compliance, and mobility</b>.<br><br>
-
-It enhances organizational productivity, empowers employees, and ensures every payment is processed accurately, securely, and on time — paving the way for a smarter, more efficient payroll experience.<br><br>`,
-  image: payroll,
+  <b>Why Choose Us</b><br>
+  Simple to use, secure, and performance-driven.<br>
+  Backed by continuous product upgrades, reliable support, and flexible integration capabilities to help you achieve growth with confidence.<br><br>
+  `,
+  image: crm, // replace with your actual imported image
   info: {
-    Category: "Web + Mobile App",
-  }
+    Category: "Sales & Customer Management",
+  },
 },
 
 {
   id: 16,
-  title: "E-Commerce Application (Amazon / Flipkart Style)",
-  subtitle: "Smart, Scalable, and Customer-Centric Online Marketplace",
-  description: `<b>The E-Commerce Application (Amazon / Flipkart Style)</b> is a full-scale digital commerce platform engineered to redefine how businesses sell and customers shop online.<br><br>
+  title: "Appointment & Booking Management System",
+  subtitle: "Smart Scheduling, Seamless Bookings, and Automated Management",
+  description: `
+  <b>Deliver a seamless booking experience</b> that boosts customer satisfaction and business efficiency. This smart Appointment and Booking Management System lets customers book services online with real-time availability, while helping businesses manage schedules, staff, payments, reminders, and locations from one platform. Designed for web and mobile with automation, security, and fast onboarding.<br><br>
 
-It combines <b>intuitive design, secure technology, and data intelligence</b> to create a marketplace that delivers convenience, transparency, and engagement at every step.<br><br>
+  <b>A complete appointment scheduling solution</b> for service-based businesses. Customers can book appointments anytime through a user-friendly interface, while staff and admins manage calendars, services, customer records, and payments with ease. The system prevents double booking, syncs with external calendars, automates reminders, and centralizes booking data. Accessible on web and mobile, it increases show-up rates, reduces manual work, and drives more bookings.<br><br>
 
-This system provides an end-to-end framework that unites <b>buyers, sellers, and administrators</b> on a single, efficient ecosystem.<br><br>
+  <b>Core Features</b><br>
+  • Online booking with staff, date, time, and service selection<br>
+  • Real-time availability and instant confirmations<br>
+  • Service catalog with pricing, duration, and categories<br>
+  • Staff scheduling with working hours, skills, and role assignment<br>
+  • Calendar with day, week, and month views<br>
+  • Payment integrations with invoicing and refunds<br>
+  • Mobile app for staff with push alerts and calendar sync<br><br>
 
-From product listing and catalog management to order fulfillment and post-delivery feedback, every workflow is automated for precision and speed.<br><br>
+  <b>Business Value</b><br>
+  • Reduces no-shows with smart reminders<br>
+  • Saves time and eliminates manual scheduling<br>
+  • Increases bookings via online and social channels<br>
+  • Enhances customer experience and retention<br>
+  • Provides clear insights into staff productivity and occupancy<br>
+  • Enables data-based business decisions<br><br>
 
-Customers enjoy effortless browsing through intelligent search and filtering, secure payments, and real-time tracking, while sellers gain comprehensive dashboards to manage inventory, pricing, and sales performance.<br><br>
+  <b>Customization</b><br>
+  Tailor services, pricing, timing, branding, workflows, notifications, locations, and user access to match your business needs.<br><br>
 
-The platform’s architecture ensures <b>high performance and scalability</b>, capable of handling large user volumes and product catalogs without compromise.<br><br>
+  <b>Ideal For</b><br>
+  Salons, spas, clinics, fitness centers, coaching institutes, repair services, photographers, consultants, wellness centers, and any appointment-based business.<br><br>
 
-Integrated analytics deliver actionable insights on sales, customer behavior, and marketing performance — empowering data-driven decisions that fuel business growth.<br><br>
-
-<b>Security and reliability</b> are fundamental to its design.<br><br>
-
-Every transaction and user interaction is protected through <b>encryption, authentication, and compliance-ready frameworks</b>, while cloud integration ensures seamless backups and synchronization across multiple devices.<br><br>
-
-Beyond functionality, the system focuses on delivering a <b>customer-centric experience</b>.<br><br>
-
-Personalized recommendations, loyalty programs, and efficient return management foster trust and repeat engagement.<br><br>
-
-Its responsive design ensures accessibility across web and mobile devices, maintaining consistency and performance throughout the user journey.<br><br>
-
-In essence, this <b>E-Commerce Application</b> transforms traditional online retail into a smart, connected, and scalable digital ecosystem.<br><br>
-
-It empowers businesses to operate efficiently, reach wider audiences, and deliver <b>world-class shopping experiences</b> that inspire loyalty and growth.<br><br>`,
-  image: ecommerce,
+  <b>Why Choose Us</b><br>
+  Easy to use, secure, and scalable. Built with automation and flexibility to help you grow and deliver a smooth booking journey.<br><br>
+  `,
+  image: appointment, // replace with your actual imported image
   info: {
-    Category: "Web + Mobile App",
-  }
+    Category: "Service & Appointment Management",
+  },
 },
 
 {
   id: 17,
-  title: "HR Management System (Employee & Workforce Platform)",
-  subtitle: "Streamlined, Automated, and Data-Driven Workforce Management",
-  description: `<b>The HR Management System (Employee & Workforce Platform)</b> is a comprehensive digital solution designed to transform traditional HR operations into a streamlined, automated, and data-driven experience.<br><br>
+  title: "Recruitment & Applicant Tracking System",
+  subtitle: "Smarter Hiring, Simplified Recruitment, and Data-Driven Decisions",
+  description: `
+  <b>Streamline hiring and build a strong workforce</b> with a modern Recruitment & Applicant Tracking System that simplifies sourcing, screening, interviewing, and hiring. The platform digitizes end-to-end recruitment operations, reduces manual work, and enables faster, data-driven decisions for HR teams, recruiters, and hiring managers.<br><br>
 
-It provides a unified ecosystem where all aspects of human resource management — including <b>employee information, attendance, performance, payroll, and analytics</b> — are interconnected for maximum efficiency and transparency.<br><br>
+  <b>A complete web and mobile-based recruitment solution</b> that centralizes job posting, candidate sourcing, resume parsing, applicant tracking, interview scheduling, communication, reporting, and talent management. Role-based access ensures secure and controlled usage for Admins, Recruiters, and Hiring Managers. Suitable for startups, SMEs, enterprises, and staffing firms, with scalable workflows to support different hiring models.<br><br>
 
-At its foundation, the platform centralizes employee data, ensuring that HR teams can manage every stage of the employee lifecycle through a single interface.<br><br>
+  <b>Core Features</b><br>
+  • Secure login with role-based dashboards and permissions<br>
+  • Job posting and management with multi-channel publishing<br>
+  • AI-enabled resume parsing with structured candidate profiles<br>
+  • Applicant tracking pipeline from Applied to Hired or Rejected<br>
+  • Interview scheduling with calendar sync and automated reminders<br>
+  • Email tools with templates, bulk send, and communication logs<br>
+  • Candidate CRM with talent pool, tagging, and history tracking<br>
+  • Reports and analytics on key hiring metrics and recruiter performance<br>
+  • Integration-ready for job boards, HRMS, email, and calendar systems<br>
+  • Mobile access for quick updates, schedules, and notifications<br><br>
 
-This integration eliminates data redundancy, improves accuracy, and enables cross-department collaboration. From recruitment and onboarding to attendance tracking and performance evaluation, every process is simplified and seamlessly connected.<br><br>
+  <b>Business Value</b><br>
+  • Faster and more efficient hiring cycles<br>
+  • Reduced manual tasks through automation<br>
+  • Better collaboration between hiring teams<br>
+  • Improved candidate experience and engagement<br>
+  • Clear visibility into recruitment metrics and performance<br><br>
 
-<b>Automation</b> lies at the core of the system, allowing repetitive administrative tasks — such as approvals, notifications, and workflow routing — to be executed intelligently without manual effort.<br><br>
+  <b>Customization</b><br>
+  Flexible settings allow tailoring of hiring stages, workflows, access levels, communication templates, and approval structures. Optional modules include background verification, onboarding, vendor hiring, assessments, and automation—making the system adaptable for growing hiring needs.<br><br>
 
-The system also ensures <b>compliance</b> with organizational policies and statutory requirements, providing complete reliability in payroll, taxation, and data security.<br><br>
-
-Employees benefit from an <b>intuitive self-service portal</b> where they can view their attendance, manage leave requests, access payslips, and update personal details independently.<br><br>
-
-Managers and HR professionals gain access to <b>insightful analytics and visual dashboards</b> that showcase workforce trends, performance statistics, and operational efficiency in real time.<br><br>
-
-The platform is built with a strong focus on <b>scalability, performance, and security</b>.<br><br>
-
-Role-based access, encrypted data handling, and audit trails safeguard sensitive information while maintaining transparency.<br><br>
-
-Its modular design ensures flexibility, making it suitable for organizations of any size — from small teams to multi-branch enterprises.<br><br>
-
-In essence, this <b>HR Management System</b> redefines workforce management by combining automation, intelligence, and human-centered design.<br><br>
-
-It empowers organizations to operate efficiently, engage employees effectively, and make data-backed strategic decisions — ultimately creating a connected, compliant, and future-ready HR ecosystem.<br><br>`,
-  image: hrms,
+  <b>Why Choose Us</b><br>
+  Reliable, secure, and easy to use. Regular enhancements, strong data protection, responsive support, and configurable features help organizations hire smarter, faster, and with confidence.<br><br>
+  `,
+  image: recruit, // replace with your actual imported image file
   info: {
-    Category: "Web + Mobile App",
-  }
+    Category: "HR & Recruitment Management",
+  },
 },
 
 {
   id: 18,
-  title: "Customer Relationship Management (CRM) System",
-  subtitle: "Streamline Relationships, Sales, and Customer Engagement",
-  description: `<b>The Customer Relationship Management (CRM) System</b> is a comprehensive digital platform designed to streamline how organizations manage their relationships with leads, customers, and partners.<br><br>
+  title: "Event Management System",
+  subtitle: "Plan, Organize, and Deliver Seamless Event Experiences",
+  description: `
+  <b>Plan, organize, and manage events of any scale</b> with an all-in-one Event Management System designed to simplify operations, boost attendee engagement, and deliver seamless event experiences. From registrations to scheduling, communication, check-ins, and post-event insights, the platform ensures end-to-end event execution without complexity.<br><br>
 
-It integrates <b>sales, marketing, and support operations</b> into a single ecosystem that drives productivity, accountability, and customer satisfaction.<br><br>
+  <b>A powerful web and mobile-based solution</b> that centralizes event planning, attendee management, ticketing, communication, and analytics. The intuitive interface allows organizers to set up events quickly and manage everything in one place. Suitable for corporate events, conferences, seminars, workshops, expos, cultural programs, and hybrid formats. Customizable modules make the system adaptable to diverse event requirements and workflows.<br><br>
 
-This system provides businesses with a <b>unified view of every client interaction</b> — from the first inquiry to post-sale service. It enables teams to track leads, manage opportunities, and convert prospects into loyal customers through structured and data-driven workflows.<br><br>
+  <b>Core Features</b><br>
+  • Event creation, branding, agenda, and session management<br>
+  • Online registrations, ticketing, passes, and payment options<br>
+  • Attendee profiles, confirmation emails, and smart reminders<br>
+  • QR/digital check-in and access management<br>
+  • Multi-channel announcements, alerts, and communication<br>
+  • Vendor and staff coordination with tasks and permissions<br>
+  • Exhibitor and sponsor mapping with allocation options<br>
+  • Real-time dashboards and performance analytics<br>
+  • Web and mobile access with secure authentication<br>
+  • Integration-ready for payment, CRM, email, and marketing tools<br><br>
 
-The built-in <b>communication framework</b> ensures that every call, email, and meeting is recorded and accessible, giving organizations full visibility into their customer lifecycle.<br><br>
+  <b>Business Value</b><br>
+  • Saves time through automation and centralized control<br>
+  • Enhances attendee experience with smooth interactions<br>
+  • Provides better visibility with real-time tracking and analytics<br>
+  • Enables collaboration among organizers, vendors, and teams<br>
+  • Scales effortlessly for single or multi-event management<br><br>
 
-By leveraging <b>intelligent automation</b>, the CRM minimizes repetitive tasks such as follow-ups, reminders, and lead assignments. This automation not only enhances efficiency but also ensures timely responses and consistent customer engagement.<br><br>
+  <b>Customization</b><br>
+  Configurable modules and add-ons allow customization of workflows, access levels, branding, registration flows, and communication styles — making it ideal for small, mid, and large-scale organizers.<br><br>
 
-<b>Advanced analytics and reporting tools</b> transform operational data into actionable insights, helping businesses measure performance, forecast trends, and refine strategies in real time.<br><br>
-
-Marketing and sales teams benefit from <b>seamless collaboration</b>, with integrated campaign management tools that monitor engagement metrics and ROI.<br><br>
-
-Customer support departments can efficiently handle service requests through a <b>ticketing system</b> that tracks queries, assigns priorities, and ensures swift resolutions — strengthening long-term trust and loyalty.<br><br>
-
-<b>Security and scalability</b> form the foundation of this system. It uses encrypted communication, role-based permissions, and cloud-based infrastructure to ensure data integrity and accessibility across devices and locations.<br><br>
-
-Whether implemented in small businesses or large enterprises, the platform adapts to varying operational needs without compromising performance.<br><br>
-
-In essence, this <b>CRM System</b> redefines customer engagement through automation, intelligence, and collaboration.<br><br>
-
-It enables organizations to nurture relationships, optimize workflows, and achieve sustainable growth — turning every interaction into an opportunity for success.<br><br>`,
-  image: crm,
+  <b>Why Choose Us</b><br>
+  Reliable, secure, and user-friendly. Regular enhancements, strong data handling, and responsive support empower organizers to manage events professionally and deliver memorable experiences with confidence.<br><br>
+  `,
+  image: event, // replace with your actual imported image file
   info: {
-    Category: "Web + Mobile App",
-  }
+    Category: "Event Planning & Management",
+  },
 },
 
 {
   id: 19,
-  title: "Appointment & Booking Management System",
-  subtitle: "Seamless Scheduling and Smart Automation",
-  description: `<b>The Appointment & Booking Management System</b> is a robust, cloud-based platform designed to simplify scheduling, automate workflows, and deliver a seamless booking experience for both businesses and customers.<br><br>
-
-It provides an <b>end-to-end solution</b> that covers appointment management, calendar synchronization, payments, reminders, analytics, and customer engagement — all in one integrated system.<br><br>
-
-Built with <b>flexibility at its core</b>, the platform enables businesses to manage bookings across multiple locations, time zones, and staff members effortlessly.<br><br>
-
-Customers can view real-time availability, book appointments online, and receive instant confirmations, while staff can manage their calendars, track schedules, and make adjustments in real time.<br><br>
-
-This level of automation reduces manual coordination and eliminates double bookings, creating a smooth and professional experience for all users.<br><br>
-
-The system seamlessly integrates with <b>major calendar and payment platforms</b>, ensuring synchronization and secure transactions.<br><br>
-
-<b>Automated notifications and reminders</b> enhance customer engagement, reducing missed appointments and improving overall service efficiency.<br><br>
-
-The platform also supports <b>customizable workflows and templates</b> that allow businesses to tailor communication and operations according to their brand identity.<br><br>
-
-From a management perspective, the application offers a <b>powerful analytics dashboard</b> that provides real-time insights into bookings, revenue, and staff performance.<br><br>
-
-Administrators can identify high-performing time slots, monitor customer activity, and make informed strategic decisions based on accurate data.<br><br>
-
-<b>Security and reliability</b> are fundamental to its design. With end-to-end encryption, role-based access control, and audit logging, the system ensures that customer and business data remain protected.<br><br>
-
-Its scalable architecture supports a wide range of industries — from salons, clinics, and educational centers to consulting agencies and professional services.<br><br>
-
-In essence, this <b>Appointment & Booking Management System</b> revolutionizes scheduling by combining automation, analytics, and user-centric design.<br><br>
-
-It enhances operational efficiency, reduces manual intervention, and empowers businesses to deliver a seamless, convenient, and professional booking experience every time.<br><br>`,
-  image: appointment,
-  info: {
-    Category: "Web + Mobile App",
-  }
-},
-
-{
-  id: 20,
-  title: "Recruitment & Applicant Tracking System (ATS)",
-  subtitle: "AI-Powered Recruitment Automation Platform",
-  description: `<b>The Recruitment & Applicant Tracking System (ATS)</b> is a comprehensive, AI-enabled hiring platform designed to simplify, automate, and optimize the recruitment process for organizations of any scale.<br><br>
-
-It provides a <b>unified ecosystem</b> that connects recruiters, hiring managers, and candidates through a seamless workflow — from job posting to final onboarding.<br><br>
-
-At its core, the system consolidates all recruitment activities into one central hub.<br><br>
-
-It enables recruiters to post job openings across multiple portals, receive applications in real time, and automatically parse resumes using <b>advanced AI and NLP technologies</b>.<br><br>
-
-This intelligent automation not only reduces manual effort but also ensures <b>faster candidate screening</b> and <b>improved matching accuracy</b>.<br><br>
-
-The platform supports complete applicant lifecycle management through <b>structured pipelines</b> that visualize each candidate’s progress — from application submission to interview and final hiring.<br><br>
-
-<b>Integrated calendar synchronization</b> simplifies interview scheduling, while automated reminders and notifications ensure no step in the process is missed.<br><br>
-
-A key strength of the system lies in its <b>analytics and reporting capabilities</b>.<br><br>
-
-HR managers can track recruitment KPIs such as <b>time-to-hire</b>, <b>source efficiency</b>, and <b>candidate conversion rates</b>, allowing for strategic decision-making and continuous process improvement.<br><br>
-
-The system also offers a <b>built-in communication framework</b> for email automation, bulk messaging, and candidate engagement, ensuring consistent communication throughout the recruitment journey.<br><br>
-
-With <b>enterprise-grade security</b>, role-based access, and GDPR compliance, sensitive candidate data is fully protected.<br><br>
-
-The <b>modular and cloud-ready architecture</b> allows organizations to scale seamlessly as their hiring needs evolve — whether managing a handful of roles or thousands of applications across departments.<br><br>
-
-Ultimately, this <b>Recruitment & Applicant Tracking System</b> transforms traditional hiring into a <b>data-driven, automated, and candidate-focused experience</b>.<br><br>
-
-It empowers organizations to build stronger teams, improve operational efficiency, and deliver a more personalized and professional recruitment experience.<br><br>`,
-  image: recruit,
-  info: {
-    Category: "Web + Mobile App",
-  }
-},
-
-{
-  id: 21,
-  title: "Event Management System (Web + Mobile)",
-  subtitle: "Smart, Automated Event Planning and Coordination",
-  description: `<b>The Event Management System (Web + Mobile)</b> is an all-in-one digital platform designed to simplify and automate the end-to-end management of events — from planning and registration to hosting and post-event analysis.<br><br>
-
-It provides a <b>complete solution</b> for organizers, attendees, and sponsors, enabling seamless coordination and engagement across physical, virtual, and hybrid events.<br><br>
-
-At its core, the system integrates multiple aspects of event management into one cohesive platform.<br><br>
-
-Organizers can create and configure events, manage speakers, sponsors, and attendees, handle registrations and payments, and monitor progress in real time.<br><br>
-
-The system supports both <b>single and multi-event management</b>, allowing organizations to oversee multiple events simultaneously from a unified dashboard.<br><br>
-
-A key component of the platform is its <b>automation-driven design</b>.<br><br>
-
-Processes such as ticketing, confirmations, reminders, and communication are fully automated to minimize manual work and enhance efficiency.<br><br>
-
-Integrated payment gateways ensure <b>secure transactions</b>, while <b>QR-coded tickets</b> simplify entry management and tracking.<br><br>
-
-For <b>virtual and hybrid events</b>, the platform includes live streaming, audience interaction features, and digital engagement tools such as polls, Q&As, and networking sessions — ensuring participants remain connected and engaged regardless of location.<br><br>
-
-The <b>mobile application</b> extends the platform’s functionality, offering real-time updates, notifications, and offline accessibility for attendees and staff alike.<br><br>
-
-Comprehensive <b>analytics and reporting tools</b> provide actionable insights into event performance.<br><br>
-
-Organizers can monitor ticket sales, attendee engagement, revenue, and satisfaction levels through visual dashboards, helping them make data-informed decisions for future events.<br><br>
-
-<b>Security, scalability, and reliability</b> form the backbone of the system.<br><br>
-
-With robust encryption, role-based access control, and cloud-based infrastructure, it guarantees data protection and consistent performance even under large-scale operations.<br><br>
-
-In essence, this <b>Event Management System</b> transforms traditional event management into a <b>smart, connected, and data-driven experience</b>.<br><br>
-
-It empowers organizations to deliver exceptional events with precision, engagement, and professionalism — all through one powerful platform.<br><br>`,
-  image: event,
-  info: {
-    Category: "Web + Mobile App",
-  }
-},
-
-{
-  id: 22,
   title: "Retail POS System (Web + Mobile)",
   subtitle: "Smart Retail Management for Modern Businesses",
-  description: `<b>The Retail POS System (Web + Mobile)</b> is a comprehensive retail management solution developed to streamline point-of-sale operations, enhance customer experience, and optimize business performance across multiple branches.<br><br>
+  description: `Accelerate business growth and streamline store operations with a POS that speeds up checkout, reduces billing errors and improves workflow efficiency.<br><br>
 
-Designed for both small and large retail enterprises, it brings <b>billing, inventory, customer management, and analytics</b> under one intelligent, integrated platform.<br><br>
+Clear dashboards and focused reports help you understand performance, control costs and make informed decisions that support steady revenue growth.<br><br>
 
-The system provides a <b>unified environment</b> where every retail function operates in harmony.<br><br>
+<b>Product Overview</b><br>
 
-It facilitates quick and error-free billing, real-time inventory tracking, and customer engagement while ensuring seamless data synchronization between stores, mobile devices, and the cloud.<br><br>
 
-With <b>offline functionality</b>, retailers can continue billing and processing transactions even during network outages, eliminating downtime and revenue loss.<br><br>
 
-At the heart of the platform lies a <b>dynamic inventory engine</b> that automates stock management — updating quantities with each sale, generating alerts for low-stock items, and simplifying reorders with supplier integration.<br><br>
+<b>Core Features</b><br>
 
-Its <b>multi-branch management</b> capabilities allow organizations to operate multiple outlets with centralized control, ensuring consistency in pricing, promotions, and reporting.<br><br>
+• Fast billing with product search, barcode and QR scanning<br>
+• Real-time inventory with low stock alerts and adjustments<br>
+• Centralized catalog, pricing and tax configuration<br>
+• Customer profiles, purchase history and loyalty options<br>
+• Support for cards, UPI, wallets, cash, split payments, returns and refunds<br>
+• GST compliant invoicing, tax settings and reporting<br>
+• User roles, access control and activity logs<br>
+• Cash register handling with shift and day-end summaries<br>
+• Works on web and mobile with secure access<br>
+• Integration ready for accounting, ecommerce and payment gateways<br><br>
 
-The system enhances operational efficiency through <b>automation and role-based access control</b>, empowering store managers, cashiers, and administrators to perform their tasks effectively while maintaining data security.<br><br>
+<b>Business Value</b><br>
 
-It also supports a <b>customer-focused approach</b>, allowing businesses to track purchase history, reward loyalty, and create personalized experiences that drive retention and growth.<br><br>
+• Faster checkout and improved customer experience<br>
+• Reduced stock loss through accurate tracking<br>
+• Better decisions using sales and performance insights<br>
+• Simplified tax management and audit-friendly records<br>
+• Scales with store expansion and business growth<br>
+• Less manual work and higher staff efficiency<br><br>
 
-Comprehensive <b>analytics and reporting tools</b> provide real-time visibility into sales performance, inventory movement, and branch-wise profitability.<br><br>
+<b>Customization</b><br>
 
-These insights enable business owners to make <b>data-driven decisions</b> and identify opportunities for optimization.<br><br>
+Configuration and customization options align the POS with your workflows, store format, user roles and reporting needs.<br>
 
-<b>Scalability and security</b> are core to the platform’s design.<br><br>
+Optional modules and add-ons can be enabled based on requirements.<br><br>
 
-Built on a <b>robust cloud architecture</b>, it adapts effortlessly to expanding business needs while ensuring data protection through encryption and secure user authentication.<br><br>
+<b>Suitable For</b><br>
 
-In essence, the <b>Retail POS System</b> transforms the retail landscape by combining <b>speed, intelligence, and reliability</b>.<br><br>
+Supports a wide range of retail formats from small independent stores to multi-outlet retail operations across various categories and business sizes.<br><br>
 
-It empowers businesses to deliver superior service, maximize efficiency, and maintain complete control — all through a single, seamless platform.<br><br>`,
+<b>Why Choose Our Product</b><br>
+
+Reliable, practical and easy to use.<br>
+
+Regular improvements, secure data handling, responsive support and flexible customization help retailers run operations smoothly and achieve consistent business growth.<br><br>`,
   image: retail,
   info: {
     Category: "Web + Mobile App",
@@ -612,86 +860,98 @@ It empowers businesses to deliver superior service, maximize efficiency, and mai
 },
 
 {
-  id: 23,
-  title: "Privacy-Based Browser (Web + Mobile)",
-  subtitle: "Secure, Private, and Intelligent Web Experience",
-  description: `<b>The Privacy-Based Browser (Web + Mobile)</b> is a next-generation web browsing solution engineered to provide a <b>secure, private, and efficient</b> online experience.<br><br>
+  id: 20,
+  title: "Privacy-Focused Browser",
+  subtitle: "Fast, Secure, and Private Browsing Experience",
+  description: `
+  <b>Experience fast, secure, and private browsing</b> without trackers, intrusive ads, or data profiling. 
+  A modern browser built for people who value privacy, control, and a distraction-free online experience. 
+  Surf the web with built-in protection, encrypted sync, and smart performance tools that enhance productivity 
+  across web and mobile.<br><br>
 
-Built with a <b>“privacy-first” philosophy</b>, it eliminates intrusive tracking, data collection, and advertising surveillance — giving users complete control over their digital footprint.<br><br>
+  <b>A next-generation privacy-first browser</b> that puts user data protection at the core. 
+  Unlike traditional browsers that track behavior for ads, this browser stores all user information in encrypted form 
+  and gives complete control over what is shared. With private sync across devices, multiple browsing modes, ad 
+  and tracker blocking, a secure password vault, and an intuitive interface, users enjoy safe browsing without 
+  compromising speed or functionality. Ideal for personal, work, family, or developer use with customizable settings 
+  and a clean, user-friendly design.<br><br>
 
-At its foundation, the browser leverages <b>end-to-end encryption</b> and advanced resource optimization to deliver both <b>security and speed</b>.<br><br>
+  <b>Core Features</b><br>
+  • Encrypted login and account sync for bookmarks, tabs, and history<br>
+  • Customizable start page with shortcuts, top sites, and news feed<br>
+  • Built-in ad, pop-up, and tracker blocking<br>
+  • Multiple browsing modes for Work, Personal, Kids, and Developer<br>
+  • Tab management with grouping, pinning, and session restore<br>
+  • Privacy dashboard with tracker and ad blocking stats<br>
+  • Extensions support and built-in developer tools<br><br>
 
-Every aspect of user interaction — from login credentials to browsing history, bookmarks, and saved sessions — is stored in an <b>encrypted format</b>, ensuring confidentiality and integrity.<br><br>
+  <b>Business Value</b><br>
+  • Protects users from tracking and data misuse<br>
+  • Speeds up browsing by blocking heavy ads and scripts<br>
+  • Enhances productivity with focused modes and tab control<br>
+  • Safe option for kids and family devices<br>
+  • Strong security and encryption reduce cyber risks<br><br>
 
-By design, the browser avoids reliance on third-party analytics or data monetization, setting a new benchmark for <b>ethical technology</b>.<br><br>
+  <b>Customization</b><br>
+  Users can personalize browsing modes, homepage layout, privacy preferences, 
+  resource settings, shortcuts, and extensions to suit individual or professional needs.<br><br>
 
-The browser introduces <b>intelligent privacy layers</b> such as real-time ad and tracker blocking, private search integration, and customizable browsing modes.<br><br>
+  <b>Ideal For</b><br>
+  Privacy-conscious users, students, professionals, families, developers, researchers, remote workers, 
+  startups, and businesses that need secure browsing without data tracking or ads.<br><br>
 
-Users can switch between profiles like <b>Work, Personal, Kids, or Developer</b>, each with tailored security configurations and content preferences.<br><br>
-
-This adaptability ensures that <b>productivity and safety coexist</b> harmoniously, regardless of user type or environment.<br><br>
-
-<b>Performance optimization</b> is another core focus of the system.<br><br>
-
-The browser intelligently allocates system resources, reducing memory consumption and CPU usage to maintain smooth operations across both high-end and low-spec devices.<br><br>
-
-<b>Offline capabilities</b> and secure synchronization further enhance usability, enabling continuous and protected access to bookmarks, passwords, and sessions across multiple devices.<br><br>
-
-The platform’s built-in <b>Privacy Dashboard</b> offers full transparency, allowing users to monitor blocked trackers, scripts, and advertisements in real time.<br><br>
-
-Integrated developer tools, extension support, and customizable APIs ensure that the browser remains open for innovation while upholding strict <b>data isolation standards</b>.<br><br>
-
-In essence, the <b>Privacy-Based Browser</b> redefines what a modern browser should be — <b>fast, private, transparent, and user-centric</b>.<br><br>
-
-It empowers individuals and organizations to browse confidently, knowing that their data remains secure, their activity remains anonymous, and their experience remains uncompromised.<br><br>`,
-  image: privacy,
+  <b>Why Choose Us</b><br>
+  A secure, fast, and user-friendly browser built for privacy, transparency, and performance. 
+  Regular updates, zero data tracking, encrypted sync, and reliable support ensure a safe and smooth browsing experience.<br><br>
+  `,
+  image: privacy, // replace with your actual imported image
   info: {
-    Category: "Web + Mobile App",
-  }
+    Category: "Privacy & Productivity Tools",
+  },
 },
 
 {
-  id: 24,
-  title: "Food and Beverages (Café) Billing Software",
-  subtitle: "Smart Café & Restaurant Management Solution",
-  description: `<b>The Food and Beverages (Café) Billing Software</b> is an advanced, all-in-one management solution developed to streamline café and restaurant operations.<br><br>
+  id: 3,
+  title: "Restaurant & Café Billing System",
+  subtitle: "Smart POS for F&B Businesses",
+  description: `
+  <b>Run your restaurant or café with faster billing, smooth order handling, and real-time coordination.</b><br><br>
+  Designed for <b>cafes, bakeries, cloud kitchens, restaurants, and food trucks,</b> this solution helps you speed up service, reduce errors, and deliver a delightful dining experience.<br><br>
 
-It combines <b>billing, inventory management, staff coordination, and analytics</b> into a unified, user-friendly platform.<br><br>
+  A <b>modern F&B billing and POS system</b> built to simplify dine-in, takeaway, and online orders. From menu setup, smart billing, and table management to kitchen display, payments, and GST-ready reports — everything works in one place.<br><br>
+  The intuitive interface helps staff learn quickly and serve customers faster. Works on <b>web, tablet, and mobile</b> with secure cloud access and multi-outlet support.<br><br>
 
-Designed for <b>speed, accuracy, and scalability</b>, it caters to cafés, restaurants, and food outlets of all sizes.<br><br>
+  <b>Key Features</b><br>
+  • Fast billing for dine-in, takeaway, delivery, and counter sales<br>
+  • Digital menu, table and order management with KOT printing<br>
+  • Inventory and ingredient tracking with low stock alerts<br>
+  • Menu management with categories, pricing, add-ons and variants<br>
+  • KDS for real-time kitchen order display and updates<br>
+  • Multiple payment modes: cash, UPI, card, wallet, split bill<br>
+  • Day-wise, product-wise, GST and sales reports with exports<br>
+  • Employee roles, permissions and activity logs<br>
+  • Works with thermal and A4 invoice printing<br><br>
 
-At its core, the system simplifies day-to-day operations by automating key processes such as <b>order management, billing, and stock updates</b>.<br><br>
+  <b>Business Benefits</b><br>
+  • Faster order processing and reduced wait times<br>
+  • Lower inventory wastage and better cost control<br>
+  • Smart insights to grow sales and repeat visits<br>
+  • Error-free billing with GST and audit-ready reports<br>
+  • Improved coordination between kitchen and service staff<br><br>
 
-Orders placed at the counter or through table service are processed instantly through an <b>integrated POS system</b> that calculates totals, applies taxes, and generates digital receipts.<br><br>
+  <b>Customization</b><br>
+  Easily configure <b>menu items, pricing, tax, KOT format, table layout, permissions, and reports</b> to match your restaurant’s workflow and service style.<br><br>
+  Our approach ensures the system fits your business operations — not the other way around.<br><br>
 
-This ensures faster customer service, reduced errors, and improved billing efficiency.<br><br>
-
-The platform integrates seamlessly with a <b>Kitchen Display System (KDS)</b> to enable real-time communication between service and kitchen teams.<br><br>
-
-Orders appear instantly on kitchen screens, allowing chefs to prioritize and prepare items efficiently.<br><br>
-
-The <b>inventory module</b> intelligently tracks ingredient consumption, updates stock levels automatically, and generates low-stock alerts — helping businesses control costs and avoid shortages.<br><br>
-
-Managers and owners can access <b>comprehensive analytics</b> through interactive dashboards.<br><br>
-
-Sales data, customer trends, top-performing menu items, and expense insights are visualized clearly to support <b>data-driven decision-making</b>.<br><br>
-
-The system also provides robust <b>employee management capabilities</b>, including role-based permissions, activity tracking, and attendance monitoring.<br><br>
-
-<b>Security and compliance</b> are central to its design.<br><br>
-
-The software includes <b>encrypted data storage</b>, GST-ready billing, and secure payment integrations for cash, card, and digital methods.<br><br>
-
-Its <b>cloud-enabled architecture</b> ensures that data remains synchronized and accessible across multiple branches and devices.<br><br>
-
-In essence, the <b>Food and Beverages (Café) Billing Software</b> delivers the perfect blend of <b>efficiency, intelligence, and simplicity</b>.<br><br>
-
-It empowers café owners to optimize daily operations, reduce manual effort, and elevate the customer experience — transforming ordinary cafés into <b>data-driven, high-performing businesses</b>.<br><br>`,
-  image: beverage,
+  <b>Ideal For</b><br>
+  Cafes, Restaurants, QSRs, Cloud Kitchens, Bakeries, Chai Outlets, Ice Cream Shops, Food Trucks, Bars, Canteens, Franchise Chains, and Multi-Outlet Brands.<br><br>
+  `,
+  image: beverage, // replace with your actual image variable or import
   info: {
-    Category: "Web + Mobile App",
-  }
+    Category: "Web & Mobile POS",
+  },
 },
+
 
 ];
 
@@ -709,7 +969,7 @@ const fadeInUp = {
 // --- Styled components for the card layout
 const PageOuter = styled("div")({
   minHeight: "100vh",
-  background: "linear-gradient(180deg,#001a33 0%, #002b4a 100%)",
+  background: "linear-gradient(135deg, #0B0F3D 0%, #1B2360 100%)",
   padding: "48px",
   boxSizing: "border-box",
   fontFamily: "'Poppins', sans-serif",
@@ -839,12 +1099,13 @@ const SidebarBox = styled("div")({
   background: "rgba(255,255,255,0.04)",
   borderRadius: 16,
   padding: 28,
-  height: 620,
+  minHeight: "1900px",
   overflowY: "auto",
   border: "1px solid rgba(255,255,255,0.06)",
   boxShadow: "0 18px 40px rgba(0,0,0,0.45)",
   scrollbarWidth: "thin",
   scrollbarColor: "#64b5ff rgba(255,255,255,0.02)",
+  maxHeight: "80vh",
 
   "&::-webkit-scrollbar": {
     width: "10px",
@@ -861,7 +1122,8 @@ const SidebarBox = styled("div")({
   "@media (max-width: 1024px)": {
     position: "relative",
     top: 0,
-    height: "auto",
+    minHeight: "auto", // ✅ override this so no long empty space
+    height: "auto", // ✅ allow it to resize properly
     maxHeight: "none",
     overflowY: "hidden",
     overflowX: "auto",
@@ -936,30 +1198,6 @@ const SmallVal = styled("div")({
 
 // --- Main Component
 export default function OurProducts() {
-
-    const [chatOpen, setChatOpen] = useState(false);
-  const [messages, setMessages] = useState([{ sender: "bot", text: "👋 Hi there! I'm Manovate Assistant. How can I help you today?" }]);
-  const [input, setInput] = useState("");
-
-     const sendMessage = async () => {
-    if (!input.trim()) return;
-
-    const newMessages = [...messages, { sender: "user", text: input }];
-    setMessages(newMessages);
-    setInput("");
-
-    try {
-      const res = await fetch("https://manovatebackend.onrender.com/api/chatbot/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
-      });
-      const data = await res.json();
-      setMessages([...newMessages, { sender: "bot", text: data.reply }]);
-    } catch {
-      setMessages([...newMessages, { sender: "bot", text: "❌ Unable to connect to the server." }]);
-    }
-  };
   const [selected, setSelected] = useState(products[0]);
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -976,6 +1214,11 @@ export default function OurProducts() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navigate = useNavigate();
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <>
       
@@ -991,7 +1234,7 @@ export default function OurProducts() {
             <li><a href="/about" onClick={toggleMenu}>About</a></li>
           <li><a href="/services" onClick={toggleMenu}>Services</a></li>
           <li><a href="/products" onClick={toggleMenu}>Products</a></li>
-          <li><a href="/solutions" onClick={toggleMenu}>Solutions</a></li>
+          <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
         
           <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
           
@@ -1011,9 +1254,6 @@ export default function OurProducts() {
         <div className="overlay"></div>
         <div className="hero-content">
           <h1>Our Products</h1>
-          <div className="breadcrumbs">
-            {/* <a href="/">Home</a> &gt; <span>Our Products</span> */}
-          </div>
         </div>
       </div>
 
@@ -1023,12 +1263,13 @@ export default function OurProducts() {
           <img src={introImage} alt="Solutions Illustration" />
         </div>
         <div className="intro-text">
-          <h2>Solutions That Transform Businesses</h2>
-          <p>
-            At <strong>Manovate Technology</strong>, we turn challenges into
-            scalable IT and Non-IT solutions that drive efficiency and growth.
-          </p>
-        </div>
+  <h2>Products That Empower Digital Growth</h2>
+  <p>
+    At <strong>Manovate Technologies</strong>, we design and build intelligent digital 
+    products that simplify workflows, enhance user experience, and accelerate business success.
+  </p>
+</div>
+
       </div>
 
       {/* PRODUCTS SECTION */}
@@ -1063,24 +1304,16 @@ export default function OurProducts() {
                 {selected.subtitle}
               </Typography>
               <Desc dangerouslySetInnerHTML={{__html: selected.description }}></Desc>
+              <button className="cta-button" onClick={handleContactClick}>
+            Contact Us
+          </button>
             </TextSection>
           </ContentArea>
 
           {/* Right Sidebar */}
           <Sidebar>
             <SidebarBox>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: 800,
-                  mb: 2,
-                  color: "#e8f8ff",
-                  textAlign: "center",
-                  fontSize: 18,
-                }}
-              >
-                All Projects
-              </Typography>
+              
 
               <Box>
                 {products.map((p) => (
@@ -1131,39 +1364,6 @@ export default function OurProducts() {
         </IconButton>
       </PageOuter>
 
-
-       <div className="chatbot-container">
-          {chatOpen ? (
-            <div className="chatbot-box">
-              <div className="chatbot-header">
-                <h4>Manovate Assistant</h4>
-                <button onClick={() => setChatOpen(false)}>×</button>
-              </div>
-              <div className="chatbot-messages">
-                {messages.map((msg, idx) => (
-                  <div key={idx} className={`chat-message ${msg.sender}`}>
-                    {msg.text}
-                  </div>
-                ))}
-              </div>
-              <div className="chatbot-input">
-                <input
-                  type="text"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  placeholder="Type your message..."
-                  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-                />
-                <button onClick={sendMessage}>Send</button>
-              </div>
-            </div>
-          ) : (
-            <button className="chatbot-toggle" onClick={() => setChatOpen(true)}>
-              <FaComments />
-            </button>
-          )}
-        </div>
-
      {/* Footer */}
       
 {/* Footer */}
@@ -1185,7 +1385,7 @@ export default function OurProducts() {
                           <li><Link to="/services">SERVICES</Link></li>
                        
                           <li><Link to="/products">PRODUCTS</Link></li>
-                          <li><Link to="/solutions">SOLUTIONS</Link></li>
+                          <li><Link to="/solution">SOLUTIONS</Link></li>
                            <li><Link to="/careers">CAREERS</Link></li>
                           <li><Link to="/contact">CONTACT</Link></li>
         </ul>

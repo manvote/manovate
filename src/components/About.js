@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Box, Typography, Breadcrumbs} from "@mui/material";
+import { Box, Typography} from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 import aboutBanner from "./breadcrumb.jpg"; // Hero banner
 import mainPhoto from "./experience.jpg";   // Big image
@@ -14,10 +13,10 @@ import "./about.css";
 import { useEffect } from "react";
 import logo from "./manovate.png";
 import { FiMenu, FiX } from "react-icons/fi";
-import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook,FaComments } from "react-icons/fa";
+import {FaMapMarkerAlt,FaLinkedin,FaInstagram,FaFacebook } from "react-icons/fa";
 import SearchIcon from "@mui/icons-material/Search";        // for SEO
 import BrushIcon from "@mui/icons-material/Brush";          // for Designing
-
+import {Link} from "react-router-dom";
 
 const OfferIcon = ({ icon, label, color }) => {
   const [active, setActive] = useState(false);
@@ -27,15 +26,7 @@ const OfferIcon = ({ icon, label, color }) => {
     setTimeout(() => setActive(false), 1000); // reset animation
   };
 
-  
-
-
-
   return (
-
-    
-    
-
     <Box
       onClick={handleClick}
       sx={{
@@ -44,8 +35,14 @@ const OfferIcon = ({ icon, label, color }) => {
         borderRadius: "15px",
         p: 2,
         transition: "all 0.3s ease",
+        width: { xs: "110px", sm: "130px", md: "150px" },   // ✅ Equal width
+        height: { xs: "110px", sm: "130px", md: "150px" }, // ✅ Equal height
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
         "&:hover": { transform: "scale(1.1)", boxShadow: `0 0 20px ${color}` },
-        perspective: "1000px",
       }}
     >
       {/* Flip Icon */}
@@ -63,7 +60,12 @@ const OfferIcon = ({ icon, label, color }) => {
 
       <Typography
         variant="body1"
-        sx={{ mt: 1, fontFamily: '"Rajdhani", sans-serif', fontWeight: 600 }}
+        sx={{
+          mt: 1,
+          fontFamily: '"Rajdhani", sans-serif',
+          fontWeight: 600,
+          whiteSpace: "nowrap",
+        }}
       >
         {label}
       </Typography>
@@ -114,6 +116,7 @@ const OfferIcon = ({ icon, label, color }) => {
     </Box>
   );
 };
+
 
 
 // Hero Banner
@@ -217,29 +220,7 @@ const About = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [chatOpen, setChatOpen] = useState(false);
-  const [messages, setMessages] = useState([{ sender: "bot", text: "👋 Hi there! I'm Manovate Assistant. How can I help you today?" }]);
-  const [input, setInput] = useState("");
 
-     const sendMessage = async () => {
-    if (!input.trim()) return;
-
-    const newMessages = [...messages, { sender: "user", text: input }];
-    setMessages(newMessages);
-    setInput("");
-
-    try {
-      const res = await fetch("https://manovatebackend.onrender.com/api/chatbot/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
-      });
-      const data = await res.json();
-      setMessages([...newMessages, { sender: "bot", text: data.reply }]);
-    } catch {
-      setMessages([...newMessages, { sender: "bot", text: "❌ Unable to connect to the server." }]);
-    }
-  };
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   useEffect(() => {
@@ -250,12 +231,8 @@ const About = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  
   return (
-    
     <>
-  
     <nav className={`navbar ${scrolled ? "scrolled" : ""} ${menuOpen ? "open" : ""}`}>
       <div className="nav-container">
         <div className="nav-left">
@@ -267,7 +244,7 @@ const About = () => {
             <li><a href="/about" onClick={toggleMenu}>About</a></li>
           <li><a href="/services" onClick={toggleMenu}>Services</a></li>
           <li><a href="/products" onClick={toggleMenu}>Products</a></li>
-          <li><a href="/solutions" onClick={toggleMenu}>Solutions</a></li>
+          <li><a href="/solution" onClick={toggleMenu}>Solutions</a></li>
         
           <li><a href="/careers" onClick={toggleMenu}>Careers</a></li>
           
@@ -298,15 +275,7 @@ const About = () => {
           >
             About Us
           </Typography>
-          <Breadcrumbs
-            aria-label="breadcrumb"
-            sx={{
-              color: "#ddd",
-              "& .MuiLink-root": { color: "#ddd", textDecoration: "none" },
-            }}
-          >
-           
-          </Breadcrumbs>
+          
         </HeroContent>
       </HeroSection>
 
@@ -432,7 +401,7 @@ challenges and unlock measurable results.
       gap: 3,
       justifyItems: "center",
       alignItems: "center",
-      position: "relative",
+      
     }}
   >
     {[
@@ -443,7 +412,20 @@ challenges and unlock measurable results.
       { icon: <BrushIcon />, label: "Designing", color: "#FBC02D" },
       { icon: <RocketLaunchIcon />, label: "IoT", color: "#7C4DFF" },
     ].map((item, i) => (
-      <OfferIcon key={i} icon={item.icon} label={item.label} color={item.color} />
+      <Box
+      key={i}
+      sx={{
+        width: { xs: "110px", sm: "130px", md: "150px" }, // ✅ equal width
+        height: { xs: "110px", sm: "130px", md: "150px" }, // ✅ equal height
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+      }}
+    >
+      <OfferIcon icon={item.icon} label={item.label} color={item.color} />
+    </Box>
     ))}
   </Box>
 </Box>
@@ -596,11 +578,11 @@ challenges and unlock measurable results.
     }}
   >
     {[
-      { title: "Integrity", desc: "Transparency and accountability in every partnership." },
-      { title: "Innovation", desc: "New ideas that drive smarter solutions." },
-      { title: "Excellence", desc: "Precision and quality in execution." },
-      { title: "Collaboration", desc: " To deliver measurable outcomes" },
-      { title: "Adaptability", desc: "Evolving with change to stay ahead." },
+      { title: "Integrity", desc: "Honesty, ethics, and full accountability frame our actions." },
+      { title: "Innovation", desc: "Fostering ideas that transform processes and create value." },
+      { title: "Excellence", desc: "High standards ensure precise, measurable outcomes always." },
+      { title: "Collaboration", desc: "Effective teamwork achieves essential, meaningful results." },
+      { title: "Adaptability", desc: "Embracing change and evolving to stay ahead of challenges." },
     ].map((item, i) => (
       <Box
         key={i}
@@ -739,40 +721,6 @@ challenges and unlock measurable results.
   </Box>
 </Box>
 
-
-
- <div className="chatbot-container">
-          {chatOpen ? (
-            <div className="chatbot-box">
-              <div className="chatbot-header">
-                <h4>Manovate Assistant</h4>
-                <button onClick={() => setChatOpen(false)}>×</button>
-              </div>
-              <div className="chatbot-messages">
-                {messages.map((msg, idx) => (
-                  <div key={idx} className={`chat-message ${msg.sender}`}>
-                    {msg.text}
-                  </div>
-                ))}
-              </div>
-              <div className="chatbot-input">
-                <input
-                  type="text"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  placeholder="Type your message..."
-                  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-                />
-                <button onClick={sendMessage}>Send</button>
-              </div>
-            </div>
-          ) : (
-            <button className="chatbot-toggle" onClick={() => setChatOpen(true)}>
-              <FaComments />
-            </button>
-          )}
-        </div>
-
      {/* Footer */}
       
 {/* Footer */}
@@ -794,7 +742,7 @@ challenges and unlock measurable results.
                 <li><Link to="/services">SERVICES</Link></li>
               
                 <li><Link to="/products">PRODUCTS</Link></li>
-                <li><Link to="/solutions">SOLUTIONS</Link></li>
+                <li><Link to="/solution">SOLUTIONS</Link></li>
                  <li><Link to="/careers">CAREERS</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
         </ul>
